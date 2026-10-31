@@ -10,11 +10,11 @@ Narobaagent is a dark, pixel-art NFT mint experience for the Naroba identity arc
 - `pnpm build:static`: build the frontend for static hosting.
 - `pnpm check` / `pnpm test`: types and application tests.
 
-## Mint stages
+## BNB Chain mint stages
 
-- Tokens 1–1,000: freemint.
-- Tokens 1,001–3,000: `0.000222`.
-- Tokens 3,001–10,000: `0.001`.
+- Tokens 1–1,000: freemint (BNB Chain gas may still apply).
+- Tokens 1,001–3,000: `0.000222 BNB`.
+- Tokens 3,001–10,000: `0.001 BNB`.
 
 The current frontend uses a safe demo flow until the production chain, contract address, ABI, and wallet provider are configured. The mint console supports pasted wallet prompts, AI-agent prompt generation, tier-aware pricing, and a filterable identity gallery.
 

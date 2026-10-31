@@ -40,7 +40,7 @@ type MintRecord = {
 
 const SUPPLY = 10_000;
 const DEMO_MINTED_START = 842;
-const CONTRACT_WALLET = "0xNAROBA_CONTRACT_CONFIGURE_ME";
+const CONTRACT_WALLET = "0xNAROBA_BNB_CONTRACT_CONFIGURE_ME";
 
 const tierForToken = (token: number) => {
   if (token <= 1_000) {
@@ -206,7 +206,7 @@ export default function Home() {
       return;
     }
     setStatus("reviewing");
-    setStatusMessage(`Reviewing token #${String(nextToken).padStart(4, "0")} · ${activeTier.displayPrice === "FREE" ? "no mint price" : `${activeTier.displayPrice} ETH`}.`);
+    setStatusMessage(`Reviewing token #${String(nextToken).padStart(4, "0")} · ${activeTier.displayPrice === "FREE" ? "no mint price" : `${activeTier.displayPrice} BNB`}.`);
     window.setTimeout(() => {
       const record: MintRecord = {
         token: nextToken,
@@ -268,7 +268,7 @@ export default function Home() {
               <span className="hero__note"><span className="hero__note-dot" />10,000 identities / one shared signal</span>
             </div>
             <div className="hero__meta">
-              <div><span className="meta-label">Network</span><strong>Configurable EVM</strong></div>
+              <div><span className="meta-label">Network</span><strong>BNB Chain</strong></div>
               <div><span className="meta-label">Contract</span><strong className="mono">0xNAROBA…ME</strong></div>
               <div><span className="meta-label">Status</span><strong className="status-live"><span />Mint live</strong></div>
             </div>
@@ -307,7 +307,7 @@ export default function Home() {
                 </button>
               ))}
             </div>
-            <div className="sidebar-note"><Info size={15} /><span>Free mint has no mint price. Network gas and the final contract configuration are separate.</span></div>
+            <div className="sidebar-note"><Info size={15} /><span>Free mint has no mint price. BNB Chain gas and the final contract configuration are separate.</span></div>
           </div>
 
           <div className="mint-console">
@@ -331,9 +331,9 @@ export default function Home() {
                 <button className="secondary-button secondary-button--full" type="button" onClick={generateAgentPrompt}><Sparkles size={15} /> Generate agent prompt <ArrowUpRight size={14} /></button>
               </div>
             )}
-            <div className="price-review"><div><span className="meta-label">Active stage</span><strong>{activeTier.label} <span>/ {activeTier.range}</span></strong></div><div className="price-review__amount"><span className="meta-label">Mint price</span><strong className={activeTier.id === "free" ? "is-free" : ""}>{activeTier.displayPrice}{activeTier.id !== "free" && <small> ETH</small>}</strong></div></div>
+            <div className="price-review"><div><span className="meta-label">Active stage</span><strong>{activeTier.label} <span>/ {activeTier.range}</span></strong></div><div className="price-review__amount"><span className="meta-label">Mint price</span><strong className={activeTier.id === "free" ? "is-free" : ""}>{activeTier.displayPrice}{activeTier.id !== "free" && <small> BNB</small>}</strong></div></div>
             <div className="console-action"><button className="mint-button" type="button" onClick={mintNow} disabled={status === "reviewing"}><span>{status === "reviewing" ? "Reviewing..." : status === "minted" ? "Mint another identity" : "Review & mint"}</span><ArrowUpRight size={17} /></button><div className={`mint-status mint-status--${status}`}><span className="mint-status__icon">{status === "minted" ? <Check size={12} /> : status === "error" ? <X size={12} /> : <Radio size={12} />}</span>{statusMessage}</div></div>
-            <div className="contract-note"><Code2 size={14} /><span>Contract wallet is <strong>not connected</strong> in this demo.</span><CopyButton value={CONTRACT_WALLET} label="Copy contract placeholder" /></div>
+            <div className="contract-note"><Code2 size={14} /><span>BNB contract wallet is <strong>not connected</strong> in this demo.</span><CopyButton value={CONTRACT_WALLET} label="Copy BNB contract placeholder" /></div>
           </div>
         </section>
 
