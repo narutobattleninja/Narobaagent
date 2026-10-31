@@ -1,14 +1,21 @@
 # Naroba — Pixel Identity Mint
 
-React / Express / tRPC / Drizzle starter, adapted from the Sandbox web-db-user template.
+Narobaagent is a dark, pixel-art NFT mint experience for the Naroba identity archive.
+
+## Development
 
 - `pnpm dev`: development server; honors `PORT` (default 3000).
-- `pnpm build` / `pnpm start`: build and serve `dist/index.js` and `dist/public/`.
-- `pnpm db:migrate`: apply checked-in migrations. `pnpm db:push`: generate and apply new schema changes.
+- `pnpm dev:static`: static development server on port 3000.
+- `pnpm build` / `pnpm start`: build and serve the application.
+- `pnpm build:static`: build the frontend for static hosting.
 - `pnpm check` / `pnpm test`: types and application tests.
 
-Start with the Webdev skill's default-template guide. Platform login, storage, payments and service contracts live in its shared references; read the relevant capability before extending its helper.
+## Mint stages
 
-`server/_core/publicConfig.ts` exposes only named public runtime values. Private keys stay server-side. The platform serves managed `/manus-storage/` assets; the application does not register a second proxy.
+- Tokens 1–1,000: freemint.
+- Tokens 1,001–3,000: `0.000222`.
+- Tokens 3,001–10,000: `0.001`.
 
-Platform configuration is readable and editable through `webdev.config`. Default settings are initial values, not enforced constraints. The agent may modify the files, commands and configuration or follow the flexible guide for another stack.
+The current frontend uses a safe demo flow until the production chain, contract address, ABI, and wallet provider are configured. The mint console supports pasted wallet prompts, AI-agent prompt generation, tier-aware pricing, and a filterable identity gallery.
+
+Platform configuration is readable and editable through `webdev.config`. Private keys stay server-side.
