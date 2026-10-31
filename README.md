@@ -16,7 +16,7 @@ Narobaagent is a dark, pixel-art NFT mint experience for the Naroba identity arc
 - Tokens 1,001–3,000: `0.000222 BNB`.
 - Tokens 3,001–10,000: `0.001 BNB`.
 
-The current frontend uses a safe demo flow until the production chain, contract address, ABI, and wallet provider are configured. The mint console supports pasted wallet prompts, AI-agent prompt generation, tier-aware pricing, and a filterable identity gallery.
+The frontend is the public Naroba mint experience for BNB Chain. The mint console supports pasted wallet prompts, AI-agent prompt generation, tier-aware pricing, and a filterable identity gallery. The deployment binding still needs the final NFT contract address, ABI, and wallet provider before it can submit live blockchain transactions.
 
 ## NFT assets and metadata
 

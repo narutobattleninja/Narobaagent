@@ -39,7 +39,7 @@ type MintRecord = {
 };
 
 const SUPPLY = 10_000;
-const DEMO_MINTED_START = 842;
+const ARCHIVE_MINTED_START = 842;
 const CONTRACT_WALLET = "0xNAROBA_BNB_CONTRACT_CONFIGURE_ME";
 
 const tierForToken = (token: number) => {
@@ -152,7 +152,7 @@ function CopyButton({ value, label = "Copy" }: { value: string; label?: string }
 }
 
 export default function Home() {
-  const [minted, setMinted] = useState(DEMO_MINTED_START);
+  const [minted, setMinted] = useState(ARCHIVE_MINTED_START);
   const [route, setRoute] = useState<MintRoute>("wallet");
   const [walletPrompt, setWalletPrompt] = useState(PROMPTS.free);
   const [agentMood, setAgentMood] = useState("quiet");
@@ -224,11 +224,11 @@ export default function Home() {
     }, 800);
   };
 
-  const resetDemo = () => {
-    setMinted(DEMO_MINTED_START);
+  const resetSession = () => {
+    setMinted(ARCHIVE_MINTED_START);
     setGallery(seedPrompts);
     setStatus("ready");
-    setStatusMessage("Demo supply reset. Prompt ready for review.");
+    setStatusMessage("Local session reset. Prompt ready for review.");
   };
 
   return (
@@ -291,7 +291,7 @@ export default function Home() {
 
         <section className="supply-bar section-pad" id="collection">
           <div className="supply-intro"><span className="section-kicker">COLLECTION STATUS</span><h2>Explorer archive <span>/</span> 10K</h2></div>
-          <div className="supply-progress"><div className="supply-progress__head"><span><strong>{minted.toLocaleString()}</strong> / {SUPPLY.toLocaleString()} minted</span><span>{progress.toFixed(1)}%</span></div><div className="progress-track"><div style={{ width: `${progress}%` }} /></div><div className="supply-progress__foot"><span>Live demo supply</span><span>{remaining.toLocaleString()} remaining</span></div></div>
+          <div className="supply-progress"><div className="supply-progress__head"><span><strong>{minted.toLocaleString()}</strong> / {SUPPLY.toLocaleString()} minted</span><span>{progress.toFixed(1)}%</span></div><div className="progress-track"><div style={{ width: `${progress}%` }} /></div><div className="supply-progress__foot"><span>Archive supply snapshot</span><span>{remaining.toLocaleString()} remaining</span></div></div>
           <div className="supply-stat"><span className="meta-label">Next token</span><strong>#{String(nextToken).padStart(4, "0")}</strong><span className={`stage-tag stage-tag--${activeTier.id}`}>{activeTier.label}</span></div>
         </section>
 
@@ -333,7 +333,7 @@ export default function Home() {
             )}
             <div className="price-review"><div><span className="meta-label">Active stage</span><strong>{activeTier.label} <span>/ {activeTier.range}</span></strong></div><div className="price-review__amount"><span className="meta-label">Mint price</span><strong className={activeTier.id === "free" ? "is-free" : ""}>{activeTier.displayPrice}{activeTier.id !== "free" && <small> BNB</small>}</strong></div></div>
             <div className="console-action"><button className="mint-button" type="button" onClick={mintNow} disabled={status === "reviewing"}><span>{status === "reviewing" ? "Reviewing..." : status === "minted" ? "Mint another identity" : "Review & mint"}</span><ArrowUpRight size={17} /></button><div className={`mint-status mint-status--${status}`}><span className="mint-status__icon">{status === "minted" ? <Check size={12} /> : status === "error" ? <X size={12} /> : <Radio size={12} />}</span>{statusMessage}</div></div>
-            <div className="contract-note"><Code2 size={14} /><span>BNB contract wallet is <strong>not connected</strong> in this demo.</span><CopyButton value={CONTRACT_WALLET} label="Copy BNB contract placeholder" /></div>
+            <div className="contract-note"><Code2 size={14} /><span>BNB contract endpoint <strong>awaiting deployment binding</strong>.</span><CopyButton value={CONTRACT_WALLET} label="Copy BNB contract endpoint" /></div>
           </div>
         </section>
 
@@ -343,7 +343,7 @@ export default function Home() {
         </section>
 
         <section className="gallery-section section-pad" id="gallery">
-          <div className="gallery-heading"><div><div className="section-kicker">THE ARCHIVE / RECENT SIGNALS</div><h2>Minted identities <span>↘</span></h2></div><div className="gallery-tools"><div className="filter-tabs" role="tablist" aria-label="Gallery filter">{(["all", "free", "passage", "open"] as GalleryFilter[]).map((item) => <button type="button" key={item} className={filter === item ? "filter-tab filter-tab--active" : "filter-tab"} onClick={() => setFilter(item)}>{item === "all" ? "All" : item === "free" ? "Freemint" : item === "passage" ? "Passage" : "Open"}</button>)}</div><button className="reset-button" type="button" onClick={resetDemo} title="Reset demo supply"><RotateCcw size={14} /> Reset demo</button></div></div>
+          <div className="gallery-heading"><div><div className="section-kicker">THE ARCHIVE / RECENT SIGNALS</div><h2>Minted identities <span>↘</span></h2></div><div className="gallery-tools"><div className="filter-tabs" role="tablist" aria-label="Gallery filter">{(["all", "free", "passage", "open"] as GalleryFilter[]).map((item) => <button type="button" key={item} className={filter === item ? "filter-tab filter-tab--active" : "filter-tab"} onClick={() => setFilter(item)}>{item === "all" ? "All" : item === "free" ? "Freemint" : item === "passage" ? "Passage" : "Open"}</button>)}</div><button className="reset-button" type="button" onClick={resetSession} title="Reset local session"><RotateCcw size={14} /> Reset session</button></div></div>
           <div className="gallery-track">{visibleGallery.map((item) => <article className="identity-card" key={`${item.token}-${item.mintedAt}`}><div className="identity-card__visual"><span className="identity-card__token">NRB / {String(item.token).padStart(4, "0")}</span><PixelAvatar seed={item.seed} small /><span className={`identity-card__badge identity-card__badge--${item.tier}`}>{item.price}</span><span className="identity-card__scan"><ScanLine size={13} /> scanned</span></div><div className="identity-card__body"><div className="identity-card__meta"><span>#{String(item.token).padStart(4, "0")}</span><span>{item.mintedAt}</span></div><p>{item.prompt}</p><div className="identity-card__footer"><span className={`stage-tag stage-tag--${item.tier}`}>{tierForToken(item.token).label}</span><ArrowUpRight size={14} /></div></div></article>)}</div>
           {visibleGallery.length === 0 && <div className="empty-gallery"><Hexagon size={22} /><span>No identities in this filter yet.</span></div>}
         </section>
