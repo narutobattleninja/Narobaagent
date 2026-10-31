@@ -1,0 +1,42 @@
+{
+  "name": "Naroba Identity #3988",
+  "description": "A observant keeper from the Naroba archive, carrying a glass signal. Signal Lime signal, pixel-native silhouette, precise details, and a calm on-chain identity. Mint stage: open. Price: 0.001 BNB.",
+  "image": "ipfs://REPLACE_WITH_IMAGES_CID/3988.png",
+  "external_url": "https://narobaagent.example/collection",
+  "token_id": 3988,
+  "prompt": "A observant keeper from the Naroba archive, carrying a glass signal. Signal Lime signal, pixel-native silhouette, precise details, and a calm on-chain identity.",
+  "attributes": [
+    {
+      "trait_type": "Token ID",
+      "value": 3988
+    },
+    {
+      "trait_type": "Stage",
+      "value": "Open"
+    },
+    {
+      "trait_type": "Palette",
+      "value": "Signal Lime"
+    },
+    {
+      "trait_type": "Mood",
+      "value": "Observant"
+    },
+    {
+      "trait_type": "Form",
+      "value": "Keeper"
+    },
+    {
+      "trait_type": "Visor",
+      "value": "Active"
+    },
+    {
+      "trait_type": "Antenna",
+      "value": "Signal"
+    },
+    {
+      "trait_type": "Artifact",
+      "value": "A Glass Signal"
+    }
+  ]
+}

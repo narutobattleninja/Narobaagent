@@ -1,0 +1,42 @@
+{
+  "name": "Naroba Identity #0244",
+  "description": "A restless scout from the Naroba archive, carrying an amber key. Checkpoint Amber signal, pixel-native silhouette, precise details, and a calm on-chain identity. Mint stage: freemint. Price: FREE.",
+  "image": "ipfs://REPLACE_WITH_IMAGES_CID/0244.png",
+  "external_url": "https://narobaagent.example/collection",
+  "token_id": 244,
+  "prompt": "A restless scout from the Naroba archive, carrying an amber key. Checkpoint Amber signal, pixel-native silhouette, precise details, and a calm on-chain identity.",
+  "attributes": [
+    {
+      "trait_type": "Token ID",
+      "value": 244
+    },
+    {
+      "trait_type": "Stage",
+      "value": "Freemint"
+    },
+    {
+      "trait_type": "Palette",
+      "value": "Checkpoint Amber"
+    },
+    {
+      "trait_type": "Mood",
+      "value": "Restless"
+    },
+    {
+      "trait_type": "Form",
+      "value": "Scout"
+    },
+    {
+      "trait_type": "Visor",
+      "value": "Active"
+    },
+    {
+      "trait_type": "Antenna",
+      "value": "Signal"
+    },
+    {
+      "trait_type": "Artifact",
+      "value": "An Amber Key"
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "name": "Naroba Identity #7460",
+  "description": "A restless cartographer from the Naroba archive, carrying a folded star map. Checkpoint Amber signal, pixel-native silhouette, precise details, and a calm on-chain identity. Mint stage: open. Price: 0.001 BNB.",
+  "image": "ipfs://REPLACE_WITH_IMAGES_CID/7460.png",
+  "external_url": "https://narobaagent.example/collection",
+  "token_id": 7460,
+  "prompt": "A restless cartographer from the Naroba archive, carrying a folded star map. Checkpoint Amber signal, pixel-native silhouette, precise details, and a calm on-chain identity.",
+  "attributes": [
+    {
+      "trait_type": "Token ID",
+      "value": 7460
+    },
+    {
+      "trait_type": "Stage",
+      "value": "Open"
+    },
+    {
+      "trait_type": "Palette",
+      "value": "Checkpoint Amber"
+    },
+    {
+      "trait_type": "Mood",
+      "value": "Restless"
+    },
+    {
+      "trait_type": "Form",
+      "value": "Cartographer"
+    },
+    {
+      "trait_type": "Visor",
+      "value": "Open"
+    },
+    {
+      "trait_type": "Antenna",
+      "value": "Signal"
+    },
+    {
+      "trait_type": "Artifact",
+      "value": "A Folded Star Map"
+    }
+  ]
+}

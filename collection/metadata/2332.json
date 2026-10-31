@@ -1,0 +1,42 @@
+{
+  "name": "Naroba Identity #2332",
+  "description": "A observant scout from the Naroba archive, carrying an amber key. Signal Lime signal, pixel-native silhouette, precise details, and a calm on-chain identity. Mint stage: passage. Price: 0.000222 BNB.",
+  "image": "ipfs://REPLACE_WITH_IMAGES_CID/2332.png",
+  "external_url": "https://narobaagent.example/collection",
+  "token_id": 2332,
+  "prompt": "A observant scout from the Naroba archive, carrying an amber key. Signal Lime signal, pixel-native silhouette, precise details, and a calm on-chain identity.",
+  "attributes": [
+    {
+      "trait_type": "Token ID",
+      "value": 2332
+    },
+    {
+      "trait_type": "Stage",
+      "value": "Passage"
+    },
+    {
+      "trait_type": "Palette",
+      "value": "Signal Lime"
+    },
+    {
+      "trait_type": "Mood",
+      "value": "Observant"
+    },
+    {
+      "trait_type": "Form",
+      "value": "Scout"
+    },
+    {
+      "trait_type": "Visor",
+      "value": "Active"
+    },
+    {
+      "trait_type": "Antenna",
+      "value": "Grounded"
+    },
+    {
+      "trait_type": "Artifact",
+      "value": "An Amber Key"
+    }
+  ]
+}

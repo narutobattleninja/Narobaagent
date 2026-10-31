@@ -1,0 +1,42 @@
+{
+  "name": "Naroba Identity #1162",
+  "description": "A observant drifter from the Naroba archive, carrying a packet of starlight. Archive Lilac signal, pixel-native silhouette, precise details, and a calm on-chain identity. Mint stage: passage. Price: 0.000222 BNB.",
+  "image": "ipfs://REPLACE_WITH_IMAGES_CID/1162.png",
+  "external_url": "https://narobaagent.example/collection",
+  "token_id": 1162,
+  "prompt": "A observant drifter from the Naroba archive, carrying a packet of starlight. Archive Lilac signal, pixel-native silhouette, precise details, and a calm on-chain identity.",
+  "attributes": [
+    {
+      "trait_type": "Token ID",
+      "value": 1162
+    },
+    {
+      "trait_type": "Stage",
+      "value": "Passage"
+    },
+    {
+      "trait_type": "Palette",
+      "value": "Archive Lilac"
+    },
+    {
+      "trait_type": "Mood",
+      "value": "Observant"
+    },
+    {
+      "trait_type": "Form",
+      "value": "Drifter"
+    },
+    {
+      "trait_type": "Visor",
+      "value": "Open"
+    },
+    {
+      "trait_type": "Antenna",
+      "value": "Grounded"
+    },
+    {
+      "trait_type": "Artifact",
+      "value": "A Packet Of Starlight"
+    }
+  ]
+}

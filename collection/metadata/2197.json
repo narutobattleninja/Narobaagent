@@ -1,0 +1,42 @@
+{
+  "name": "Naroba Identity #2197",
+  "description": "A electric listener from the Naroba archive, carrying a tiny beacon. Archive Lilac signal, pixel-native silhouette, precise details, and a calm on-chain identity. Mint stage: passage. Price: 0.000222 BNB.",
+  "image": "ipfs://REPLACE_WITH_IMAGES_CID/2197.png",
+  "external_url": "https://narobaagent.example/collection",
+  "token_id": 2197,
+  "prompt": "A electric listener from the Naroba archive, carrying a tiny beacon. Archive Lilac signal, pixel-native silhouette, precise details, and a calm on-chain identity.",
+  "attributes": [
+    {
+      "trait_type": "Token ID",
+      "value": 2197
+    },
+    {
+      "trait_type": "Stage",
+      "value": "Passage"
+    },
+    {
+      "trait_type": "Palette",
+      "value": "Archive Lilac"
+    },
+    {
+      "trait_type": "Mood",
+      "value": "Electric"
+    },
+    {
+      "trait_type": "Form",
+      "value": "Listener"
+    },
+    {
+      "trait_type": "Visor",
+      "value": "Active"
+    },
+    {
+      "trait_type": "Antenna",
+      "value": "Signal"
+    },
+    {
+      "trait_type": "Artifact",
+      "value": "A Tiny Beacon"
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "name": "Naroba Identity #0187",
+  "description": "A observant courier from the Naroba archive, carrying a glass signal. Archive Lilac signal, pixel-native silhouette, precise details, and a calm on-chain identity. Mint stage: freemint. Price: FREE.",
+  "image": "ipfs://REPLACE_WITH_IMAGES_CID/0187.png",
+  "external_url": "https://narobaagent.example/collection",
+  "token_id": 187,
+  "prompt": "A observant courier from the Naroba archive, carrying a glass signal. Archive Lilac signal, pixel-native silhouette, precise details, and a calm on-chain identity.",
+  "attributes": [
+    {
+      "trait_type": "Token ID",
+      "value": 187
+    },
+    {
+      "trait_type": "Stage",
+      "value": "Freemint"
+    },
+    {
+      "trait_type": "Palette",
+      "value": "Archive Lilac"
+    },
+    {
+      "trait_type": "Mood",
+      "value": "Observant"
+    },
+    {
+      "trait_type": "Form",
+      "value": "Courier"
+    },
+    {
+      "trait_type": "Visor",
+      "value": "Open"
+    },
+    {
+      "trait_type": "Antenna",
+      "value": "Signal"
+    },
+    {
+      "trait_type": "Artifact",
+      "value": "A Glass Signal"
+    }
+  ]
+}

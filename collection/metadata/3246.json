@@ -1,0 +1,42 @@
+{
+  "name": "Naroba Identity #3246",
+  "description": "A strange drifter from the Naroba archive, carrying a pocket horizon. Archive Lilac signal, pixel-native silhouette, precise details, and a calm on-chain identity. Mint stage: open. Price: 0.001 BNB.",
+  "image": "ipfs://REPLACE_WITH_IMAGES_CID/3246.png",
+  "external_url": "https://narobaagent.example/collection",
+  "token_id": 3246,
+  "prompt": "A strange drifter from the Naroba archive, carrying a pocket horizon. Archive Lilac signal, pixel-native silhouette, precise details, and a calm on-chain identity.",
+  "attributes": [
+    {
+      "trait_type": "Token ID",
+      "value": 3246
+    },
+    {
+      "trait_type": "Stage",
+      "value": "Open"
+    },
+    {
+      "trait_type": "Palette",
+      "value": "Archive Lilac"
+    },
+    {
+      "trait_type": "Mood",
+      "value": "Strange"
+    },
+    {
+      "trait_type": "Form",
+      "value": "Drifter"
+    },
+    {
+      "trait_type": "Visor",
+      "value": "Open"
+    },
+    {
+      "trait_type": "Antenna",
+      "value": "Grounded"
+    },
+    {
+      "trait_type": "Artifact",
+      "value": "A Pocket Horizon"
+    }
+  ]
+}

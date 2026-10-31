@@ -1,0 +1,42 @@
+{
+  "name": "Naroba Identity #6373",
+  "description": "A observant cartographer from the Naroba archive, carrying a tiny beacon. Checkpoint Amber signal, pixel-native silhouette, precise details, and a calm on-chain identity. Mint stage: open. Price: 0.001 BNB.",
+  "image": "ipfs://REPLACE_WITH_IMAGES_CID/6373.png",
+  "external_url": "https://narobaagent.example/collection",
+  "token_id": 6373,
+  "prompt": "A observant cartographer from the Naroba archive, carrying a tiny beacon. Checkpoint Amber signal, pixel-native silhouette, precise details, and a calm on-chain identity.",
+  "attributes": [
+    {
+      "trait_type": "Token ID",
+      "value": 6373
+    },
+    {
+      "trait_type": "Stage",
+      "value": "Open"
+    },
+    {
+      "trait_type": "Palette",
+      "value": "Checkpoint Amber"
+    },
+    {
+      "trait_type": "Mood",
+      "value": "Observant"
+    },
+    {
+      "trait_type": "Form",
+      "value": "Cartographer"
+    },
+    {
+      "trait_type": "Visor",
+      "value": "Active"
+    },
+    {
+      "trait_type": "Antenna",
+      "value": "Signal"
+    },
+    {
+      "trait_type": "Artifact",
+      "value": "A Tiny Beacon"
+    }
+  ]
+}

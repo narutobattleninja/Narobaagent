@@ -1,0 +1,42 @@
+{
+  "name": "Naroba Identity #1186",
+  "description": "A strange keeper from the Naroba archive, carrying a pocket horizon. Checkpoint Amber signal, pixel-native silhouette, precise details, and a calm on-chain identity. Mint stage: passage. Price: 0.000222 BNB.",
+  "image": "ipfs://REPLACE_WITH_IMAGES_CID/1186.png",
+  "external_url": "https://narobaagent.example/collection",
+  "token_id": 1186,
+  "prompt": "A strange keeper from the Naroba archive, carrying a pocket horizon. Checkpoint Amber signal, pixel-native silhouette, precise details, and a calm on-chain identity.",
+  "attributes": [
+    {
+      "trait_type": "Token ID",
+      "value": 1186
+    },
+    {
+      "trait_type": "Stage",
+      "value": "Passage"
+    },
+    {
+      "trait_type": "Palette",
+      "value": "Checkpoint Amber"
+    },
+    {
+      "trait_type": "Mood",
+      "value": "Strange"
+    },
+    {
+      "trait_type": "Form",
+      "value": "Keeper"
+    },
+    {
+      "trait_type": "Visor",
+      "value": "Active"
+    },
+    {
+      "trait_type": "Antenna",
+      "value": "Signal"
+    },
+    {
+      "trait_type": "Artifact",
+      "value": "A Pocket Horizon"
+    }
+  ]
+}

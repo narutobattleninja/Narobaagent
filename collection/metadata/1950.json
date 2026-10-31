@@ -1,0 +1,42 @@
+{
+  "name": "Naroba Identity #1950",
+  "description": "A electric cartographer from the Naroba archive, carrying a tiny beacon. Signal Lime signal, pixel-native silhouette, precise details, and a calm on-chain identity. Mint stage: passage. Price: 0.000222 BNB.",
+  "image": "ipfs://REPLACE_WITH_IMAGES_CID/1950.png",
+  "external_url": "https://narobaagent.example/collection",
+  "token_id": 1950,
+  "prompt": "A electric cartographer from the Naroba archive, carrying a tiny beacon. Signal Lime signal, pixel-native silhouette, precise details, and a calm on-chain identity.",
+  "attributes": [
+    {
+      "trait_type": "Token ID",
+      "value": 1950
+    },
+    {
+      "trait_type": "Stage",
+      "value": "Passage"
+    },
+    {
+      "trait_type": "Palette",
+      "value": "Signal Lime"
+    },
+    {
+      "trait_type": "Mood",
+      "value": "Electric"
+    },
+    {
+      "trait_type": "Form",
+      "value": "Cartographer"
+    },
+    {
+      "trait_type": "Visor",
+      "value": "Active"
+    },
+    {
+      "trait_type": "Antenna",
+      "value": "Grounded"
+    },
+    {
+      "trait_type": "Artifact",
+      "value": "A Tiny Beacon"
+    }
+  ]
+}

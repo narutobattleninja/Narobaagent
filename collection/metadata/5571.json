@@ -1,0 +1,42 @@
+{
+  "name": "Naroba Identity #5571",
+  "description": "A electric scout from the Naroba archive, carrying a packet of starlight. Signal Lime signal, pixel-native silhouette, precise details, and a calm on-chain identity. Mint stage: open. Price: 0.001 BNB.",
+  "image": "ipfs://REPLACE_WITH_IMAGES_CID/5571.png",
+  "external_url": "https://narobaagent.example/collection",
+  "token_id": 5571,
+  "prompt": "A electric scout from the Naroba archive, carrying a packet of starlight. Signal Lime signal, pixel-native silhouette, precise details, and a calm on-chain identity.",
+  "attributes": [
+    {
+      "trait_type": "Token ID",
+      "value": 5571
+    },
+    {
+      "trait_type": "Stage",
+      "value": "Open"
+    },
+    {
+      "trait_type": "Palette",
+      "value": "Signal Lime"
+    },
+    {
+      "trait_type": "Mood",
+      "value": "Electric"
+    },
+    {
+      "trait_type": "Form",
+      "value": "Scout"
+    },
+    {
+      "trait_type": "Visor",
+      "value": "Open"
+    },
+    {
+      "trait_type": "Antenna",
+      "value": "Signal"
+    },
+    {
+      "trait_type": "Artifact",
+      "value": "A Packet Of Starlight"
+    }
+  ]
+}

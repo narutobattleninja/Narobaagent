@@ -1,0 +1,42 @@
+{
+  "name": "Naroba Identity #9011",
+  "description": "A quiet scout from the Naroba archive, carrying a pocket horizon. Checkpoint Amber signal, pixel-native silhouette, precise details, and a calm on-chain identity. Mint stage: open. Price: 0.001 BNB.",
+  "image": "ipfs://REPLACE_WITH_IMAGES_CID/9011.png",
+  "external_url": "https://narobaagent.example/collection",
+  "token_id": 9011,
+  "prompt": "A quiet scout from the Naroba archive, carrying a pocket horizon. Checkpoint Amber signal, pixel-native silhouette, precise details, and a calm on-chain identity.",
+  "attributes": [
+    {
+      "trait_type": "Token ID",
+      "value": 9011
+    },
+    {
+      "trait_type": "Stage",
+      "value": "Open"
+    },
+    {
+      "trait_type": "Palette",
+      "value": "Checkpoint Amber"
+    },
+    {
+      "trait_type": "Mood",
+      "value": "Quiet"
+    },
+    {
+      "trait_type": "Form",
+      "value": "Scout"
+    },
+    {
+      "trait_type": "Visor",
+      "value": "Open"
+    },
+    {
+      "trait_type": "Antenna",
+      "value": "Grounded"
+    },
+    {
+      "trait_type": "Artifact",
+      "value": "A Pocket Horizon"
+    }
+  ]
+}

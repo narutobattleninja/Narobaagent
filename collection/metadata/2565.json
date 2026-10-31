@@ -1,0 +1,42 @@
+{
+  "name": "Naroba Identity #2565",
+  "description": "A electric courier from the Naroba archive, carrying a tiny beacon. Static Blue signal, pixel-native silhouette, precise details, and a calm on-chain identity. Mint stage: passage. Price: 0.000222 BNB.",
+  "image": "ipfs://REPLACE_WITH_IMAGES_CID/2565.png",
+  "external_url": "https://narobaagent.example/collection",
+  "token_id": 2565,
+  "prompt": "A electric courier from the Naroba archive, carrying a tiny beacon. Static Blue signal, pixel-native silhouette, precise details, and a calm on-chain identity.",
+  "attributes": [
+    {
+      "trait_type": "Token ID",
+      "value": 2565
+    },
+    {
+      "trait_type": "Stage",
+      "value": "Passage"
+    },
+    {
+      "trait_type": "Palette",
+      "value": "Static Blue"
+    },
+    {
+      "trait_type": "Mood",
+      "value": "Electric"
+    },
+    {
+      "trait_type": "Form",
+      "value": "Courier"
+    },
+    {
+      "trait_type": "Visor",
+      "value": "Active"
+    },
+    {
+      "trait_type": "Antenna",
+      "value": "Grounded"
+    },
+    {
+      "trait_type": "Artifact",
+      "value": "A Tiny Beacon"
+    }
+  ]
+}

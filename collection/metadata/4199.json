@@ -1,0 +1,42 @@
+{
+  "name": "Naroba Identity #4199",
+  "description": "A strange cartographer from the Naroba archive, carrying a glass signal. Archive Lilac signal, pixel-native silhouette, precise details, and a calm on-chain identity. Mint stage: open. Price: 0.001 BNB.",
+  "image": "ipfs://REPLACE_WITH_IMAGES_CID/4199.png",
+  "external_url": "https://narobaagent.example/collection",
+  "token_id": 4199,
+  "prompt": "A strange cartographer from the Naroba archive, carrying a glass signal. Archive Lilac signal, pixel-native silhouette, precise details, and a calm on-chain identity.",
+  "attributes": [
+    {
+      "trait_type": "Token ID",
+      "value": 4199
+    },
+    {
+      "trait_type": "Stage",
+      "value": "Open"
+    },
+    {
+      "trait_type": "Palette",
+      "value": "Archive Lilac"
+    },
+    {
+      "trait_type": "Mood",
+      "value": "Strange"
+    },
+    {
+      "trait_type": "Form",
+      "value": "Cartographer"
+    },
+    {
+      "trait_type": "Visor",
+      "value": "Open"
+    },
+    {
+      "trait_type": "Antenna",
+      "value": "Grounded"
+    },
+    {
+      "trait_type": "Artifact",
+      "value": "A Glass Signal"
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "name": "Naroba Identity #0289",
+  "description": "A patient scout from the Naroba archive, carrying a glass signal. Checkpoint Amber signal, pixel-native silhouette, precise details, and a calm on-chain identity. Mint stage: freemint. Price: FREE.",
+  "image": "ipfs://REPLACE_WITH_IMAGES_CID/0289.png",
+  "external_url": "https://narobaagent.example/collection",
+  "token_id": 289,
+  "prompt": "A patient scout from the Naroba archive, carrying a glass signal. Checkpoint Amber signal, pixel-native silhouette, precise details, and a calm on-chain identity.",
+  "attributes": [
+    {
+      "trait_type": "Token ID",
+      "value": 289
+    },
+    {
+      "trait_type": "Stage",
+      "value": "Freemint"
+    },
+    {
+      "trait_type": "Palette",
+      "value": "Checkpoint Amber"
+    },
+    {
+      "trait_type": "Mood",
+      "value": "Patient"
+    },
+    {
+      "trait_type": "Form",
+      "value": "Scout"
+    },
+    {
+      "trait_type": "Visor",
+      "value": "Open"
+    },
+    {
+      "trait_type": "Antenna",
+      "value": "Signal"
+    },
+    {
+      "trait_type": "Artifact",
+      "value": "A Glass Signal"
+    }
+  ]
+}

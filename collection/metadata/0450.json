@@ -1,0 +1,42 @@
+{
+  "name": "Naroba Identity #0450",
+  "description": "A patient drifter from the Naroba archive, carrying an amber key. Archive Lilac signal, pixel-native silhouette, precise details, and a calm on-chain identity. Mint stage: freemint. Price: FREE.",
+  "image": "ipfs://REPLACE_WITH_IMAGES_CID/0450.png",
+  "external_url": "https://narobaagent.example/collection",
+  "token_id": 450,
+  "prompt": "A patient drifter from the Naroba archive, carrying an amber key. Archive Lilac signal, pixel-native silhouette, precise details, and a calm on-chain identity.",
+  "attributes": [
+    {
+      "trait_type": "Token ID",
+      "value": 450
+    },
+    {
+      "trait_type": "Stage",
+      "value": "Freemint"
+    },
+    {
+      "trait_type": "Palette",
+      "value": "Archive Lilac"
+    },
+    {
+      "trait_type": "Mood",
+      "value": "Patient"
+    },
+    {
+      "trait_type": "Form",
+      "value": "Drifter"
+    },
+    {
+      "trait_type": "Visor",
+      "value": "Active"
+    },
+    {
+      "trait_type": "Antenna",
+      "value": "Signal"
+    },
+    {
+      "trait_type": "Artifact",
+      "value": "An Amber Key"
+    }
+  ]
+}

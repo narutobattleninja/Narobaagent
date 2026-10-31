@@ -1,0 +1,42 @@
+{
+  "name": "Naroba Identity #1308",
+  "description": "A restless listener from the Naroba archive, carrying a packet of starlight. Signal Lime signal, pixel-native silhouette, precise details, and a calm on-chain identity. Mint stage: passage. Price: 0.000222 BNB.",
+  "image": "ipfs://REPLACE_WITH_IMAGES_CID/1308.png",
+  "external_url": "https://narobaagent.example/collection",
+  "token_id": 1308,
+  "prompt": "A restless listener from the Naroba archive, carrying a packet of starlight. Signal Lime signal, pixel-native silhouette, precise details, and a calm on-chain identity.",
+  "attributes": [
+    {
+      "trait_type": "Token ID",
+      "value": 1308
+    },
+    {
+      "trait_type": "Stage",
+      "value": "Passage"
+    },
+    {
+      "trait_type": "Palette",
+      "value": "Signal Lime"
+    },
+    {
+      "trait_type": "Mood",
+      "value": "Restless"
+    },
+    {
+      "trait_type": "Form",
+      "value": "Listener"
+    },
+    {
+      "trait_type": "Visor",
+      "value": "Active"
+    },
+    {
+      "trait_type": "Antenna",
+      "value": "Grounded"
+    },
+    {
+      "trait_type": "Artifact",
+      "value": "A Packet Of Starlight"
+    }
+  ]
+}

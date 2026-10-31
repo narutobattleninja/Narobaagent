@@ -1,0 +1,42 @@
+{
+  "name": "Naroba Identity #9913",
+  "description": "A observant keeper from the Naroba archive, carrying a tiny beacon. Checkpoint Amber signal, pixel-native silhouette, precise details, and a calm on-chain identity. Mint stage: open. Price: 0.001 BNB.",
+  "image": "ipfs://REPLACE_WITH_IMAGES_CID/9913.png",
+  "external_url": "https://narobaagent.example/collection",
+  "token_id": 9913,
+  "prompt": "A observant keeper from the Naroba archive, carrying a tiny beacon. Checkpoint Amber signal, pixel-native silhouette, precise details, and a calm on-chain identity.",
+  "attributes": [
+    {
+      "trait_type": "Token ID",
+      "value": 9913
+    },
+    {
+      "trait_type": "Stage",
+      "value": "Open"
+    },
+    {
+      "trait_type": "Palette",
+      "value": "Checkpoint Amber"
+    },
+    {
+      "trait_type": "Mood",
+      "value": "Observant"
+    },
+    {
+      "trait_type": "Form",
+      "value": "Keeper"
+    },
+    {
+      "trait_type": "Visor",
+      "value": "Active"
+    },
+    {
+      "trait_type": "Antenna",
+      "value": "Signal"
+    },
+    {
+      "trait_type": "Artifact",
+      "value": "A Tiny Beacon"
+    }
+  ]
+}

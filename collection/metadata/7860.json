@@ -1,0 +1,42 @@
+{
+  "name": "Naroba Identity #7860",
+  "description": "A quiet courier from the Naroba archive, carrying an amber key. Signal Lime signal, pixel-native silhouette, precise details, and a calm on-chain identity. Mint stage: open. Price: 0.001 BNB.",
+  "image": "ipfs://REPLACE_WITH_IMAGES_CID/7860.png",
+  "external_url": "https://narobaagent.example/collection",
+  "token_id": 7860,
+  "prompt": "A quiet courier from the Naroba archive, carrying an amber key. Signal Lime signal, pixel-native silhouette, precise details, and a calm on-chain identity.",
+  "attributes": [
+    {
+      "trait_type": "Token ID",
+      "value": 7860
+    },
+    {
+      "trait_type": "Stage",
+      "value": "Open"
+    },
+    {
+      "trait_type": "Palette",
+      "value": "Signal Lime"
+    },
+    {
+      "trait_type": "Mood",
+      "value": "Quiet"
+    },
+    {
+      "trait_type": "Form",
+      "value": "Courier"
+    },
+    {
+      "trait_type": "Visor",
+      "value": "Active"
+    },
+    {
+      "trait_type": "Antenna",
+      "value": "Grounded"
+    },
+    {
+      "trait_type": "Artifact",
+      "value": "An Amber Key"
+    }
+  ]
+}

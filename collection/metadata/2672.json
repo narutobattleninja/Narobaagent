@@ -1,0 +1,42 @@
+{
+  "name": "Naroba Identity #2672",
+  "description": "A restless cartographer from the Naroba archive, carrying a tiny beacon. Checkpoint Amber signal, pixel-native silhouette, precise details, and a calm on-chain identity. Mint stage: passage. Price: 0.000222 BNB.",
+  "image": "ipfs://REPLACE_WITH_IMAGES_CID/2672.png",
+  "external_url": "https://narobaagent.example/collection",
+  "token_id": 2672,
+  "prompt": "A restless cartographer from the Naroba archive, carrying a tiny beacon. Checkpoint Amber signal, pixel-native silhouette, precise details, and a calm on-chain identity.",
+  "attributes": [
+    {
+      "trait_type": "Token ID",
+      "value": 2672
+    },
+    {
+      "trait_type": "Stage",
+      "value": "Passage"
+    },
+    {
+      "trait_type": "Palette",
+      "value": "Checkpoint Amber"
+    },
+    {
+      "trait_type": "Mood",
+      "value": "Restless"
+    },
+    {
+      "trait_type": "Form",
+      "value": "Cartographer"
+    },
+    {
+      "trait_type": "Visor",
+      "value": "Active"
+    },
+    {
+      "trait_type": "Antenna",
+      "value": "Grounded"
+    },
+    {
+      "trait_type": "Artifact",
+      "value": "A Tiny Beacon"
+    }
+  ]
+}

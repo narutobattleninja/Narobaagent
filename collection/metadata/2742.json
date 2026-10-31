@@ -1,0 +1,42 @@
+{
+  "name": "Naroba Identity #2742",
+  "description": "A electric listener from the Naroba archive, carrying a folded star map. Archive Lilac signal, pixel-native silhouette, precise details, and a calm on-chain identity. Mint stage: passage. Price: 0.000222 BNB.",
+  "image": "ipfs://REPLACE_WITH_IMAGES_CID/2742.png",
+  "external_url": "https://narobaagent.example/collection",
+  "token_id": 2742,
+  "prompt": "A electric listener from the Naroba archive, carrying a folded star map. Archive Lilac signal, pixel-native silhouette, precise details, and a calm on-chain identity.",
+  "attributes": [
+    {
+      "trait_type": "Token ID",
+      "value": 2742
+    },
+    {
+      "trait_type": "Stage",
+      "value": "Passage"
+    },
+    {
+      "trait_type": "Palette",
+      "value": "Archive Lilac"
+    },
+    {
+      "trait_type": "Mood",
+      "value": "Electric"
+    },
+    {
+      "trait_type": "Form",
+      "value": "Listener"
+    },
+    {
+      "trait_type": "Visor",
+      "value": "Active"
+    },
+    {
+      "trait_type": "Antenna",
+      "value": "Signal"
+    },
+    {
+      "trait_type": "Artifact",
+      "value": "A Folded Star Map"
+    }
+  ]
+}

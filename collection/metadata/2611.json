@@ -1,0 +1,42 @@
+{
+  "name": "Naroba Identity #2611",
+  "description": "A patient cartographer from the Naroba archive, carrying a folded star map. Archive Lilac signal, pixel-native silhouette, precise details, and a calm on-chain identity. Mint stage: passage. Price: 0.000222 BNB.",
+  "image": "ipfs://REPLACE_WITH_IMAGES_CID/2611.png",
+  "external_url": "https://narobaagent.example/collection",
+  "token_id": 2611,
+  "prompt": "A patient cartographer from the Naroba archive, carrying a folded star map. Archive Lilac signal, pixel-native silhouette, precise details, and a calm on-chain identity.",
+  "attributes": [
+    {
+      "trait_type": "Token ID",
+      "value": 2611
+    },
+    {
+      "trait_type": "Stage",
+      "value": "Passage"
+    },
+    {
+      "trait_type": "Palette",
+      "value": "Archive Lilac"
+    },
+    {
+      "trait_type": "Mood",
+      "value": "Patient"
+    },
+    {
+      "trait_type": "Form",
+      "value": "Cartographer"
+    },
+    {
+      "trait_type": "Visor",
+      "value": "Open"
+    },
+    {
+      "trait_type": "Antenna",
+      "value": "Signal"
+    },
+    {
+      "trait_type": "Artifact",
+      "value": "A Folded Star Map"
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "name": "Naroba Identity #6775",
+  "description": "A restless keeper from the Naroba archive, carrying a tiny beacon. Checkpoint Amber signal, pixel-native silhouette, precise details, and a calm on-chain identity. Mint stage: open. Price: 0.001 BNB.",
+  "image": "ipfs://REPLACE_WITH_IMAGES_CID/6775.png",
+  "external_url": "https://narobaagent.example/collection",
+  "token_id": 6775,
+  "prompt": "A restless keeper from the Naroba archive, carrying a tiny beacon. Checkpoint Amber signal, pixel-native silhouette, precise details, and a calm on-chain identity.",
+  "attributes": [
+    {
+      "trait_type": "Token ID",
+      "value": 6775
+    },
+    {
+      "trait_type": "Stage",
+      "value": "Open"
+    },
+    {
+      "trait_type": "Palette",
+      "value": "Checkpoint Amber"
+    },
+    {
+      "trait_type": "Mood",
+      "value": "Restless"
+    },
+    {
+      "trait_type": "Form",
+      "value": "Keeper"
+    },
+    {
+      "trait_type": "Visor",
+      "value": "Active"
+    },
+    {
+      "trait_type": "Antenna",
+      "value": "Grounded"
+    },
+    {
+      "trait_type": "Artifact",
+      "value": "A Tiny Beacon"
+    }
+  ]
+}

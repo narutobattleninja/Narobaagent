@@ -18,4 +18,8 @@ Narobaagent is a dark, pixel-art NFT mint experience for the Naroba identity arc
 
 The current frontend uses a safe demo flow until the production chain, contract address, ABI, and wallet provider are configured. The mint console supports pasted wallet prompts, AI-agent prompt generation, tier-aware pricing, and a filterable identity gallery.
 
+## NFT assets and metadata
+
+The `collection/` directory now contains 10,000 deterministic 128×128 PNG identities, 10,000 ERC-721 metadata JSON files, and a token-to-asset manifest. Rebuild or verify the collection with `python3 scripts/generate_collection.py --count 10000` and `python3 scripts/verify_collection.py --collection collection --supply 10000`. Use `PINATA_JWT=... node scripts/pin_to_ipfs.mjs` to pin the image and metadata folders to IPFS, then set the resulting metadata CID as the NFT contract base URI. The Solidity URI helper is in `contracts/NarobaMetadataURI.sol`.
+
 Platform configuration is readable and editable through `webdev.config`. Private keys stay server-side.

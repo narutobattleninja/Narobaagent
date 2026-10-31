@@ -1,0 +1,42 @@
+{
+  "name": "Naroba Identity #9129",
+  "description": "A electric courier from the Naroba archive, carrying an amber key. Static Blue signal, pixel-native silhouette, precise details, and a calm on-chain identity. Mint stage: open. Price: 0.001 BNB.",
+  "image": "ipfs://REPLACE_WITH_IMAGES_CID/9129.png",
+  "external_url": "https://narobaagent.example/collection",
+  "token_id": 9129,
+  "prompt": "A electric courier from the Naroba archive, carrying an amber key. Static Blue signal, pixel-native silhouette, precise details, and a calm on-chain identity.",
+  "attributes": [
+    {
+      "trait_type": "Token ID",
+      "value": 9129
+    },
+    {
+      "trait_type": "Stage",
+      "value": "Open"
+    },
+    {
+      "trait_type": "Palette",
+      "value": "Static Blue"
+    },
+    {
+      "trait_type": "Mood",
+      "value": "Electric"
+    },
+    {
+      "trait_type": "Form",
+      "value": "Courier"
+    },
+    {
+      "trait_type": "Visor",
+      "value": "Active"
+    },
+    {
+      "trait_type": "Antenna",
+      "value": "Signal"
+    },
+    {
+      "trait_type": "Artifact",
+      "value": "An Amber Key"
+    }
+  ]
+}

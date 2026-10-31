@@ -1,0 +1,42 @@
+{
+  "name": "Naroba Identity #1726",
+  "description": "A quiet keeper from the Naroba archive, carrying a glass signal. Checkpoint Amber signal, pixel-native silhouette, precise details, and a calm on-chain identity. Mint stage: passage. Price: 0.000222 BNB.",
+  "image": "ipfs://REPLACE_WITH_IMAGES_CID/1726.png",
+  "external_url": "https://narobaagent.example/collection",
+  "token_id": 1726,
+  "prompt": "A quiet keeper from the Naroba archive, carrying a glass signal. Checkpoint Amber signal, pixel-native silhouette, precise details, and a calm on-chain identity.",
+  "attributes": [
+    {
+      "trait_type": "Token ID",
+      "value": 1726
+    },
+    {
+      "trait_type": "Stage",
+      "value": "Passage"
+    },
+    {
+      "trait_type": "Palette",
+      "value": "Checkpoint Amber"
+    },
+    {
+      "trait_type": "Mood",
+      "value": "Quiet"
+    },
+    {
+      "trait_type": "Form",
+      "value": "Keeper"
+    },
+    {
+      "trait_type": "Visor",
+      "value": "Active"
+    },
+    {
+      "trait_type": "Antenna",
+      "value": "Grounded"
+    },
+    {
+      "trait_type": "Artifact",
+      "value": "A Glass Signal"
+    }
+  ]
+}

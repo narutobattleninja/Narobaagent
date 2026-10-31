@@ -1,0 +1,42 @@
+{
+  "name": "Naroba Identity #9413",
+  "description": "A patient scout from the Naroba archive, carrying a glass signal. Static Blue signal, pixel-native silhouette, precise details, and a calm on-chain identity. Mint stage: open. Price: 0.001 BNB.",
+  "image": "ipfs://REPLACE_WITH_IMAGES_CID/9413.png",
+  "external_url": "https://narobaagent.example/collection",
+  "token_id": 9413,
+  "prompt": "A patient scout from the Naroba archive, carrying a glass signal. Static Blue signal, pixel-native silhouette, precise details, and a calm on-chain identity.",
+  "attributes": [
+    {
+      "trait_type": "Token ID",
+      "value": 9413
+    },
+    {
+      "trait_type": "Stage",
+      "value": "Open"
+    },
+    {
+      "trait_type": "Palette",
+      "value": "Static Blue"
+    },
+    {
+      "trait_type": "Mood",
+      "value": "Patient"
+    },
+    {
+      "trait_type": "Form",
+      "value": "Scout"
+    },
+    {
+      "trait_type": "Visor",
+      "value": "Active"
+    },
+    {
+      "trait_type": "Antenna",
+      "value": "Grounded"
+    },
+    {
+      "trait_type": "Artifact",
+      "value": "A Glass Signal"
+    }
+  ]
+}

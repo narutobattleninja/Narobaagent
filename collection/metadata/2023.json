@@ -1,0 +1,42 @@
+{
+  "name": "Naroba Identity #2023",
+  "description": "A patient scout from the Naroba archive, carrying a folded star map. Static Blue signal, pixel-native silhouette, precise details, and a calm on-chain identity. Mint stage: passage. Price: 0.000222 BNB.",
+  "image": "ipfs://REPLACE_WITH_IMAGES_CID/2023.png",
+  "external_url": "https://narobaagent.example/collection",
+  "token_id": 2023,
+  "prompt": "A patient scout from the Naroba archive, carrying a folded star map. Static Blue signal, pixel-native silhouette, precise details, and a calm on-chain identity.",
+  "attributes": [
+    {
+      "trait_type": "Token ID",
+      "value": 2023
+    },
+    {
+      "trait_type": "Stage",
+      "value": "Passage"
+    },
+    {
+      "trait_type": "Palette",
+      "value": "Static Blue"
+    },
+    {
+      "trait_type": "Mood",
+      "value": "Patient"
+    },
+    {
+      "trait_type": "Form",
+      "value": "Scout"
+    },
+    {
+      "trait_type": "Visor",
+      "value": "Active"
+    },
+    {
+      "trait_type": "Antenna",
+      "value": "Grounded"
+    },
+    {
+      "trait_type": "Artifact",
+      "value": "A Folded Star Map"
+    }
+  ]
+}

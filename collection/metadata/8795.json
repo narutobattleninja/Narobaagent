@@ -1,0 +1,42 @@
+{
+  "name": "Naroba Identity #8795",
+  "description": "A quiet cartographer from the Naroba archive, carrying a pocket horizon. Archive Lilac signal, pixel-native silhouette, precise details, and a calm on-chain identity. Mint stage: open. Price: 0.001 BNB.",
+  "image": "ipfs://REPLACE_WITH_IMAGES_CID/8795.png",
+  "external_url": "https://narobaagent.example/collection",
+  "token_id": 8795,
+  "prompt": "A quiet cartographer from the Naroba archive, carrying a pocket horizon. Archive Lilac signal, pixel-native silhouette, precise details, and a calm on-chain identity.",
+  "attributes": [
+    {
+      "trait_type": "Token ID",
+      "value": 8795
+    },
+    {
+      "trait_type": "Stage",
+      "value": "Open"
+    },
+    {
+      "trait_type": "Palette",
+      "value": "Archive Lilac"
+    },
+    {
+      "trait_type": "Mood",
+      "value": "Quiet"
+    },
+    {
+      "trait_type": "Form",
+      "value": "Cartographer"
+    },
+    {
+      "trait_type": "Visor",
+      "value": "Active"
+    },
+    {
+      "trait_type": "Antenna",
+      "value": "Signal"
+    },
+    {
+      "trait_type": "Artifact",
+      "value": "A Pocket Horizon"
+    }
+  ]
+}

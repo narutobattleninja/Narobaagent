@@ -1,0 +1,42 @@
+{
+  "name": "Naroba Identity #4237",
+  "description": "A quiet drifter from the Naroba archive, carrying a packet of starlight. Static Blue signal, pixel-native silhouette, precise details, and a calm on-chain identity. Mint stage: open. Price: 0.001 BNB.",
+  "image": "ipfs://REPLACE_WITH_IMAGES_CID/4237.png",
+  "external_url": "https://narobaagent.example/collection",
+  "token_id": 4237,
+  "prompt": "A quiet drifter from the Naroba archive, carrying a packet of starlight. Static Blue signal, pixel-native silhouette, precise details, and a calm on-chain identity.",
+  "attributes": [
+    {
+      "trait_type": "Token ID",
+      "value": 4237
+    },
+    {
+      "trait_type": "Stage",
+      "value": "Open"
+    },
+    {
+      "trait_type": "Palette",
+      "value": "Static Blue"
+    },
+    {
+      "trait_type": "Mood",
+      "value": "Quiet"
+    },
+    {
+      "trait_type": "Form",
+      "value": "Drifter"
+    },
+    {
+      "trait_type": "Visor",
+      "value": "Active"
+    },
+    {
+      "trait_type": "Antenna",
+      "value": "Signal"
+    },
+    {
+      "trait_type": "Artifact",
+      "value": "A Packet Of Starlight"
+    }
+  ]
+}

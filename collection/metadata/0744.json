@@ -1,0 +1,42 @@
+{
+  "name": "Naroba Identity #0744",
+  "description": "A quiet courier from the Naroba archive, carrying a folded star map. Checkpoint Amber signal, pixel-native silhouette, precise details, and a calm on-chain identity. Mint stage: freemint. Price: FREE.",
+  "image": "ipfs://REPLACE_WITH_IMAGES_CID/0744.png",
+  "external_url": "https://narobaagent.example/collection",
+  "token_id": 744,
+  "prompt": "A quiet courier from the Naroba archive, carrying a folded star map. Checkpoint Amber signal, pixel-native silhouette, precise details, and a calm on-chain identity.",
+  "attributes": [
+    {
+      "trait_type": "Token ID",
+      "value": 744
+    },
+    {
+      "trait_type": "Stage",
+      "value": "Freemint"
+    },
+    {
+      "trait_type": "Palette",
+      "value": "Checkpoint Amber"
+    },
+    {
+      "trait_type": "Mood",
+      "value": "Quiet"
+    },
+    {
+      "trait_type": "Form",
+      "value": "Courier"
+    },
+    {
+      "trait_type": "Visor",
+      "value": "Open"
+    },
+    {
+      "trait_type": "Antenna",
+      "value": "Signal"
+    },
+    {
+      "trait_type": "Artifact",
+      "value": "A Folded Star Map"
+    }
+  ]
+}

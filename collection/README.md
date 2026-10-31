@@ -1,0 +1,45 @@
+# Naroba collection pipeline
+
+The collection is generated deterministically from the token ID. Token `0001` will always produce the same PNG, prompt, traits, and metadata when regenerated with the same script version.
+
+## Generate the full 10,000-token collection
+
+From the repository root:
+
+```bash
+python3 scripts/generate_collection.py --count 10000
+```
+
+The generator writes:
+
+- `collection/images/0001.png` through `0010000.png`
+- `collection/metadata/0001.json` through `0010000.json`
+- `collection/collection.json`, a token-to-image and token-to-metadata manifest
+
+The files use a four-digit naming convention for token IDs below 1,000 and natural five-digit names above it, matching the Solidity helper's padded token URI rule.
+
+## Verify the mapping
+
+```bash
+python3 scripts/verify_collection.py --collection collection --supply 10000
+```
+
+## Pin to IPFS
+
+Create a Pinata JWT locally, then run:
+
+```bash
+PINATA_JWT='your-token' EXTERNAL_URL='https://your-domain.example/collection' node scripts/pin_to_ipfs.mjs
+```
+
+The script pins images first, rewrites every metadata `image` field to the real image CID, then pins metadata as a separate directory. It writes `collection/ipfs-manifest.json`. Never commit the JWT. After pinning, set the contract base URI to the metadata CID with the pattern:
+
+```text
+ipfs://<metadata-cid>/
+```
+
+The contract helper in `contracts/NarobaMetadataURI.sol` maps token `1` to `ipfs://<metadata-cid>/0001.json`, and each JSON points to the matching image under the image CID. The final CID values cannot be known until the pinning step has run.
+
+## Important deployment step
+
+An IPFS CID cannot be created offline. The repository now contains the reproducible PNG/metadata generator and the upload script, but the final CID and contract binding must be created with your own pinning account and then set on the deployed BNB Chain NFT contract.

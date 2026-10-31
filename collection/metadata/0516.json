@@ -1,0 +1,42 @@
+{
+  "name": "Naroba Identity #0516",
+  "description": "A electric courier from the Naroba archive, carrying a pocket horizon. Static Blue signal, pixel-native silhouette, precise details, and a calm on-chain identity. Mint stage: freemint. Price: FREE.",
+  "image": "ipfs://REPLACE_WITH_IMAGES_CID/0516.png",
+  "external_url": "https://narobaagent.example/collection",
+  "token_id": 516,
+  "prompt": "A electric courier from the Naroba archive, carrying a pocket horizon. Static Blue signal, pixel-native silhouette, precise details, and a calm on-chain identity.",
+  "attributes": [
+    {
+      "trait_type": "Token ID",
+      "value": 516
+    },
+    {
+      "trait_type": "Stage",
+      "value": "Freemint"
+    },
+    {
+      "trait_type": "Palette",
+      "value": "Static Blue"
+    },
+    {
+      "trait_type": "Mood",
+      "value": "Electric"
+    },
+    {
+      "trait_type": "Form",
+      "value": "Courier"
+    },
+    {
+      "trait_type": "Visor",
+      "value": "Active"
+    },
+    {
+      "trait_type": "Antenna",
+      "value": "Grounded"
+    },
+    {
+      "trait_type": "Artifact",
+      "value": "A Pocket Horizon"
+    }
+  ]
+}
