@@ -33,4 +33,15 @@
 
 - [x] Layout desktop asimetris dan layout mobile yang dapat discroll dengan nyaman.
 - [x] Register route manifest `/manus-routes.json`.
-- [ ] Hubungkan alamat kontrak, chain, dan fungsi wallet provider nyata setelah detail deployment kontrak diberikan.
+- [ ] Hubungkan tombol mint homepage ke address kontrak yang sudah dideploy; deploy console saja belum mengaktifkan mint publik.
+
+
+## Owner deploy console — complete
+
+- [x] Sediakan halaman langsung `/deploy.html` dengan alur sambungkan wallet, pilih BNB Testnet/Mainnet, lalu deploy.
+- [x] Tambahkan kontrak ERC-721 suplai 10.000 dengan tahap 1.000 free, 8.000 × 0.000222 BNB, dan 1.000 × 0.001 BNB.
+- [x] Pastikan deploy membuat wallet deployer sebagai owner dan mint tetap tertutup sampai owner membuka secara terpisah.
+- [x] Tambahkan set Base URI, open/close mint, cek kontrak read-only, dan tarik hasil ke owner.
+- [x] Jelaskan IPFS CID, biaya gas, transaksi wallet, ketiadaan seed phrase/private-key prompts, serta bahwa mint console homepage belum terhubung ke kontrak.
+- [x] Bangun `deploy.html` sebagai entry multi-page, perbarui navigasi, dan invalidasi cache PWA lama.
+- [x] Verifikasi kompilasi Solidity, TypeScript, test suite, dan build statis sebelum push.

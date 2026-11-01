@@ -11,9 +11,18 @@ import path from "node:path";
 
 const jwt = process.env.PINATA_JWT;
 const collectionDir = process.env.COLLECTION_DIR || "collection";
-const externalUrl = process.env.EXTERNAL_URL || "https://narobaagent.example/collection";
+const externalUrl = process.env.EXTERNAL_URL || "https://naroba.info/#collection";
 if (!jwt) {
   console.error("Missing PINATA_JWT. Create a Pinata JWT and run again without committing it.");
+  process.exit(1);
+}
+try {
+  const parsedExternalUrl = new URL(externalUrl);
+  if (parsedExternalUrl.protocol !== "https:" || !parsedExternalUrl.hostname || parsedExternalUrl.hostname.endsWith(".example")) {
+    throw new Error("Use a real public HTTPS collection URL.");
+  }
+} catch (error) {
+  console.error(`Invalid EXTERNAL_URL: ${error.message}`);
   process.exit(1);
 }
 

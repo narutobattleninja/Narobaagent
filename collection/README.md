@@ -29,10 +29,10 @@ python3 scripts/verify_collection.py --collection collection --supply 10000
 Create a Pinata JWT locally, then run:
 
 ```bash
-PINATA_JWT='your-token' EXTERNAL_URL='https://your-domain.example/collection' node scripts/pin_to_ipfs.mjs
+PINATA_JWT='your-token' EXTERNAL_URL='https://naroba.info/#collection' node scripts/pin_to_ipfs.mjs
 ```
 
-The script pins images first, rewrites every metadata `image` field to the real image CID, then pins metadata as a separate directory. It writes `collection/ipfs-manifest.json`. Never commit the JWT. After pinning, set the contract base URI to the metadata CID with the pattern:
+The script defaults `EXTERNAL_URL` to `https://naroba.info/#collection`, rejects non-HTTPS and `.example` URLs, pins images first, rewrites every metadata `image` field to the real image CID, then pins metadata as a separate directory. It writes `collection/ipfs-manifest.json`. Never commit the JWT. After pinning, set the contract base URI to the metadata CID with the pattern:
 
 ```text
 ipfs://<metadata-cid>/

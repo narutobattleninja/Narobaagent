@@ -76,3 +76,12 @@ Logo berupa artefak `N` dari blok pixel hijau dan lilac dalam frame empat sudut,
 ### Signature brand color
 
 Naroba Signal — `#b9ff59`.
+
+
+## Contract deployment console
+
+Halaman multi-entry `/deploy.html` memakai alur tiga tahap seperti referensi Framlin: koneksi wallet owner, pemilihan BNB Testnet/Mainnet dan deploy ERC-721, lalu pengaturan Base URI serta kontrol open/close mint dan pemeriksaan read-only. Network awal adalah Testnet. Tidak ada private key atau seed phrase yang diminta; semua transaksi hanya menunggu tanda tangan eksplisit dari wallet.
+
+`contracts/NarobaNFT.sol` memakai OpenZeppelin ERC-721, menyimpan suplai/harga fase 1.000 gratis, 8.000 × 0.000222 BNB, dan 1.000 × 0.001 BNB, dengan mint tertutup ketika kontrak dibuat. Base URI harus disiapkan dari CID metadata IPFS sebelum mint dibuka. Dana mint tertahan di kontrak sampai owner menariknya. Homepage mint panel masih simulasi dan tidak otomatis terhubung oleh deploy; UI console mengingatkan agar mint tetap tertutup sampai binding frontend publik dikerjakan.
+
+Artifact ABI/bytecode dibuat ulang oleh `scripts/compile_naroba.mjs`; Vite membangun `index.html` dan `deploy.html` sebagai entry terpisah. `deploy.html` dirutekan langsung untuk GitHub Pages, dengan cache PWA dinaikkan agar halaman baru tidak tertutup cache lama.

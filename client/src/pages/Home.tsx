@@ -284,6 +284,7 @@ export default function Home() {
           <a href="#ritual" onClick={() => setMobileNav(false)}>How it works <span>02</span></a>
           <a href="#mint" onClick={() => setMobileNav(false)}>Mint <span>03</span></a>
           <a href="#install" onClick={() => setMobileNav(false)}>Install <span>04</span></a>
+          <a href="/deploy.html">Deploy <span>05</span></a>
         </nav>
         <button className={`connect-button ${connected ? "connect-button--connected" : ""}`} type="button" onClick={connectWalletPrompt}>
           <WalletCards size={15} />
@@ -374,7 +375,7 @@ export default function Home() {
             )}
             <div className="price-review"><div><span className="meta-label">Active stage</span><strong>{activeTier.label} <span>/ {activeTier.range}</span></strong></div><div className="price-review__amount"><span className="meta-label">Mint price</span><strong className={activeTier.id === "free" ? "is-free" : ""}>{activeTier.displayPrice}{activeTier.id !== "free" && <small> BNB</small>}</strong></div></div>
             <div className="console-action"><button className="mint-button" type="button" onClick={mintNow} disabled={status === "reviewing"}><span>{status === "reviewing" ? "Reviewing..." : status === "minted" ? "Mint another identity" : "Review & mint"}</span><ArrowUpRight size={17} /></button><div className={`mint-status mint-status--${status}`}><span className="mint-status__icon">{status === "minted" ? <Check size={12} /> : status === "error" ? <X size={12} /> : <Radio size={12} />}</span>{statusMessage}</div></div>
-            <div className="contract-note"><Code2 size={14} /><span>BNB contract endpoint <strong>awaiting deployment binding</strong>.</span><CopyButton value={CONTRACT_WALLET} label="Copy BNB contract endpoint" /></div>
+            <div className="contract-note"><Code2 size={14} /><span>BNB contract endpoint <strong>awaiting deployment binding</strong>. <a href="/deploy.html">Open deploy console</a></span><CopyButton value={CONTRACT_WALLET} label="Copy BNB contract endpoint" /></div>
           </div>
         </section>
 
@@ -390,7 +391,7 @@ export default function Home() {
         </section>
       </main>
 
-      <footer className="site-footer section-pad"><div className="footer-brand"><PixelMark compact /><span>naroba</span></div><div className="footer-copy">A tiny signal from a bigger world.<br /><span>© 2026 Naroba identity archive.</span></div><div className="footer-links"><a href="#mint">Mint <ArrowUpRight size={13} /></a><a href="#collection">Collection <ArrowUpRight size={13} /></a><a href="#top">Back to top <ArrowUpRight size={13} /></a></div></footer>
+      <footer className="site-footer section-pad"><div className="footer-brand"><PixelMark compact /><span>naroba</span></div><div className="footer-copy">A tiny signal from a bigger world.<br /><span>© 2026 Naroba identity archive.</span></div><div className="footer-links"><a href="#mint">Mint <ArrowUpRight size={13} /></a><a href="#collection">Collection <ArrowUpRight size={13} /></a><a href="/deploy.html">Deploy contract <ArrowUpRight size={13} /></a><a href="#top">Back to top <ArrowUpRight size={13} /></a></div></footer>
     </div>
   );
 }

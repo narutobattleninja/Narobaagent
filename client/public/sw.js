@@ -1,6 +1,6 @@
-const CACHE_NAME = "naroba-shell-v3";
+const CACHE_NAME = "naroba-shell-v4";
 const CACHE_PREFIX = "naroba-shell-";
-const APP_SHELL = ["/", "/manifest.webmanifest", "/icons/naroba-logo.svg", "/nft/nrba-0001.png", "/nft/nrba-0638.png", "/nft/nrba-0771.png", "/nft/nrba-2814.png"];
+const APP_SHELL = ["/", "/deploy.html", "/manifest.webmanifest", "/icons/naroba-logo.svg", "/nft/nrba-0001.png", "/nft/nrba-0638.png", "/nft/nrba-0771.png", "/nft/nrba-2814.png"];
 
 self.addEventListener("install", (event) => {
   const freshRequests = APP_SHELL.map((url) => new Request(url, { cache: "reload" }));
