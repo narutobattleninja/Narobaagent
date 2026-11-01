@@ -87,7 +87,7 @@ const PROMPTS: Record<MintTier, string> = {
   open: "A signal keeper from the far edge of the archive, dark chrome shell, electric lime core, and one strange artifact held close. Pixel-art identity with a patient, observant mood.",
 };
  const seedPrompts = [
-   {   token: 1, tier: "free" as const, price: "FREE", prompt: "An observant listener with a Solar Gold signal, carrying a tiny beacon.", seed: 0, mintedAt: "20 min ago" },
+   { token: 1, tier: "free" as const, price: "FREE", prompt: "An observant listener with a Solar Gold signal, carrying a tiny beacon.", seed: 0, mintedAt: "20 min ago" },
 { token: 2, tier: "free" as const, price: "FREE", prompt: "An observant listener with an Ice Silver signal, carrying an amber key.", seed: 1, mintedAt: "18 min ago" },
 { token: 3, tier: "free" as const, price: "FREE", prompt: "A strange courier with a Neon Cyan signal, carrying a tiny beacon.", seed: 2, mintedAt: "16 min ago" },
 { token: 4, tier: "free" as const, price: "FREE", prompt: "A strange drifter with an Electric Blue signal, carrying a folded star map.", seed: 3, mintedAt: "14 min ago" },
