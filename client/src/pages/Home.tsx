@@ -52,6 +52,22 @@ const ARCHIVE_MINTED_START = 842;
 const CONTRACT_ADDRESS = "0x8cc34AaD007bF677FfED5E64e4a05c327609625d";
 const BSC_RPC_URL = "https://bsc-dataseed.binance.org/";
 const MINT_CALLDATA = "0x1249c58b";
+const AGENT_ID_PROMPT = `You are operating my Binance Agentic Wallet on BNB Smart Chain (chain ID 56).
+
+First, check the Naroba mint status on-chain before doing anything:
+- Contract: 0x8cc34AaD007bF677FfED5E64e4a05c327609625d
+- Read mintEnabled and totalMinted.
+- If mintEnabled is false, STOP and tell me "Mint is not open yet." Do not send any transaction.
+
+If mint is open, mint exactly 1 Naroba NFT for me:
+- Call mint() on 0x8cc34AaD007bF677FfED5E64e4a05c327609625d (calldata 0x1249c58b, no arguments, 1 token per call, token ID is sequential).
+- Value must be exact, based on the next token ID:
+  - Token #1-#1000: 0 BNB (gas only)
+  - Token #1001-#9000: 0.000222 BNB
+  - Token #9001-#10000: 0.001 BNB
+- Show me the preview first (next token ID, exact value, estimated gas) and wait for my approval before sending.
+- After the transaction confirms, report the transaction hash and the token ID I received.
+- Never approve other spenders, never transfer funds to unknown addresses, and never ask for my seed phrase or private key.`;
 
 type ChainState = { totalMinted: number; mintEnabled: boolean };
 
@@ -458,7 +474,6 @@ export default function Home() {
           <a href="#ritual" onClick={() => setMobileNav(false)}>How it works <span>02</span></a>
           <a href="#mint" onClick={() => setMobileNav(false)}>Mint <span>03</span></a>
           <a href="#install" onClick={() => setMobileNav(false)}>Install <span>04</span></a>
-          <a href="/deploy.html">Deploy <span>05</span></a>
         </nav>
         <button className={`connect-button ${connected ? "connect-button--connected" : ""}`} type="button" onClick={connectWalletPrompt}>
           <WalletCards size={15} />
@@ -553,6 +568,21 @@ export default function Home() {
           </div>
         </section>
 
+        <section className="section-pad" id="agent">
+          <div className="section-kicker">BINANCE AGENT ID</div>
+          <h2>Mint with your<br /><em>Binance agent.</em></h2>
+          <p>Own a Binance Agentic Wallet? Your AI agent can mint Naroba for you. No new contract is needed and the Naroba contract does not check Agent ID on-chain — your Agent ID is simply your agent wallet&apos;s readable .ai identity, and any wallet can mint once mint is open.</p>
+          <ol>
+            <li><strong>Claim your Agent ID.</strong> In the Binance Wallet app, open your Agentic Wallet and claim your .ai name from the Agent ID banner.</li>
+            <li><strong>Turn on Developer Mode.</strong> In your Agentic Wallet settings, enable Developer Mode and set a low daily spending limit. Without it, your agent cannot call custom contracts.</li>
+            <li><strong>Pair your agent.</strong> Connect your AI agent (Binance AI Pro or another supported agent) by scanning the pairing QR code in the Binance app. Never share your seed phrase or private key — an Agentic Wallet is keyless by design.</li>
+            <li><strong>Paste the prompt.</strong> Copy the prompt below, give it to your agent, review the preview, then approve. The agent checks mint status first and stops instead of sending a transaction if mint is not open yet.</li>
+          </ol>
+          <div style={{ marginTop: "20px", border: "1px solid var(--line)", borderRadius: "12px", padding: "16px" }}>
+            <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: "12px" }}><span className="section-kicker">AGENT PROMPT — COPY &amp; PASTE</span><CopyButton value={AGENT_ID_PROMPT} label="Copy agent prompt" /></div>
+            <pre style={{ marginTop: "12px", whiteSpace: "pre-wrap", wordBreak: "break-word", fontFamily: "'IBM Plex Mono', monospace", fontSize: "12px", lineHeight: "1.7" }}>{AGENT_ID_PROMPT}</pre>
+          </div>
+        </section>
         <section className="ritual-section section-pad" id="ritual">
           <div className="ritual-heading"><div><div className="section-kicker">THE NAROBA RITUAL</div><h2>Small prompt.<br /><em>Real identity.</em></h2></div><p>Nothing is hidden behind the pixel. Every identity keeps its prompt, its stage, and its place in the archive.</p></div>
           <div className="ritual-steps"><div className="ritual-step"><span>01</span><div><Link2 size={18} /><h3>Connect a channel</h3><p>Paste a wallet prompt or let the agent prepare one for you.</p></div></div><div className="ritual-step"><span>02</span><div><Layers3 size={18} /><h3>Shape the signal</h3><p>Review the exact words that will travel with your identity.</p></div></div><div className="ritual-step"><span>03</span><div><Zap size={18} /><h3>Enter the archive</h3><p>Mint the next open token and keep the trace in your gallery.</p></div></div></div>
@@ -565,7 +595,7 @@ export default function Home() {
         </section>
       </main>
 
-      <footer className="site-footer section-pad"><div className="footer-brand"><img src="/nft/nrba-0001.png" alt="Naroba NFT identity #0001" style={{ width: "32px", height: "32px", objectFit: "cover", borderRadius: "8px", border: "1px solid #b9ff59" }} /><span>naroba</span></div><div className="footer-copy">A tiny signal from a bigger world.<br /><span>© 2026 Naroba identity archive.</span><br /><span>Developer by <a href="https://x.com/404Naroba" target="_blank" rel="noreferrer" style={{ color: "inherit", textDecoration: "underline" }}>@404Naroba</a></span></div><div className="footer-links"><a href="#mint">Mint <ArrowUpRight size={13} /></a><a href="#collection">Collection <ArrowUpRight size={13} /></a><a href="/deploy.html">Deploy contract <ArrowUpRight size={13} /></a><a href="#top">Back to top <ArrowUpRight size={13} /></a></div></footer>
+      <footer className="site-footer section-pad"><div className="footer-brand"><img src="/nft/nrba-0001.png" alt="Naroba NFT identity #0001" style={{ width: "32px", height: "32px", objectFit: "cover", borderRadius: "8px", border: "1px solid #b9ff59" }} /><span>naroba</span></div><div className="footer-copy">A tiny signal from a bigger world.<br /><span>© 2026 Naroba identity archive.</span><br /><span>Developer by <a href="https://x.com/404Naroba" target="_blank" rel="noreferrer" style={{ color: "inherit", textDecoration: "underline" }}>@404Naroba</a></span></div><div className="footer-links"><a href="#mint">Mint <ArrowUpRight size={13} /></a><a href="#agent">Agent ID <ArrowUpRight size={13} /></a><a href="#collection">Collection <ArrowUpRight size={13} /></a><a href="#top">Back to top <ArrowUpRight size={13} /></a></div></footer>
     </div>
   );
 }
