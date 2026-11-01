@@ -1,0 +1,46 @@
+name: Fix Naroba metadata image URLs
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  fix-metadata:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v4
+      - name: Rewrite placeholder image and external URLs
+        run: |
+          python3 - << 'PY'
+          import pathlib
+          root = pathlib.Path('collection/metadata')
+          files = sorted(root.glob('*.json'))
+          assert len(files) == 10000, f'expected 10000 metadata files, found {len(files)}'
+          changed = 0
+          for f in files:
+              text = f.read_text()
+              new = text.replace('ipfs://REPLACE_WITH_IMAGES_CID/', 'https://naroba.info/collection/images/')
+              new = new.replace('https://narobaagent.example/collection', 'https://naroba.info/')
+              if new != text:
+                  f.write_text(new)
+                  changed += 1
+          print(f'changed {changed} files')
+          assert changed == 10000, f'expected 10000 changed, got {changed}'
+          PY
+      - name: Verify no placeholders remain
+        run: |
+          test "$(grep -rl 'REPLACE_WITH' collection/metadata/ | wc -l)" = "0"
+          test "$(grep -rl 'narobaagent.example' collection/metadata/ | wc -l)" = "0"
+          grep '"image": "https://naroba.info/collection/images/0001.png"' collection/metadata/0001.json
+          grep '"external_url": "https://naroba.info/"' collection/metadata/0001.json
+      - name: Commit fixed metadata
+        run: |
+          git config user.name "naroba-metadata-fix"
+          git config user.email "naroba-metadata-fix@users.noreply.github.com"
+          git add collection/metadata
+          git diff --cached --quiet && echo "no changes" && exit 0
+          git commit -m "fix: point collection metadata images to naroba.info hosting [skip ci]"
+          git push
