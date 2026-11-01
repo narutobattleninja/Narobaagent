@@ -565,7 +565,7 @@ export default function Home() {
         </section>
       </main>
 
-      <footer className="site-footer section-pad"><div className="footer-brand"><PixelMark compact /><span>naroba</span></div><div className="footer-copy">A tiny signal from a bigger world.<br /><span>© 2026 Naroba identity archive.</span></div><div className="footer-links"><a href="#mint">Mint <ArrowUpRight size={13} /></a><a href="#collection">Collection <ArrowUpRight size={13} /></a><a href="/deploy.html">Deploy contract <ArrowUpRight size={13} /></a><a href="#top">Back to top <ArrowUpRight size={13} /></a></div></footer>
+      <footer className="site-footer section-pad"><div className="footer-brand"><img src="/nft/nrba-0001.png" alt="Naroba NFT identity #0001" style={{ width: "32px", height: "32px", objectFit: "cover", borderRadius: "8px", border: "1px solid #b9ff59" }} /><span>naroba</span></div><div className="footer-copy">A tiny signal from a bigger world.<br /><span>© 2026 Naroba identity archive.</span></div><div className="footer-links"><a href="#mint">Mint <ArrowUpRight size={13} /></a><a href="#collection">Collection <ArrowUpRight size={13} /></a><a href="/deploy.html">Deploy contract <ArrowUpRight size={13} /></a><a href="#top">Back to top <ArrowUpRight size={13} /></a></div></footer>
     </div>
   );
 }
