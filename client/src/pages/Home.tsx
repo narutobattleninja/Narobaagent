@@ -86,12 +86,18 @@ const PROMPTS: Record<MintTier, string> = {
   passage: "A night courier crossing the Naroba threshold, lilac visor, amber checkpoint light, and a tiny packet of starlight. Pixel-art identity, calm posture, precise details.",
   open: "A signal keeper from the far edge of the archive, dark chrome shell, electric lime core, and one strange artifact held close. Pixel-art identity with a patient, observant mood.",
 };
-
-const seedPrompts = [
-  { token: 771, tier: "free" as const, price: "FREE", prompt: "A patient scout with a lime signal and a pocket-sized horizon.", seed: 1, mintedAt: "2 min ago" },
-  { token: 638, tier: "free" as const, price: "FREE", prompt: "A soft-static listener carrying a tiny beacon through the dark.", seed: 2, mintedAt: "5 min ago" },
-  { token: 2814, tier: "passage" as const, price: "0.000222", prompt: "A threshold courier with a lilac visor and amber checkpoint light.", seed: 3, mintedAt: "8 min ago" },
-];
+ const seedPrompts = [
+   {   token: 1, tier: "free" as const, price: "FREE", prompt: "An observant listener with a Solar Gold signal, carrying a tiny beacon.", seed: 0, mintedAt: "20 min ago" },
+{ token: 2, tier: "free" as const, price: "FREE", prompt: "An observant listener with an Ice Silver signal, carrying an amber key.", seed: 1, mintedAt: "18 min ago" },
+{ token: 3, tier: "free" as const, price: "FREE", prompt: "A strange courier with a Neon Cyan signal, carrying a tiny beacon.", seed: 2, mintedAt: "16 min ago" },
+{ token: 4, tier: "free" as const, price: "FREE", prompt: "A strange drifter with an Electric Blue signal, carrying a folded star map.", seed: 3, mintedAt: "14 min ago" },
+{ token: 5, tier: "free" as const, price: "FREE", prompt: "An observant drifter with an Electric Blue signal, carrying a packet of starlight.", seed: 4, mintedAt: "12 min ago" },
+   { token: 6, tier: "free" as const, price: "FREE", prompt: "An observant listener with an Ice Silver signal, carrying a pocket horizon.", seed: 5, mintedAt: "10 min ago" },
+   { token: 7, tier: "free" as const, price: "FREE", prompt: "A strange listener with a Solar Gold signal, carrying a folded star map.", seed: 6, mintedAt: "8 min ago" },
+   { token: 8, tier: "free" as const, price: "FREE", prompt: "An electric drifter with an Emerald Signal, carrying a pocket horizon.", seed: 7, mintedAt: "6 min ago" },
+   { token: 9, tier: "free" as const, price: "FREE", prompt: "An electric keeper with a Solar Gold signal, carrying a pocket horizon.", seed: 8, mintedAt: "4 min ago" },
+   { token: 10, tier: "free" as const, price: "FREE", prompt: "An electric cartographer with an Ice Silver signal, carrying an amber key.", seed: 9, mintedAt: "2 min ago" },
+ ];
 
 const stageCards = [
   { id: "free" as const, index: "01", label: "First signal", price: "FREE", range: "1,000 spots", note: "The first 1,000 tokens are free." },
@@ -138,7 +144,7 @@ function PixelAvatar({ seed = 1, small = false }: { seed?: number; small?: boole
 }
 
 function nftPreviewForSeed(seed: number) {
-  const previews = ["nrba-0001.png", "nrba-0638.png", "nrba-2814.png", "nrba-0771.png"];
+    const previews = ["nrba-0001.png", "nrba-0002.png", "nrba-0003.png", "nrba-0004.png", "nrba-0005.png", "nrba-0006.png", "nrba-0007.png", "nrba-0008.png", "nrba-0009.png", "nrba-0010.png"];
   return `/nft/${previews[Math.abs(seed) % previews.length]}`;
 }
 
