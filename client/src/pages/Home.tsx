@@ -297,9 +297,6 @@ export default function Home() {
   const activeTier = tierForToken(nextToken);
   const displayToken = chainMinted === null ? nextToken : Math.min(chainMinted + 1, SUPPLY);
   const displayTier = tierForToken(displayToken);
-  const progress = (minted / SUPPLY) * 100;
-  const remaining = SUPPLY - minted;
-
   useEffect(() => {
     if (route === "wallet") {
       setWalletPrompt(PROMPTS[activeTier.id]);
@@ -315,6 +312,14 @@ export default function Home() {
       .catch(() => {
         setStatusMessage("On-chain read unavailable. Connect a wallet to mint.");
       });
+        const timer = window.setInterval(() => {
+          readChainState()
+                  .then((state) => setChainMinted(state.totalMinted))
+                  .catch(() => {});
+        }, 30000);
+        return () => window.clearInterval(timer);
+             
+  
   }, []);
 
   useEffect(() => {
@@ -516,7 +521,7 @@ export default function Home() {
 
         <section className="supply-bar section-pad" id="collection">
           <div className="supply-intro"><span className="section-kicker">COLLECTION STATUS</span><h2>Explorer archive <span>/</span> 10K</h2></div>
-          <div className="supply-progress"><div className="supply-progress__head"><span><strong>{minted.toLocaleString()}</strong> / {SUPPLY.toLocaleString()} minted</span><span>{progress.toFixed(1)}%</span></div><div className="progress-track"><div style={{ width: `${progress}%` }} /></div><div className="supply-progress__foot"><span>Archive supply snapshot</span><span>{remaining.toLocaleString()} remaining</span></div></div>
+          <div className="supply-progress"><div className="supply-progress__head"><span><strong>{chainMinted === null ? "…" : chainMinted.toLocaleString()}</strong> / {SUPPLY.toLocaleString()} minted</span><span>{chainMinted === null ? "…" : `${((chainMinted / SUPPLY) * 100).toFixed(1)}%`}</span></div><div className="progress-track"><div style={{ width: `${chainMinted === null ? 0 : (chainMinted / SUPPLY) * 100}%` }} /></div><div className="supply-progress__foot"><span>{chainMinted === null ? "Reading live count from BNB Chain…" : "Live on-chain · refreshes automatically"}</span><span>{chainMinted === null ? "…" : `${(SUPPLY - chainMinted).toLocaleString()} remaining`}</span></div></div>
           <div className="supply-stat"><span className="meta-label">Next token</span><strong>#{String(nextToken).padStart(4, "0")}</strong><span className={`stage-tag stage-tag--${activeTier.id}`}>{activeTier.label}</span></div>
         </section>
 
