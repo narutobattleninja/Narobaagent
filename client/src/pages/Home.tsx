@@ -37,6 +37,7 @@ type MintRecord = {
   prompt: string;
   mintedAt: string;
   seed: number;
+  image?: string;
 };
 
 type BeforeInstallPromptEvent = Event & {
@@ -48,7 +49,55 @@ const SUPPLY = 10_000;
 const FREE_MINT_END = 1_000;
 const PASSAGE_MINT_END = FREE_MINT_END + 8_000;
 const ARCHIVE_MINTED_START = 842;
-const CONTRACT_WALLET = "0xNAROBA_BNB_CONTRACT_CONFIGURE_ME";
+const CONTRACT_ADDRESS = "0x8cc34AaD007bF677FfED5E64e4a05c327609625d";
+const BSC_RPC_URL = "https://bsc-dataseed.binance.org/";
+const MINT_CALLDATA = "0x1249c58b";
+
+type ChainState = { totalMinted: number; mintEnabled: boolean };
+
+async function rpcEthCall(data: string): Promise<string> {
+  const res = await fetch(BSC_RPC_URL, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ jsonrpc: "2.0", method: "eth_call", params: [{ to: CONTRACT_ADDRESS, data }, "latest"], id: 1 }),
+  });
+  const json = (await res.json()) as { result?: string; error?: { message?: string } };
+  if (!json.result) throw new Error(json.error?.message ?? "Contract read failed.");
+  return json.result;
+}
+
+async function readChainState(): Promise<ChainState> {
+  const [mintedHex, openHex] = await Promise.all([rpcEthCall("0xa2309ff8"), rpcEthCall("0xd1239730")]);
+  return { totalMinted: Number.parseInt(mintedHex, 16), mintEnabled: BigInt(openHex) === 1n };
+}
+
+function priceWeiForToken(token: number): bigint {
+  if (token <= FREE_MINT_END) return 0n;
+  if (token <= PASSAGE_MINT_END) return 222000000000000n;
+  return 1000000000000000n;
+}
+
+function priceHexForToken(token: number): string {
+  return `0x${priceWeiForToken(token).toString(16)}`;
+}
+
+function shortAddress(address: string): string {
+  return `${address.slice(0, 6)}...${address.slice(-4)}`;
+}
+
+async function waitForReceipt(txHash: string): Promise<boolean> {
+  for (let i = 0; i < 60; i++) {
+    const res = await fetch(BSC_RPC_URL, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ jsonrpc: "2.0", method: "eth_getTransactionReceipt", params: [txHash], id: 1 }),
+    });
+    const json = (await res.json()) as { result?: { status?: string } | null };
+    if (json.result) return json.result.status === "0x1";
+    await new Promise((resolve) => window.setTimeout(resolve, 2000));
+  }
+  throw new Error("Transaction receipt timed out. Check the hash on BscScan.");
+}
 
 const tierForToken = (token: number) => {
   if (token <= FREE_MINT_END) {
@@ -177,6 +226,8 @@ export default function Home() {
   const [agentMood, setAgentMood] = useState("quiet");
   const [agentTrait, setAgentTrait] = useState("curious");
   const [connected, setConnected] = useState(false);
+  const [account, setAccount] = useState("");
+  const [chainMinted, setChainMinted] = useState<number | null>(null);
   const [status, setStatus] = useState<"ready" | "reviewing" | "minted" | "error">("ready");
   const [statusMessage, setStatusMessage] = useState("Prompt ready for review.");
   const [filter, setFilter] = useState<GalleryFilter>("all");
@@ -186,6 +237,8 @@ export default function Home() {
 
   const nextToken = Math.min(minted + 1, SUPPLY);
   const activeTier = tierForToken(nextToken);
+  const displayToken = chainMinted === null ? nextToken : Math.min(chainMinted + 1, SUPPLY);
+  const displayTier = tierForToken(displayToken);
   const progress = (minted / SUPPLY) * 100;
   const remaining = SUPPLY - minted;
 
@@ -194,6 +247,17 @@ export default function Home() {
       setWalletPrompt(PROMPTS[activeTier.id]);
     }
   }, [activeTier.id, route]);
+
+  useEffect(() => {
+    readChainState()
+      .then((state) => {
+        setChainMinted(state.totalMinted);
+        setStatusMessage(state.mintEnabled ? `On-chain: mint is open · next token #${String(Math.min(state.totalMinted + 1, SUPPLY)).padStart(4, "0")}.` : "On-chain: mint is not open yet. The owner has not opened mint.");
+      })
+      .catch(() => {
+        setStatusMessage("On-chain read unavailable. Connect a wallet to mint.");
+      });
+  }, []);
 
   useEffect(() => {
     const captureInstallPrompt = (event: Event) => {
@@ -209,10 +273,36 @@ export default function Home() {
     return gallery.filter((item) => item.tier === filter);
   }, [filter, gallery]);
 
-  const connectWalletPrompt = () => {
-    setConnected(true);
-    setStatus("ready");
-    setStatusMessage("Wallet prompt channel connected. Review before minting.");
+  const connectWalletPrompt = async () => {
+    try {
+      const wallet = window.ethereum;
+      if (!wallet) {
+        setStatus("error");
+        setStatusMessage("No wallet found. Open this page in your wallet's dApp browser (Binance Wallet, MetaMask, OKX or Trust).");
+        return;
+      }
+      const accounts = (await wallet.request({ method: "eth_requestAccounts" })) as string[];
+      if (!accounts[0]) throw new Error("No account returned.");
+      try {
+        await wallet.request({ method: "wallet_switchEthereumChain", params: [{ chainId: "0x38" }] });
+      } catch (switchError) {
+        const code = typeof switchError === "object" && switchError !== null ? (switchError as { code?: number }).code : undefined;
+        if (code === 4902) {
+          await wallet.request({ method: "wallet_addEthereumChain", params: [{ chainId: "0x38", chainName: "BNB Smart Chain", nativeCurrency: { name: "BNB", symbol: "BNB", decimals: 18 }, rpcUrls: [BSC_RPC_URL], blockExplorerUrls: ["https://bscscan.com"] }] });
+        } else {
+          throw switchError;
+        }
+      }
+      setAccount(accounts[0]);
+      setConnected(true);
+      setStatus("ready");
+      setStatusMessage(`Wallet connected · ${shortAddress(accounts[0])} · BNB Smart Chain.`);
+      const state = await readChainState();
+      setChainMinted(state.totalMinted);
+    } catch {
+      setStatus("error");
+      setStatusMessage("Wallet connection failed. Approve the connection in your wallet and try again.");
+    }
   };
 
   const generateAgentPrompt = () => {
@@ -234,34 +324,70 @@ export default function Home() {
     setInstallPrompt(null);
   };
 
-  const mintNow = () => {
+  const mintNow = async () => {
     if (!walletPrompt.trim()) {
       setStatus("error");
       setStatusMessage("Paste a wallet prompt or generate one with the agent first.");
       return;
     }
-    if (minted >= SUPPLY) {
+    if (!connected || !account) {
       setStatus("error");
-      setStatusMessage("The Naroba archive is closed. Supply is complete.");
+      setStatusMessage("Connect your wallet first.");
       return;
     }
-    setStatus("reviewing");
-    setStatusMessage(`Reviewing token #${String(nextToken).padStart(4, "0")} · ${activeTier.displayPrice === "FREE" ? "no mint price" : `${activeTier.displayPrice} BNB`}.`);
-    window.setTimeout(() => {
+    const wallet = window.ethereum;
+    if (!wallet) {
+      setStatus("error");
+      setStatusMessage("No wallet found. Open this page in your wallet's dApp browser.");
+      return;
+    }
+    try {
+      setStatus("reviewing");
+      setStatusMessage("Reading the contract for the next token and price...");
+      const state = await readChainState();
+      setChainMinted(state.totalMinted);
+      if (!state.mintEnabled) {
+        setStatus("error");
+        setStatusMessage("Mint is not open yet. The owner has not opened mint.");
+        return;
+      }
+      const tokenId = state.totalMinted + 1;
+      if (tokenId > SUPPLY) {
+        setStatus("error");
+        setStatusMessage("The Naroba archive is closed. Supply is complete.");
+        return;
+      }
+      const tier = tierForToken(tokenId);
+      setStatusMessage(`Review token #${String(tokenId).padStart(4, "0")} · ${tier.displayPrice === "FREE" ? "no mint price (gas only)" : `${tier.displayPrice} BNB`} · check the value in your wallet before signing.`);
+      const txHash = (await wallet.request({
+        method: "eth_sendTransaction",
+        params: [{ from: account, to: CONTRACT_ADDRESS, value: priceHexForToken(tokenId), data: MINT_CALLDATA }],
+      })) as string;
+      setStatusMessage("Transaction sent · waiting for confirmation...");
+      const ok = await waitForReceipt(txHash);
+      if (!ok) {
+        setStatus("error");
+        setStatusMessage("Transaction failed on-chain. Check the hash on BscScan.");
+        return;
+      }
+      const fresh = await readChainState();
+      setChainMinted(fresh.totalMinted);
       const record: MintRecord = {
-        token: nextToken,
-        tier: activeTier.id,
-        price: activeTier.displayPrice,
+        token: tokenId,
+        tier: tier.id,
+        price: tier.displayPrice,
         prompt: walletPrompt.trim(),
         mintedAt: "just now",
-        seed: nextToken,
+        seed: tokenId - 1,
+        image: `/collection/images/${String(tokenId).padStart(4, "0")}.png`,
       };
-      setMinted((value) => Math.min(value + 1, SUPPLY));
       setGallery((items) => [record, ...items]);
       setStatus("minted");
-      setStatusMessage(`Token #${String(nextToken).padStart(4, "0")} is staged in your archive.`);
-      setConnected(true);
-    }, 800);
+      setStatusMessage(`Token #${String(tokenId).padStart(4, "0")} minted to your wallet.`);
+    } catch {
+      setStatus("error");
+      setStatusMessage("Mint could not be completed. If you rejected it in your wallet, nothing was sent.");
+    }
   };
 
   const resetSession = () => {
@@ -294,7 +420,7 @@ export default function Home() {
         </nav>
         <button className={`connect-button ${connected ? "connect-button--connected" : ""}`} type="button" onClick={connectWalletPrompt}>
           <WalletCards size={15} />
-          {connected ? "Prompt connected" : "Connect agent"}
+          {connected && account ? `Connected · ${shortAddress(account)}` : "Connect wallet"}
           <ArrowUpRight size={14} />
         </button>
       </header>
@@ -359,7 +485,7 @@ export default function Home() {
           </div>
 
           <div className="mint-console">
-            <div className="console-top"><div className="console-status"><span className="console-dot" /> MINT CONSOLE <span className="console-line" /></div><span className="console-id">NRB / {String(nextToken).padStart(4, "0")}</span></div>
+            <div className="console-top"><div className="console-status"><span className="console-dot" /> MINT CONSOLE <span className="console-line" /></div><span className="console-id">NRB / {String(displayToken).padStart(4, "0")}</span></div>
             <div className="route-tabs" role="tablist" aria-label="Mint route">
               <button className={route === "wallet" ? "route-tab route-tab--active" : "route-tab"} type="button" onClick={() => { setRoute("wallet"); setStatusMessage("Wallet prompt channel ready."); }} role="tab" aria-selected={route === "wallet"}><Clipboard size={15} /> Paste wallet prompt</button>
               <button className={route === "agent" ? "route-tab route-tab--active" : "route-tab"} type="button" onClick={() => { setRoute("agent"); setStatusMessage("AI agent channel ready."); }} role="tab" aria-selected={route === "agent"}><Bot size={15} /> Ask AI agent</button>
@@ -369,7 +495,7 @@ export default function Home() {
                 <div className="console-heading"><div><span className="section-kicker">WALLET PROMPT</span><h3>Bring your own<br />signal.</h3></div><StatusPill tone={connected ? "lime" : "lilac"}>{connected ? "CONNECTED" : "READY"}</StatusPill></div>
                 <label className="prompt-label" htmlFor="wallet-prompt">Your mint prompt <span>required</span></label>
                 <textarea id="wallet-prompt" value={walletPrompt} onChange={(event) => setWalletPrompt(event.target.value)} placeholder="Paste your wallet prompt here..." rows={5} />
-                <div className="prompt-help"><Terminal size={14} /> Prompt will be attached to identity #{String(nextToken).padStart(4, "0")}. <button type="button" onClick={() => setWalletPrompt(PROMPTS[activeTier.id])}>Use stage prompt</button></div>
+                <div className="prompt-help"><Terminal size={14} /> Prompt will be attached to identity #{String(displayToken).padStart(4, "0")}. <button type="button" onClick={() => setWalletPrompt(PROMPTS[activeTier.id])}>Use stage prompt</button></div>
               </div>
             ) : (
               <div className="console-body">
@@ -379,9 +505,9 @@ export default function Home() {
                 <button className="secondary-button secondary-button--full" type="button" onClick={generateAgentPrompt}><Sparkles size={15} /> Generate agent prompt <ArrowUpRight size={14} /></button>
               </div>
             )}
-            <div className="price-review"><div><span className="meta-label">Active stage</span><strong>{activeTier.label} <span>/ {activeTier.range}</span></strong></div><div className="price-review__amount"><span className="meta-label">Mint price</span><strong className={activeTier.id === "free" ? "is-free" : ""}>{activeTier.displayPrice}{activeTier.id !== "free" && <small> BNB</small>}</strong></div></div>
+            <div className="price-review"><div><span className="meta-label">Active stage</span><strong>{displayTier.label} <span>/ {displayTier.range}</span></strong></div><div className="price-review__amount"><span className="meta-label">Mint price</span><strong className={displayTier.id === "free" ? "is-free" : ""}>{displayTier.displayPrice}{displayTier.id !== "free" && <small> BNB</small>}</strong></div></div>
             <div className="console-action"><button className="mint-button" type="button" onClick={mintNow} disabled={status === "reviewing"}><span>{status === "reviewing" ? "Reviewing..." : status === "minted" ? "Mint another identity" : "Review & mint"}</span><ArrowUpRight size={17} /></button><div className={`mint-status mint-status--${status}`}><span className="mint-status__icon">{status === "minted" ? <Check size={12} /> : status === "error" ? <X size={12} /> : <Radio size={12} />}</span>{statusMessage}</div></div>
-            <div className="contract-note"><Code2 size={14} /><span>BNB contract endpoint <strong>awaiting deployment binding</strong>. <a href="/deploy.html">Open deploy console</a></span><CopyButton value={CONTRACT_WALLET} label="Copy BNB contract endpoint" /></div>
+            <div className="contract-note"><Code2 size={14} /><span>BNB contract <strong>live on BNB Mainnet</strong>. <a href="https://bscscan.com/address/0x8cc34AaD007bF677FfED5E64e4a05c327609625d" target="_blank" rel="noreferrer">View on BscScan</a></span><CopyButton value={CONTRACT_ADDRESS} label="Copy contract address" /></div>
           </div>
         </section>
 
@@ -392,7 +518,7 @@ export default function Home() {
 
         <section className="gallery-section section-pad" id="gallery">
           <div className="gallery-heading"><div><div className="section-kicker">THE ARCHIVE / RECENT SIGNALS</div><h2>Minted identities <span>↘</span></h2></div><div className="gallery-tools"><div className="filter-tabs" role="tablist" aria-label="Gallery filter">{(["all", "free", "passage", "open"] as GalleryFilter[]).map((item) => <button type="button" key={item} className={filter === item ? "filter-tab filter-tab--active" : "filter-tab"} onClick={() => setFilter(item)}>{item === "all" ? "All" : item === "free" ? "Freemint" : item === "passage" ? "Passage" : "Open"}</button>)}</div><button className="reset-button" type="button" onClick={resetSession} title="Reset local session"><RotateCcw size={14} /> Reset session</button></div></div>
-          <div className="gallery-track">{visibleGallery.map((item) => <article className="identity-card" key={`${item.token}-${item.mintedAt}`}><div className="identity-card__visual"><span className="identity-card__token">NRB / {String(item.token).padStart(4, "0")}</span><img className="identity-card__nft" src={nftPreviewForSeed(item.seed)} alt={`Naroba NFT identity #${String(item.token).padStart(4, "0")}`} /><span className={`identity-card__badge identity-card__badge--${item.tier}`}>{item.price}</span><span className="identity-card__scan"><ScanLine size={13} /> scanned</span></div><div className="identity-card__body"><div className="identity-card__meta"><span>#{String(item.token).padStart(4, "0")}</span><span>{item.mintedAt}</span></div><p>{item.prompt}</p><div className="identity-card__footer"><span className={`stage-tag stage-tag--${item.tier}`}>{tierForToken(item.token).label}</span><ArrowUpRight size={14} /></div></div></article>)}</div>
+          <div className="gallery-track">{visibleGallery.map((item) => <article className="identity-card" key={`${item.token}-${item.mintedAt}`}><div className="identity-card__visual"><span className="identity-card__token">NRB / {String(item.token).padStart(4, "0")}</span><img className="identity-card__nft" src={item.image ?? nftPreviewForSeed(item.seed)} alt={`Naroba NFT identity #${String(item.token).padStart(4, "0")}`} /><span className={`identity-card__badge identity-card__badge--${item.tier}`}>{item.price}</span><span className="identity-card__scan"><ScanLine size={13} /> scanned</span></div><div className="identity-card__body"><div className="identity-card__meta"><span>#{String(item.token).padStart(4, "0")}</span><span>{item.mintedAt}</span></div><p>{item.prompt}</p><div className="identity-card__footer"><span className={`stage-tag stage-tag--${item.tier}`}>{tierForToken(item.token).label}</span><ArrowUpRight size={14} /></div></div></article>)}</div>
           {visibleGallery.length === 0 && <div className="empty-gallery"><Hexagon size={22} /><span>No identities in this filter yet.</span></div>}
         </section>
       </main>
