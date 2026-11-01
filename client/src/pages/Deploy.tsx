@@ -389,7 +389,7 @@ export default function Deploy() {
                 <div className="deploy-uri-note"><CircleAlert size={15} /><span>Pin the metadata and image folders first. Use the metadata CID ending in <code>/</code>. Do not use a placeholder CID. The contract owner can change this URI later.</span></div>
                 <div className="deploy-action-grid">
                   <button className="deploy-secondary" type="button" onClick={setBaseURI} disabled={!canManage || busy !== null || !baseURIInput.trim()}>{busy === "base-uri" ? "Setting URI…" : "Set Base URI — sign"}</button>
-                  <button className="deploy-secondary" type="button" onClick={() => void setMintOpen(true)} disabled={!canManage || busy !== null || Boolean(snapshot?.mintEnabled)}>{busy === "open" ? "Opening…" : "Open mint — sign"}</button>
+                  <button className="deploy-secondary" type="button" onClick={() => void setMintOpen(true)} disabled={!canManage || busy !== null}>{busy === "open" ? "Opening…" : "Open mint — sign"}</button>
                   <button className="deploy-secondary" type="button" onClick={() => void setMintOpen(false)} disabled={!canManage || busy !== null || !snapshot?.mintEnabled}>{busy === "close" ? "Closing…" : "Close mint — sign"}</button>
                   <button className="deploy-secondary" type="button" onClick={checkContract} disabled={busy !== null}>{busy === "check" ? "Checking…" : "Check contract — read only"}</button>
                 </div>
