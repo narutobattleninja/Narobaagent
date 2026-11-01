@@ -1,4 +1,4 @@
-const CACHE_NAME = "naroba-shell-v9";
+const CACHE_NAME = "naroba-shell-v10";
 const CACHE_PREFIX = "naroba-shell-";
 const APP_SHELL = ["/", "/deploy.html", "/manifest.webmanifest", "/icons/naroba-logo.svg", "/nft/nrba-0001.png", "/nft/nrba-0638.png", "/nft/nrba-0771.png", "/nft/nrba-2814.png"];
 
