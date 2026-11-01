@@ -317,9 +317,7 @@ export default function Home() {
                   .then((state) => setChainMinted(state.totalMinted))
                   .catch(() => {});
         }, 30000);
-        return () => window.clearInterval(timer);
-             
-  
+        return () => window.clearInterval(timer);             
   }, []);
 
   useEffect(() => {
