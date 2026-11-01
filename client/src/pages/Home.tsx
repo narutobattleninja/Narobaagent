@@ -55,15 +55,54 @@ const MINT_CALLDATA = "0x1249c58b";
 
 type ChainState = { totalMinted: number; mintEnabled: boolean };
 
+const RPC_URLS = [
+  "https://bsc-dataseed.binance.org/",
+  "https://bsc.publicnode.com",
+  "https://binance.llamarpc.com",
+];
+
+async function rpcPost(url: string, payload: unknown): Promise<unknown> {
+  const controller = new AbortController();
+  const timer = window.setTimeout(() => controller.abort(), 8000);
+  try {
+    const res = await fetch(url, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload),
+      signal: controller.signal,
+    });
+    if (!res.ok) throw new Error(`RPC HTTP ${res.status}`);
+    return (await res.json()) as unknown;
+  } finally {
+    window.clearTimeout(timer);
+  }
+}
+
 async function rpcEthCall(data: string): Promise<string> {
-  const res = await fetch(BSC_RPC_URL, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ jsonrpc: "2.0", method: "eth_call", params: [{ to: CONTRACT_ADDRESS, data }, "latest"], id: 1 }),
-  });
-  const json = (await res.json()) as { result?: string; error?: { message?: string } };
-  if (!json.result) throw new Error(json.error?.message ?? "Contract read failed.");
-  return json.result;
+  const wallet = typeof window !== "undefined" ? window.ethereum : undefined;
+  if (wallet) {
+    try {
+      const result = (await wallet.request({
+        method: "eth_call",
+        params: [{ to: CONTRACT_ADDRESS, data }, "latest"],
+      })) as string;
+      if (typeof result === "string" && result.startsWith("0x")) return result;
+    } catch {
+      // Fall through to public RPC endpoints below.
+    }
+  }
+  const payload = { jsonrpc: "2.0", method: "eth_call", params: [{ to: CONTRACT_ADDRESS, data }, "latest"], id: 1 };
+  let lastError: unknown = new Error("Contract read failed.");
+  for (const url of RPC_URLS) {
+    try {
+      const json = (await rpcPost(url, payload)) as { result?: string; error?: { message?: string } };
+      if (json.result) return json.result;
+      lastError = new Error(json.error?.message ?? "Contract read failed.");
+    } catch (error) {
+      lastError = error;
+    }
+  }
+  throw lastError;
 }
 
 async function readChainState(): Promise<ChainState> {
@@ -86,14 +125,17 @@ function shortAddress(address: string): string {
 }
 
 async function waitForReceipt(txHash: string): Promise<boolean> {
+  const payload = { jsonrpc: "2.0", method: "eth_getTransactionReceipt", params: [txHash], id: 1 };
   for (let i = 0; i < 60; i++) {
-    const res = await fetch(BSC_RPC_URL, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ jsonrpc: "2.0", method: "eth_getTransactionReceipt", params: [txHash], id: 1 }),
-    });
-    const json = (await res.json()) as { result?: { status?: string } | null };
-    if (json.result) return json.result.status === "0x1";
+    for (const url of RPC_URLS) {
+      try {
+        const json = (await rpcPost(url, payload)) as { result?: { status?: string } | null };
+        if (json.result) return json.result.status === "0x1";
+        break;
+      } catch {
+        // Try the next endpoint.
+      }
+    }
     await new Promise((resolve) => window.setTimeout(resolve, 2000));
   }
   throw new Error("Transaction receipt timed out. Check the hash on BscScan.");
