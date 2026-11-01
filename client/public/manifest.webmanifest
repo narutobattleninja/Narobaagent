@@ -1,0 +1,18 @@
+{
+  "name": "Naroba — Pixel Identity Archive",
+  "short_name": "Naroba",
+  "description": "Carry the Naroba pixel identity archive with you.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#08090f",
+  "theme_color": "#08090f",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/icons/naroba-logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

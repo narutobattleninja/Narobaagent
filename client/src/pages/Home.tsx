@@ -7,6 +7,7 @@ import {
   Clipboard,
   Code2,
   Copy,
+  Download,
   ExternalLink,
   Hexagon,
   Info,
@@ -36,6 +37,11 @@ type MintRecord = {
   prompt: string;
   mintedAt: string;
   seed: number;
+};
+
+type BeforeInstallPromptEvent = Event & {
+  prompt: () => Promise<void>;
+  userChoice: Promise<{ outcome: "accepted" | "dismissed"; platform: string }>;
 };
 
 const SUPPLY = 10_000;
@@ -129,6 +135,11 @@ function PixelAvatar({ seed = 1, small = false }: { seed?: number; small?: boole
   );
 }
 
+function nftPreviewForSeed(seed: number) {
+  const previews = ["nrba-0001.png", "nrba-0638.png", "nrba-2814.png", "nrba-0771.png"];
+  return `/nft/${previews[Math.abs(seed) % previews.length]}`;
+}
+
 function StatusPill({ children, tone = "lime" }: { children: React.ReactNode; tone?: "lime" | "lilac" | "amber" }) {
   return <span className={`status-pill status-pill--${tone}`}><span className="status-pill__dot" />{children}</span>;
 }
@@ -163,6 +174,7 @@ export default function Home() {
   const [filter, setFilter] = useState<GalleryFilter>("all");
   const [mobileNav, setMobileNav] = useState(false);
   const [gallery, setGallery] = useState<MintRecord[]>(seedPrompts);
+  const [installPrompt, setInstallPrompt] = useState<BeforeInstallPromptEvent | null>(null);
 
   const nextToken = Math.min(minted + 1, SUPPLY);
   const activeTier = tierForToken(nextToken);
@@ -174,6 +186,15 @@ export default function Home() {
       setWalletPrompt(PROMPTS[activeTier.id]);
     }
   }, [activeTier.id, route]);
+
+  useEffect(() => {
+    const captureInstallPrompt = (event: Event) => {
+      event.preventDefault();
+      setInstallPrompt(event as BeforeInstallPromptEvent);
+    };
+    window.addEventListener("beforeinstallprompt", captureInstallPrompt);
+    return () => window.removeEventListener("beforeinstallprompt", captureInstallPrompt);
+  }, []);
 
   const visibleGallery = useMemo(() => {
     if (filter === "all") return gallery;
@@ -192,6 +213,17 @@ export default function Home() {
     setRoute("agent");
     setStatus("ready");
     setStatusMessage("Agent assembled a new identity prompt.");
+  };
+
+  const installApp = async () => {
+    if (!installPrompt) {
+      setStatusMessage("Use your browser menu and choose Add to Home screen.");
+      return;
+    }
+    await installPrompt.prompt();
+    const choice = await installPrompt.userChoice;
+    setStatusMessage(choice.outcome === "accepted" ? "Naroba added to your home screen." : "Install kept available from your browser menu.");
+    setInstallPrompt(null);
   };
 
   const mintNow = () => {
@@ -249,6 +281,7 @@ export default function Home() {
           <a href="#collection" onClick={() => setMobileNav(false)}>Collection <span>01</span></a>
           <a href="#ritual" onClick={() => setMobileNav(false)}>How it works <span>02</span></a>
           <a href="#mint" onClick={() => setMobileNav(false)}>Mint <span>03</span></a>
+          <a href="#install" onClick={() => setMobileNav(false)}>Install <span>04</span></a>
         </nav>
         <button className={`connect-button ${connected ? "connect-button--connected" : ""}`} type="button" onClick={connectWalletPrompt}>
           <WalletCards size={15} />
@@ -281,7 +314,7 @@ export default function Home() {
             <div className="visual-orbit visual-orbit--two" />
             <div className="visual-cross visual-cross--one" />
             <div className="visual-cross visual-cross--two" />
-            <div className="hero-avatar-wrap"><PixelAvatar seed={4} /></div>
+            <div className="hero-avatar-wrap"><img className="hero-nft-image" src="/nft/nrba-0001.png" alt="Naroba NFT identity #0001" /><span className="hero-nft-pixel-corner hero-nft-pixel-corner--one" /><span className="hero-nft-pixel-corner hero-nft-pixel-corner--two" /></div>
             <div className="visual-label visual-label--left"><span className="visual-label__number">01</span><span>first light<br />/ signal found</span></div>
             <div className="visual-label visual-label--right"><span>CLASS / OBSERVER</span><strong>nrb_0042</strong></div>
             <div className="visual-cursor"><MousePointer2 size={14} /><span>hover to inspect</span></div>
@@ -293,6 +326,12 @@ export default function Home() {
           <div className="supply-intro"><span className="section-kicker">COLLECTION STATUS</span><h2>Explorer archive <span>/</span> 10K</h2></div>
           <div className="supply-progress"><div className="supply-progress__head"><span><strong>{minted.toLocaleString()}</strong> / {SUPPLY.toLocaleString()} minted</span><span>{progress.toFixed(1)}%</span></div><div className="progress-track"><div style={{ width: `${progress}%` }} /></div><div className="supply-progress__foot"><span>Archive supply snapshot</span><span>{remaining.toLocaleString()} remaining</span></div></div>
           <div className="supply-stat"><span className="meta-label">Next token</span><strong>#{String(nextToken).padStart(4, "0")}</strong><span className={`stage-tag stage-tag--${activeTier.id}`}>{activeTier.label}</span></div>
+        </section>
+
+        <section className="install-section section-pad" id="install">
+          <div className="install-art"><img src="/nft/nrba-2814.png" alt="Naroba NFT identity #2814" /><span className="install-art__tag">NRB / 2814</span><span className="install-art__scan">ARCHIVE READY</span></div>
+          <div className="install-copy"><div className="section-kicker">NAROBA / INSTALL APP</div><h2>Carry the<br /><em>archive with you.</em></h2><p>Install Naroba on your home screen and keep the collection, mint stages, and identity prompts one tap away.</p><button className="primary-button" type="button" onClick={installApp}><Download size={16} /> Install Naroba app</button><span className="install-hint">BNB Chain collection · offline shell · NFT-first interface</span></div>
+          <div className="install-stack"><img src="/nft/nrba-0001.png" alt="Naroba NFT preview #0001" /><img src="/nft/nrba-0638.png" alt="Naroba NFT preview #0638" /><img src="/nft/nrba-0771.png" alt="Naroba NFT preview #0771" /></div>
         </section>
 
         <section className="mint-section section-pad" id="mint">
@@ -344,7 +383,7 @@ export default function Home() {
 
         <section className="gallery-section section-pad" id="gallery">
           <div className="gallery-heading"><div><div className="section-kicker">THE ARCHIVE / RECENT SIGNALS</div><h2>Minted identities <span>↘</span></h2></div><div className="gallery-tools"><div className="filter-tabs" role="tablist" aria-label="Gallery filter">{(["all", "free", "passage", "open"] as GalleryFilter[]).map((item) => <button type="button" key={item} className={filter === item ? "filter-tab filter-tab--active" : "filter-tab"} onClick={() => setFilter(item)}>{item === "all" ? "All" : item === "free" ? "Freemint" : item === "passage" ? "Passage" : "Open"}</button>)}</div><button className="reset-button" type="button" onClick={resetSession} title="Reset local session"><RotateCcw size={14} /> Reset session</button></div></div>
-          <div className="gallery-track">{visibleGallery.map((item) => <article className="identity-card" key={`${item.token}-${item.mintedAt}`}><div className="identity-card__visual"><span className="identity-card__token">NRB / {String(item.token).padStart(4, "0")}</span><PixelAvatar seed={item.seed} small /><span className={`identity-card__badge identity-card__badge--${item.tier}`}>{item.price}</span><span className="identity-card__scan"><ScanLine size={13} /> scanned</span></div><div className="identity-card__body"><div className="identity-card__meta"><span>#{String(item.token).padStart(4, "0")}</span><span>{item.mintedAt}</span></div><p>{item.prompt}</p><div className="identity-card__footer"><span className={`stage-tag stage-tag--${item.tier}`}>{tierForToken(item.token).label}</span><ArrowUpRight size={14} /></div></div></article>)}</div>
+          <div className="gallery-track">{visibleGallery.map((item) => <article className="identity-card" key={`${item.token}-${item.mintedAt}`}><div className="identity-card__visual"><span className="identity-card__token">NRB / {String(item.token).padStart(4, "0")}</span><img className="identity-card__nft" src={nftPreviewForSeed(item.seed)} alt={`Naroba NFT identity #${String(item.token).padStart(4, "0")}`} /><span className={`identity-card__badge identity-card__badge--${item.tier}`}>{item.price}</span><span className="identity-card__scan"><ScanLine size={13} /> scanned</span></div><div className="identity-card__body"><div className="identity-card__meta"><span>#{String(item.token).padStart(4, "0")}</span><span>{item.mintedAt}</span></div><p>{item.prompt}</p><div className="identity-card__footer"><span className={`stage-tag stage-tag--${item.tier}`}>{tierForToken(item.token).label}</span><ArrowUpRight size={14} /></div></div></article>)}</div>
           {visibleGallery.length === 0 && <div className="empty-gallery"><Hexagon size={22} /><span>No identities in this filter yet.</span></div>}
         </section>
       </main>
