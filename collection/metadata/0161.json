@@ -1,10 +1,10 @@
 {
   "name": "Naroba Identity #0161",
-  "description": "A patient cartographer from the Naroba archive, carrying a packet of starlight. Checkpoint Amber signal, pixel-native silhouette, precise details, and a calm on-chain identity. Mint stage: freemint. Price: FREE.",
+  "description": "A patient cartographer Naroba signal terminal with a luminous golden pixel-art laptop, carrying a packet of starlight. Electric Blue gold, dark grid, radiant signal crystal, crisp details, and a calm on-chain identity. Mint stage: freemint. Price: FREE.",
   "image": "ipfs://REPLACE_WITH_IMAGES_CID/0161.png",
   "external_url": "https://narobaagent.example/collection",
   "token_id": 161,
-  "prompt": "A patient cartographer from the Naroba archive, carrying a packet of starlight. Checkpoint Amber signal, pixel-native silhouette, precise details, and a calm on-chain identity.",
+  "prompt": "A patient cartographer Naroba signal terminal with a luminous golden pixel-art laptop, carrying a packet of starlight. Electric Blue gold, dark grid, radiant signal crystal, crisp details, and a calm on-chain identity.",
   "attributes": [
     {
       "trait_type": "Token ID",
@@ -16,7 +16,7 @@
     },
     {
       "trait_type": "Palette",
-      "value": "Checkpoint Amber"
+      "value": "Electric Blue"
     },
     {
       "trait_type": "Mood",
@@ -27,12 +27,12 @@
       "value": "Cartographer"
     },
     {
-      "trait_type": "Visor",
-      "value": "Open"
+      "trait_type": "Screen",
+      "value": "#0161"
     },
     {
-      "trait_type": "Antenna",
-      "value": "Signal"
+      "trait_type": "Signal Crest",
+      "value": "Charged"
     },
     {
       "trait_type": "Artifact",

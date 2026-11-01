@@ -1,10 +1,10 @@
 {
   "name": "Naroba Identity #2115",
-  "description": "A observant listener from the Naroba archive, carrying a glass signal. Checkpoint Amber signal, pixel-native silhouette, precise details, and a calm on-chain identity. Mint stage: passage. Price: 0.000222 BNB.",
+  "description": "A observant listener Naroba signal terminal with a luminous golden pixel-art laptop, carrying a glass signal. Hot Magenta gold, dark grid, radiant signal crystal, crisp details, and a calm on-chain identity. Mint stage: passage. Price: 0.000222 BNB.",
   "image": "ipfs://REPLACE_WITH_IMAGES_CID/2115.png",
   "external_url": "https://narobaagent.example/collection",
   "token_id": 2115,
-  "prompt": "A observant listener from the Naroba archive, carrying a glass signal. Checkpoint Amber signal, pixel-native silhouette, precise details, and a calm on-chain identity.",
+  "prompt": "A observant listener Naroba signal terminal with a luminous golden pixel-art laptop, carrying a glass signal. Hot Magenta gold, dark grid, radiant signal crystal, crisp details, and a calm on-chain identity.",
   "attributes": [
     {
       "trait_type": "Token ID",
@@ -16,7 +16,7 @@
     },
     {
       "trait_type": "Palette",
-      "value": "Checkpoint Amber"
+      "value": "Hot Magenta"
     },
     {
       "trait_type": "Mood",
@@ -27,12 +27,12 @@
       "value": "Listener"
     },
     {
-      "trait_type": "Visor",
-      "value": "Open"
+      "trait_type": "Screen",
+      "value": "#2115"
     },
     {
-      "trait_type": "Antenna",
-      "value": "Signal"
+      "trait_type": "Signal Crest",
+      "value": "Charged"
     },
     {
       "trait_type": "Artifact",

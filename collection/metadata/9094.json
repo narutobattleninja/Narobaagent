@@ -1,10 +1,10 @@
 {
   "name": "Naroba Identity #9094",
-  "description": "A quiet scout from the Naroba archive, carrying a folded star map. Checkpoint Amber signal, pixel-native silhouette, precise details, and a calm on-chain identity. Mint stage: open. Price: 0.001 BNB.",
+  "description": "A quiet scout Naroba signal terminal with a luminous golden pixel-art laptop, carrying a folded star map. Electric Blue gold, dark grid, radiant signal crystal, crisp details, and a calm on-chain identity. Mint stage: open. Price: 0.001 BNB.",
   "image": "ipfs://REPLACE_WITH_IMAGES_CID/9094.png",
   "external_url": "https://narobaagent.example/collection",
   "token_id": 9094,
-  "prompt": "A quiet scout from the Naroba archive, carrying a folded star map. Checkpoint Amber signal, pixel-native silhouette, precise details, and a calm on-chain identity.",
+  "prompt": "A quiet scout Naroba signal terminal with a luminous golden pixel-art laptop, carrying a folded star map. Electric Blue gold, dark grid, radiant signal crystal, crisp details, and a calm on-chain identity.",
   "attributes": [
     {
       "trait_type": "Token ID",
@@ -16,7 +16,7 @@
     },
     {
       "trait_type": "Palette",
-      "value": "Checkpoint Amber"
+      "value": "Electric Blue"
     },
     {
       "trait_type": "Mood",
@@ -27,12 +27,12 @@
       "value": "Scout"
     },
     {
-      "trait_type": "Visor",
-      "value": "Open"
+      "trait_type": "Screen",
+      "value": "#9094"
     },
     {
-      "trait_type": "Antenna",
-      "value": "Grounded"
+      "trait_type": "Signal Crest",
+      "value": "Steady"
     },
     {
       "trait_type": "Artifact",

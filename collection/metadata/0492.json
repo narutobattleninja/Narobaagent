@@ -1,10 +1,10 @@
 {
   "name": "Naroba Identity #0492",
-  "description": "A strange scout from the Naroba archive, carrying an amber key. Checkpoint Amber signal, pixel-native silhouette, precise details, and a calm on-chain identity. Mint stage: freemint. Price: FREE.",
+  "description": "A strange scout Naroba signal terminal with a luminous golden pixel-art laptop, carrying an amber key. Hot Magenta gold, dark grid, radiant signal crystal, crisp details, and a calm on-chain identity. Mint stage: freemint. Price: FREE.",
   "image": "ipfs://REPLACE_WITH_IMAGES_CID/0492.png",
   "external_url": "https://narobaagent.example/collection",
   "token_id": 492,
-  "prompt": "A strange scout from the Naroba archive, carrying an amber key. Checkpoint Amber signal, pixel-native silhouette, precise details, and a calm on-chain identity.",
+  "prompt": "A strange scout Naroba signal terminal with a luminous golden pixel-art laptop, carrying an amber key. Hot Magenta gold, dark grid, radiant signal crystal, crisp details, and a calm on-chain identity.",
   "attributes": [
     {
       "trait_type": "Token ID",
@@ -16,7 +16,7 @@
     },
     {
       "trait_type": "Palette",
-      "value": "Checkpoint Amber"
+      "value": "Hot Magenta"
     },
     {
       "trait_type": "Mood",
@@ -27,12 +27,12 @@
       "value": "Scout"
     },
     {
-      "trait_type": "Visor",
-      "value": "Open"
+      "trait_type": "Screen",
+      "value": "#0492"
     },
     {
-      "trait_type": "Antenna",
-      "value": "Signal"
+      "trait_type": "Signal Crest",
+      "value": "Charged"
     },
     {
       "trait_type": "Artifact",

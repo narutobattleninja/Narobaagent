@@ -1,10 +1,10 @@
 {
   "name": "Naroba Identity #1286",
-  "description": "A strange scout from the Naroba archive, carrying a glass signal. Checkpoint Amber signal, pixel-native silhouette, precise details, and a calm on-chain identity. Mint stage: passage. Price: 0.000222 BNB.",
+  "description": "A strange scout Naroba signal terminal with a luminous golden pixel-art laptop, carrying a glass signal. Electric Blue gold, dark grid, radiant signal crystal, crisp details, and a calm on-chain identity. Mint stage: passage. Price: 0.000222 BNB.",
   "image": "ipfs://REPLACE_WITH_IMAGES_CID/1286.png",
   "external_url": "https://narobaagent.example/collection",
   "token_id": 1286,
-  "prompt": "A strange scout from the Naroba archive, carrying a glass signal. Checkpoint Amber signal, pixel-native silhouette, precise details, and a calm on-chain identity.",
+  "prompt": "A strange scout Naroba signal terminal with a luminous golden pixel-art laptop, carrying a glass signal. Electric Blue gold, dark grid, radiant signal crystal, crisp details, and a calm on-chain identity.",
   "attributes": [
     {
       "trait_type": "Token ID",
@@ -16,7 +16,7 @@
     },
     {
       "trait_type": "Palette",
-      "value": "Checkpoint Amber"
+      "value": "Electric Blue"
     },
     {
       "trait_type": "Mood",
@@ -27,12 +27,12 @@
       "value": "Scout"
     },
     {
-      "trait_type": "Visor",
-      "value": "Open"
+      "trait_type": "Screen",
+      "value": "#1286"
     },
     {
-      "trait_type": "Antenna",
-      "value": "Signal"
+      "trait_type": "Signal Crest",
+      "value": "Charged"
     },
     {
       "trait_type": "Artifact",

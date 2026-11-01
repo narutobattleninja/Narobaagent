@@ -1,10 +1,10 @@
 {
   "name": "Naroba Identity #7836",
-  "description": "A observant cartographer from the Naroba archive, carrying an amber key. Archive Lilac signal, pixel-native silhouette, precise details, and a calm on-chain identity. Mint stage: open. Price: 0.001 BNB.",
+  "description": "A observant cartographer Naroba signal terminal with a luminous golden pixel-art laptop, carrying an amber key. Neon Cyan gold, dark grid, radiant signal crystal, crisp details, and a calm on-chain identity. Mint stage: open. Price: 0.001 BNB.",
   "image": "ipfs://REPLACE_WITH_IMAGES_CID/7836.png",
   "external_url": "https://narobaagent.example/collection",
   "token_id": 7836,
-  "prompt": "A observant cartographer from the Naroba archive, carrying an amber key. Archive Lilac signal, pixel-native silhouette, precise details, and a calm on-chain identity.",
+  "prompt": "A observant cartographer Naroba signal terminal with a luminous golden pixel-art laptop, carrying an amber key. Neon Cyan gold, dark grid, radiant signal crystal, crisp details, and a calm on-chain identity.",
   "attributes": [
     {
       "trait_type": "Token ID",
@@ -16,7 +16,7 @@
     },
     {
       "trait_type": "Palette",
-      "value": "Archive Lilac"
+      "value": "Neon Cyan"
     },
     {
       "trait_type": "Mood",
@@ -27,12 +27,12 @@
       "value": "Cartographer"
     },
     {
-      "trait_type": "Visor",
-      "value": "Open"
+      "trait_type": "Screen",
+      "value": "#7836"
     },
     {
-      "trait_type": "Antenna",
-      "value": "Signal"
+      "trait_type": "Signal Crest",
+      "value": "Charged"
     },
     {
       "trait_type": "Artifact",

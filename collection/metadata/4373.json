@@ -1,10 +1,10 @@
 {
   "name": "Naroba Identity #4373",
-  "description": "A patient scout from the Naroba archive, carrying a tiny beacon. Signal Lime signal, pixel-native silhouette, precise details, and a calm on-chain identity. Mint stage: open. Price: 0.001 BNB.",
+  "description": "A patient scout Naroba signal terminal with a luminous golden pixel-art laptop, carrying a tiny beacon. Arcane Violet gold, dark grid, radiant signal crystal, crisp details, and a calm on-chain identity. Mint stage: open. Price: 0.001 BNB.",
   "image": "ipfs://REPLACE_WITH_IMAGES_CID/4373.png",
   "external_url": "https://narobaagent.example/collection",
   "token_id": 4373,
-  "prompt": "A patient scout from the Naroba archive, carrying a tiny beacon. Signal Lime signal, pixel-native silhouette, precise details, and a calm on-chain identity.",
+  "prompt": "A patient scout Naroba signal terminal with a luminous golden pixel-art laptop, carrying a tiny beacon. Arcane Violet gold, dark grid, radiant signal crystal, crisp details, and a calm on-chain identity.",
   "attributes": [
     {
       "trait_type": "Token ID",
@@ -16,7 +16,7 @@
     },
     {
       "trait_type": "Palette",
-      "value": "Signal Lime"
+      "value": "Arcane Violet"
     },
     {
       "trait_type": "Mood",
@@ -27,12 +27,12 @@
       "value": "Scout"
     },
     {
-      "trait_type": "Visor",
-      "value": "Open"
+      "trait_type": "Screen",
+      "value": "#4373"
     },
     {
-      "trait_type": "Antenna",
-      "value": "Signal"
+      "trait_type": "Signal Crest",
+      "value": "Charged"
     },
     {
       "trait_type": "Artifact",

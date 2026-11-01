@@ -1,10 +1,10 @@
 {
   "name": "Naroba Identity #7075",
-  "description": "A electric scout from the Naroba archive, carrying a folded star map. Signal Lime signal, pixel-native silhouette, precise details, and a calm on-chain identity. Mint stage: open. Price: 0.001 BNB.",
+  "description": "A electric scout Naroba signal terminal with a luminous golden pixel-art laptop, carrying a folded star map. Arcane Violet gold, dark grid, radiant signal crystal, crisp details, and a calm on-chain identity. Mint stage: open. Price: 0.001 BNB.",
   "image": "ipfs://REPLACE_WITH_IMAGES_CID/7075.png",
   "external_url": "https://narobaagent.example/collection",
   "token_id": 7075,
-  "prompt": "A electric scout from the Naroba archive, carrying a folded star map. Signal Lime signal, pixel-native silhouette, precise details, and a calm on-chain identity.",
+  "prompt": "A electric scout Naroba signal terminal with a luminous golden pixel-art laptop, carrying a folded star map. Arcane Violet gold, dark grid, radiant signal crystal, crisp details, and a calm on-chain identity.",
   "attributes": [
     {
       "trait_type": "Token ID",
@@ -16,7 +16,7 @@
     },
     {
       "trait_type": "Palette",
-      "value": "Signal Lime"
+      "value": "Arcane Violet"
     },
     {
       "trait_type": "Mood",
@@ -27,12 +27,12 @@
       "value": "Scout"
     },
     {
-      "trait_type": "Visor",
-      "value": "Open"
+      "trait_type": "Screen",
+      "value": "#7075"
     },
     {
-      "trait_type": "Antenna",
-      "value": "Grounded"
+      "trait_type": "Signal Crest",
+      "value": "Steady"
     },
     {
       "trait_type": "Artifact",

@@ -1,10 +1,10 @@
 {
   "name": "Naroba Identity #2864",
-  "description": "A patient courier from the Naroba archive, carrying a packet of starlight. Signal Lime signal, pixel-native silhouette, precise details, and a calm on-chain identity. Mint stage: passage. Price: 0.000222 BNB.",
+  "description": "A patient courier Naroba signal terminal with a luminous golden pixel-art laptop, carrying a packet of starlight. Arcane Violet gold, dark grid, radiant signal crystal, crisp details, and a calm on-chain identity. Mint stage: passage. Price: 0.000222 BNB.",
   "image": "ipfs://REPLACE_WITH_IMAGES_CID/2864.png",
   "external_url": "https://narobaagent.example/collection",
   "token_id": 2864,
-  "prompt": "A patient courier from the Naroba archive, carrying a packet of starlight. Signal Lime signal, pixel-native silhouette, precise details, and a calm on-chain identity.",
+  "prompt": "A patient courier Naroba signal terminal with a luminous golden pixel-art laptop, carrying a packet of starlight. Arcane Violet gold, dark grid, radiant signal crystal, crisp details, and a calm on-chain identity.",
   "attributes": [
     {
       "trait_type": "Token ID",
@@ -16,7 +16,7 @@
     },
     {
       "trait_type": "Palette",
-      "value": "Signal Lime"
+      "value": "Arcane Violet"
     },
     {
       "trait_type": "Mood",
@@ -27,12 +27,12 @@
       "value": "Courier"
     },
     {
-      "trait_type": "Visor",
-      "value": "Active"
+      "trait_type": "Screen",
+      "value": "#2864"
     },
     {
-      "trait_type": "Antenna",
-      "value": "Grounded"
+      "trait_type": "Signal Crest",
+      "value": "Steady"
     },
     {
       "trait_type": "Artifact",

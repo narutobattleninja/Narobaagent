@@ -1,10 +1,10 @@
 {
   "name": "Naroba Identity #0549",
-  "description": "A electric keeper from the Naroba archive, carrying a pocket horizon. Signal Lime signal, pixel-native silhouette, precise details, and a calm on-chain identity. Mint stage: freemint. Price: FREE.",
+  "description": "A electric keeper Naroba signal terminal with a luminous golden pixel-art laptop, carrying a pocket horizon. Arcane Violet gold, dark grid, radiant signal crystal, crisp details, and a calm on-chain identity. Mint stage: freemint. Price: FREE.",
   "image": "ipfs://REPLACE_WITH_IMAGES_CID/0549.png",
   "external_url": "https://narobaagent.example/collection",
   "token_id": 549,
-  "prompt": "A electric keeper from the Naroba archive, carrying a pocket horizon. Signal Lime signal, pixel-native silhouette, precise details, and a calm on-chain identity.",
+  "prompt": "A electric keeper Naroba signal terminal with a luminous golden pixel-art laptop, carrying a pocket horizon. Arcane Violet gold, dark grid, radiant signal crystal, crisp details, and a calm on-chain identity.",
   "attributes": [
     {
       "trait_type": "Token ID",
@@ -16,7 +16,7 @@
     },
     {
       "trait_type": "Palette",
-      "value": "Signal Lime"
+      "value": "Arcane Violet"
     },
     {
       "trait_type": "Mood",
@@ -27,12 +27,12 @@
       "value": "Keeper"
     },
     {
-      "trait_type": "Visor",
-      "value": "Active"
+      "trait_type": "Screen",
+      "value": "#0549"
     },
     {
-      "trait_type": "Antenna",
-      "value": "Signal"
+      "trait_type": "Signal Crest",
+      "value": "Charged"
     },
     {
       "trait_type": "Artifact",

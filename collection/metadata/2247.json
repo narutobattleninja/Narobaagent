@@ -1,10 +1,10 @@
 {
   "name": "Naroba Identity #2247",
-  "description": "A electric scout from the Naroba archive, carrying a packet of starlight. Static Blue signal, pixel-native silhouette, precise details, and a calm on-chain identity. Mint stage: passage. Price: 0.000222 BNB.",
+  "description": "A electric scout Naroba signal terminal with a luminous golden pixel-art laptop, carrying a packet of starlight. Ice Silver gold, dark grid, radiant signal crystal, crisp details, and a calm on-chain identity. Mint stage: passage. Price: 0.000222 BNB.",
   "image": "ipfs://REPLACE_WITH_IMAGES_CID/2247.png",
   "external_url": "https://narobaagent.example/collection",
   "token_id": 2247,
-  "prompt": "A electric scout from the Naroba archive, carrying a packet of starlight. Static Blue signal, pixel-native silhouette, precise details, and a calm on-chain identity.",
+  "prompt": "A electric scout Naroba signal terminal with a luminous golden pixel-art laptop, carrying a packet of starlight. Ice Silver gold, dark grid, radiant signal crystal, crisp details, and a calm on-chain identity.",
   "attributes": [
     {
       "trait_type": "Token ID",
@@ -16,7 +16,7 @@
     },
     {
       "trait_type": "Palette",
-      "value": "Static Blue"
+      "value": "Ice Silver"
     },
     {
       "trait_type": "Mood",
@@ -27,12 +27,12 @@
       "value": "Scout"
     },
     {
-      "trait_type": "Visor",
-      "value": "Open"
+      "trait_type": "Screen",
+      "value": "#2247"
     },
     {
-      "trait_type": "Antenna",
-      "value": "Signal"
+      "trait_type": "Signal Crest",
+      "value": "Charged"
     },
     {
       "trait_type": "Artifact",

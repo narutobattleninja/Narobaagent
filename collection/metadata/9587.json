@@ -1,10 +1,10 @@
 {
   "name": "Naroba Identity #9587",
-  "description": "A restless cartographer from the Naroba archive, carrying a folded star map. Static Blue signal, pixel-native silhouette, precise details, and a calm on-chain identity. Mint stage: open. Price: 0.001 BNB.",
+  "description": "A restless cartographer Naroba signal terminal with a luminous golden pixel-art laptop, carrying a folded star map. Ice Silver gold, dark grid, radiant signal crystal, crisp details, and a calm on-chain identity. Mint stage: open. Price: 0.001 BNB.",
   "image": "ipfs://REPLACE_WITH_IMAGES_CID/9587.png",
   "external_url": "https://narobaagent.example/collection",
   "token_id": 9587,
-  "prompt": "A restless cartographer from the Naroba archive, carrying a folded star map. Static Blue signal, pixel-native silhouette, precise details, and a calm on-chain identity.",
+  "prompt": "A restless cartographer Naroba signal terminal with a luminous golden pixel-art laptop, carrying a folded star map. Ice Silver gold, dark grid, radiant signal crystal, crisp details, and a calm on-chain identity.",
   "attributes": [
     {
       "trait_type": "Token ID",
@@ -16,7 +16,7 @@
     },
     {
       "trait_type": "Palette",
-      "value": "Static Blue"
+      "value": "Ice Silver"
     },
     {
       "trait_type": "Mood",
@@ -27,12 +27,12 @@
       "value": "Cartographer"
     },
     {
-      "trait_type": "Visor",
-      "value": "Active"
+      "trait_type": "Screen",
+      "value": "#9587"
     },
     {
-      "trait_type": "Antenna",
-      "value": "Grounded"
+      "trait_type": "Signal Crest",
+      "value": "Steady"
     },
     {
       "trait_type": "Artifact",

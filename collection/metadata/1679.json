@@ -1,10 +1,10 @@
 {
   "name": "Naroba Identity #1679",
-  "description": "A restless listener from the Naroba archive, carrying a glass signal. Archive Lilac signal, pixel-native silhouette, precise details, and a calm on-chain identity. Mint stage: passage. Price: 0.000222 BNB.",
+  "description": "A restless listener Naroba signal terminal with a luminous golden pixel-art laptop, carrying a glass signal. Neon Cyan gold, dark grid, radiant signal crystal, crisp details, and a calm on-chain identity. Mint stage: passage. Price: 0.000222 BNB.",
   "image": "ipfs://REPLACE_WITH_IMAGES_CID/1679.png",
   "external_url": "https://narobaagent.example/collection",
   "token_id": 1679,
-  "prompt": "A restless listener from the Naroba archive, carrying a glass signal. Archive Lilac signal, pixel-native silhouette, precise details, and a calm on-chain identity.",
+  "prompt": "A restless listener Naroba signal terminal with a luminous golden pixel-art laptop, carrying a glass signal. Neon Cyan gold, dark grid, radiant signal crystal, crisp details, and a calm on-chain identity.",
   "attributes": [
     {
       "trait_type": "Token ID",
@@ -16,7 +16,7 @@
     },
     {
       "trait_type": "Palette",
-      "value": "Archive Lilac"
+      "value": "Neon Cyan"
     },
     {
       "trait_type": "Mood",
@@ -27,12 +27,12 @@
       "value": "Listener"
     },
     {
-      "trait_type": "Visor",
-      "value": "Active"
+      "trait_type": "Screen",
+      "value": "#1679"
     },
     {
-      "trait_type": "Antenna",
-      "value": "Grounded"
+      "trait_type": "Signal Crest",
+      "value": "Steady"
     },
     {
       "trait_type": "Artifact",

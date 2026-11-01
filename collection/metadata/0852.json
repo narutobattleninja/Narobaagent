@@ -1,10 +1,10 @@
 {
   "name": "Naroba Identity #0852",
-  "description": "A observant courier from the Naroba archive, carrying a packet of starlight. Static Blue signal, pixel-native silhouette, precise details, and a calm on-chain identity. Mint stage: freemint. Price: FREE.",
+  "description": "A observant courier Naroba signal terminal with a luminous golden pixel-art laptop, carrying a packet of starlight. Coral Flame gold, dark grid, radiant signal crystal, crisp details, and a calm on-chain identity. Mint stage: freemint. Price: FREE.",
   "image": "ipfs://REPLACE_WITH_IMAGES_CID/0852.png",
   "external_url": "https://narobaagent.example/collection",
   "token_id": 852,
-  "prompt": "A observant courier from the Naroba archive, carrying a packet of starlight. Static Blue signal, pixel-native silhouette, precise details, and a calm on-chain identity.",
+  "prompt": "A observant courier Naroba signal terminal with a luminous golden pixel-art laptop, carrying a packet of starlight. Coral Flame gold, dark grid, radiant signal crystal, crisp details, and a calm on-chain identity.",
   "attributes": [
     {
       "trait_type": "Token ID",
@@ -16,7 +16,7 @@
     },
     {
       "trait_type": "Palette",
-      "value": "Static Blue"
+      "value": "Coral Flame"
     },
     {
       "trait_type": "Mood",
@@ -27,12 +27,12 @@
       "value": "Courier"
     },
     {
-      "trait_type": "Visor",
-      "value": "Open"
+      "trait_type": "Screen",
+      "value": "#0852"
     },
     {
-      "trait_type": "Antenna",
-      "value": "Signal"
+      "trait_type": "Signal Crest",
+      "value": "Charged"
     },
     {
       "trait_type": "Artifact",

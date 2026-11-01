@@ -1,10 +1,10 @@
 {
   "name": "Naroba Identity #8589",
-  "description": "A patient keeper from the Naroba archive, carrying a pocket horizon. Signal Lime signal, pixel-native silhouette, precise details, and a calm on-chain identity. Mint stage: open. Price: 0.001 BNB.",
+  "description": "A patient keeper Naroba signal terminal with a luminous golden pixel-art laptop, carrying a pocket horizon. Arcane Violet gold, dark grid, radiant signal crystal, crisp details, and a calm on-chain identity. Mint stage: open. Price: 0.001 BNB.",
   "image": "ipfs://REPLACE_WITH_IMAGES_CID/8589.png",
   "external_url": "https://narobaagent.example/collection",
   "token_id": 8589,
-  "prompt": "A patient keeper from the Naroba archive, carrying a pocket horizon. Signal Lime signal, pixel-native silhouette, precise details, and a calm on-chain identity.",
+  "prompt": "A patient keeper Naroba signal terminal with a luminous golden pixel-art laptop, carrying a pocket horizon. Arcane Violet gold, dark grid, radiant signal crystal, crisp details, and a calm on-chain identity.",
   "attributes": [
     {
       "trait_type": "Token ID",
@@ -16,7 +16,7 @@
     },
     {
       "trait_type": "Palette",
-      "value": "Signal Lime"
+      "value": "Arcane Violet"
     },
     {
       "trait_type": "Mood",
@@ -27,12 +27,12 @@
       "value": "Keeper"
     },
     {
-      "trait_type": "Visor",
-      "value": "Open"
+      "trait_type": "Screen",
+      "value": "#8589"
     },
     {
-      "trait_type": "Antenna",
-      "value": "Grounded"
+      "trait_type": "Signal Crest",
+      "value": "Steady"
     },
     {
       "trait_type": "Artifact",

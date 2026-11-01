@@ -1,10 +1,10 @@
 {
   "name": "Naroba Identity #2354",
-  "description": "A strange cartographer from the Naroba archive, carrying a pocket horizon. Checkpoint Amber signal, pixel-native silhouette, precise details, and a calm on-chain identity. Mint stage: passage. Price: 0.000222 BNB.",
+  "description": "A strange cartographer Naroba signal terminal with a luminous golden pixel-art laptop, carrying a pocket horizon. Hot Magenta gold, dark grid, radiant signal crystal, crisp details, and a calm on-chain identity. Mint stage: passage. Price: 0.000222 BNB.",
   "image": "ipfs://REPLACE_WITH_IMAGES_CID/2354.png",
   "external_url": "https://narobaagent.example/collection",
   "token_id": 2354,
-  "prompt": "A strange cartographer from the Naroba archive, carrying a pocket horizon. Checkpoint Amber signal, pixel-native silhouette, precise details, and a calm on-chain identity.",
+  "prompt": "A strange cartographer Naroba signal terminal with a luminous golden pixel-art laptop, carrying a pocket horizon. Hot Magenta gold, dark grid, radiant signal crystal, crisp details, and a calm on-chain identity.",
   "attributes": [
     {
       "trait_type": "Token ID",
@@ -16,7 +16,7 @@
     },
     {
       "trait_type": "Palette",
-      "value": "Checkpoint Amber"
+      "value": "Hot Magenta"
     },
     {
       "trait_type": "Mood",
@@ -27,12 +27,12 @@
       "value": "Cartographer"
     },
     {
-      "trait_type": "Visor",
-      "value": "Active"
+      "trait_type": "Screen",
+      "value": "#2354"
     },
     {
-      "trait_type": "Antenna",
-      "value": "Signal"
+      "trait_type": "Signal Crest",
+      "value": "Charged"
     },
     {
       "trait_type": "Artifact",

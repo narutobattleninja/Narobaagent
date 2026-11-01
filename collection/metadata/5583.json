@@ -1,10 +1,10 @@
 {
   "name": "Naroba Identity #5583",
-  "description": "A observant drifter from the Naroba archive, carrying a tiny beacon. Checkpoint Amber signal, pixel-native silhouette, precise details, and a calm on-chain identity. Mint stage: open. Price: 0.001 BNB.",
+  "description": "A observant drifter Naroba signal terminal with a luminous golden pixel-art laptop, carrying a tiny beacon. Hot Magenta gold, dark grid, radiant signal crystal, crisp details, and a calm on-chain identity. Mint stage: open. Price: 0.001 BNB.",
   "image": "ipfs://REPLACE_WITH_IMAGES_CID/5583.png",
   "external_url": "https://narobaagent.example/collection",
   "token_id": 5583,
-  "prompt": "A observant drifter from the Naroba archive, carrying a tiny beacon. Checkpoint Amber signal, pixel-native silhouette, precise details, and a calm on-chain identity.",
+  "prompt": "A observant drifter Naroba signal terminal with a luminous golden pixel-art laptop, carrying a tiny beacon. Hot Magenta gold, dark grid, radiant signal crystal, crisp details, and a calm on-chain identity.",
   "attributes": [
     {
       "trait_type": "Token ID",
@@ -16,7 +16,7 @@
     },
     {
       "trait_type": "Palette",
-      "value": "Checkpoint Amber"
+      "value": "Hot Magenta"
     },
     {
       "trait_type": "Mood",
@@ -27,12 +27,12 @@
       "value": "Drifter"
     },
     {
-      "trait_type": "Visor",
-      "value": "Open"
+      "trait_type": "Screen",
+      "value": "#5583"
     },
     {
-      "trait_type": "Antenna",
-      "value": "Signal"
+      "trait_type": "Signal Crest",
+      "value": "Charged"
     },
     {
       "trait_type": "Artifact",

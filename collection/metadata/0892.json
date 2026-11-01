@@ -1,10 +1,10 @@
 {
   "name": "Naroba Identity #0892",
-  "description": "A quiet scout from the Naroba archive, carrying a tiny beacon. Archive Lilac signal, pixel-native silhouette, precise details, and a calm on-chain identity. Mint stage: freemint. Price: FREE.",
+  "description": "A quiet scout Naroba signal terminal with a luminous golden pixel-art laptop, carrying a tiny beacon. Neon Cyan gold, dark grid, radiant signal crystal, crisp details, and a calm on-chain identity. Mint stage: freemint. Price: FREE.",
   "image": "ipfs://REPLACE_WITH_IMAGES_CID/0892.png",
   "external_url": "https://narobaagent.example/collection",
   "token_id": 892,
-  "prompt": "A quiet scout from the Naroba archive, carrying a tiny beacon. Archive Lilac signal, pixel-native silhouette, precise details, and a calm on-chain identity.",
+  "prompt": "A quiet scout Naroba signal terminal with a luminous golden pixel-art laptop, carrying a tiny beacon. Neon Cyan gold, dark grid, radiant signal crystal, crisp details, and a calm on-chain identity.",
   "attributes": [
     {
       "trait_type": "Token ID",
@@ -16,7 +16,7 @@
     },
     {
       "trait_type": "Palette",
-      "value": "Archive Lilac"
+      "value": "Neon Cyan"
     },
     {
       "trait_type": "Mood",
@@ -27,12 +27,12 @@
       "value": "Scout"
     },
     {
-      "trait_type": "Visor",
-      "value": "Active"
+      "trait_type": "Screen",
+      "value": "#0892"
     },
     {
-      "trait_type": "Antenna",
-      "value": "Grounded"
+      "trait_type": "Signal Crest",
+      "value": "Steady"
     },
     {
       "trait_type": "Artifact",

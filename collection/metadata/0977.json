@@ -1,10 +1,10 @@
 {
   "name": "Naroba Identity #0977",
-  "description": "A patient drifter from the Naroba archive, carrying a tiny beacon. Static Blue signal, pixel-native silhouette, precise details, and a calm on-chain identity. Mint stage: freemint. Price: FREE.",
+  "description": "A patient drifter Naroba signal terminal with a luminous golden pixel-art laptop, carrying a tiny beacon. Ice Silver gold, dark grid, radiant signal crystal, crisp details, and a calm on-chain identity. Mint stage: freemint. Price: FREE.",
   "image": "ipfs://REPLACE_WITH_IMAGES_CID/0977.png",
   "external_url": "https://narobaagent.example/collection",
   "token_id": 977,
-  "prompt": "A patient drifter from the Naroba archive, carrying a tiny beacon. Static Blue signal, pixel-native silhouette, precise details, and a calm on-chain identity.",
+  "prompt": "A patient drifter Naroba signal terminal with a luminous golden pixel-art laptop, carrying a tiny beacon. Ice Silver gold, dark grid, radiant signal crystal, crisp details, and a calm on-chain identity.",
   "attributes": [
     {
       "trait_type": "Token ID",
@@ -16,7 +16,7 @@
     },
     {
       "trait_type": "Palette",
-      "value": "Static Blue"
+      "value": "Ice Silver"
     },
     {
       "trait_type": "Mood",
@@ -27,12 +27,12 @@
       "value": "Drifter"
     },
     {
-      "trait_type": "Visor",
-      "value": "Active"
+      "trait_type": "Screen",
+      "value": "#0977"
     },
     {
-      "trait_type": "Antenna",
-      "value": "Grounded"
+      "trait_type": "Signal Crest",
+      "value": "Steady"
     },
     {
       "trait_type": "Artifact",

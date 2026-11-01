@@ -1,10 +1,10 @@
 {
   "name": "Naroba Identity #8113",
-  "description": "A patient scout from the Naroba archive, carrying a folded star map. Static Blue signal, pixel-native silhouette, precise details, and a calm on-chain identity. Mint stage: open. Price: 0.001 BNB.",
+  "description": "A patient scout Naroba signal terminal with a luminous golden pixel-art laptop, carrying a folded star map. Ice Silver gold, dark grid, radiant signal crystal, crisp details, and a calm on-chain identity. Mint stage: open. Price: 0.001 BNB.",
   "image": "ipfs://REPLACE_WITH_IMAGES_CID/8113.png",
   "external_url": "https://narobaagent.example/collection",
   "token_id": 8113,
-  "prompt": "A patient scout from the Naroba archive, carrying a folded star map. Static Blue signal, pixel-native silhouette, precise details, and a calm on-chain identity.",
+  "prompt": "A patient scout Naroba signal terminal with a luminous golden pixel-art laptop, carrying a folded star map. Ice Silver gold, dark grid, radiant signal crystal, crisp details, and a calm on-chain identity.",
   "attributes": [
     {
       "trait_type": "Token ID",
@@ -16,7 +16,7 @@
     },
     {
       "trait_type": "Palette",
-      "value": "Static Blue"
+      "value": "Ice Silver"
     },
     {
       "trait_type": "Mood",
@@ -27,12 +27,12 @@
       "value": "Scout"
     },
     {
-      "trait_type": "Visor",
-      "value": "Active"
+      "trait_type": "Screen",
+      "value": "#8113"
     },
     {
-      "trait_type": "Antenna",
-      "value": "Grounded"
+      "trait_type": "Signal Crest",
+      "value": "Steady"
     },
     {
       "trait_type": "Artifact",

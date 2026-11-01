@@ -1,10 +1,10 @@
 {
   "name": "Naroba Identity #5830",
-  "description": "A quiet listener from the Naroba archive, carrying an amber key. Signal Lime signal, pixel-native silhouette, precise details, and a calm on-chain identity. Mint stage: open. Price: 0.001 BNB.",
+  "description": "A quiet listener Naroba signal terminal with a luminous golden pixel-art laptop, carrying an amber key. Solar Gold gold, dark grid, radiant signal crystal, crisp details, and a calm on-chain identity. Mint stage: open. Price: 0.001 BNB.",
   "image": "ipfs://REPLACE_WITH_IMAGES_CID/5830.png",
   "external_url": "https://narobaagent.example/collection",
   "token_id": 5830,
-  "prompt": "A quiet listener from the Naroba archive, carrying an amber key. Signal Lime signal, pixel-native silhouette, precise details, and a calm on-chain identity.",
+  "prompt": "A quiet listener Naroba signal terminal with a luminous golden pixel-art laptop, carrying an amber key. Solar Gold gold, dark grid, radiant signal crystal, crisp details, and a calm on-chain identity.",
   "attributes": [
     {
       "trait_type": "Token ID",
@@ -16,7 +16,7 @@
     },
     {
       "trait_type": "Palette",
-      "value": "Signal Lime"
+      "value": "Solar Gold"
     },
     {
       "trait_type": "Mood",
@@ -27,12 +27,12 @@
       "value": "Listener"
     },
     {
-      "trait_type": "Visor",
-      "value": "Open"
+      "trait_type": "Screen",
+      "value": "#5830"
     },
     {
-      "trait_type": "Antenna",
-      "value": "Signal"
+      "trait_type": "Signal Crest",
+      "value": "Charged"
     },
     {
       "trait_type": "Artifact",

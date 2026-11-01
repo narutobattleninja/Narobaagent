@@ -1,10 +1,10 @@
 {
   "name": "Naroba Identity #1337",
-  "description": "A strange courier from the Naroba archive, carrying a tiny beacon. Static Blue signal, pixel-native silhouette, precise details, and a calm on-chain identity. Mint stage: passage. Price: 0.000222 BNB.",
+  "description": "A strange courier Naroba signal terminal with a luminous golden pixel-art laptop, carrying a tiny beacon. Coral Flame gold, dark grid, radiant signal crystal, crisp details, and a calm on-chain identity. Mint stage: passage. Price: 0.000222 BNB.",
   "image": "ipfs://REPLACE_WITH_IMAGES_CID/1337.png",
   "external_url": "https://narobaagent.example/collection",
   "token_id": 1337,
-  "prompt": "A strange courier from the Naroba archive, carrying a tiny beacon. Static Blue signal, pixel-native silhouette, precise details, and a calm on-chain identity.",
+  "prompt": "A strange courier Naroba signal terminal with a luminous golden pixel-art laptop, carrying a tiny beacon. Coral Flame gold, dark grid, radiant signal crystal, crisp details, and a calm on-chain identity.",
   "attributes": [
     {
       "trait_type": "Token ID",
@@ -16,7 +16,7 @@
     },
     {
       "trait_type": "Palette",
-      "value": "Static Blue"
+      "value": "Coral Flame"
     },
     {
       "trait_type": "Mood",
@@ -27,12 +27,12 @@
       "value": "Courier"
     },
     {
-      "trait_type": "Visor",
-      "value": "Active"
+      "trait_type": "Screen",
+      "value": "#1337"
     },
     {
-      "trait_type": "Antenna",
-      "value": "Grounded"
+      "trait_type": "Signal Crest",
+      "value": "Steady"
     },
     {
       "trait_type": "Artifact",

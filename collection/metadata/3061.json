@@ -1,10 +1,10 @@
 {
   "name": "Naroba Identity #3061",
-  "description": "A quiet drifter from the Naroba archive, carrying an amber key. Static Blue signal, pixel-native silhouette, precise details, and a calm on-chain identity. Mint stage: open. Price: 0.001 BNB.",
+  "description": "A quiet drifter Naroba signal terminal with a luminous golden pixel-art laptop, carrying an amber key. Coral Flame gold, dark grid, radiant signal crystal, crisp details, and a calm on-chain identity. Mint stage: open. Price: 0.001 BNB.",
   "image": "ipfs://REPLACE_WITH_IMAGES_CID/3061.png",
   "external_url": "https://narobaagent.example/collection",
   "token_id": 3061,
-  "prompt": "A quiet drifter from the Naroba archive, carrying an amber key. Static Blue signal, pixel-native silhouette, precise details, and a calm on-chain identity.",
+  "prompt": "A quiet drifter Naroba signal terminal with a luminous golden pixel-art laptop, carrying an amber key. Coral Flame gold, dark grid, radiant signal crystal, crisp details, and a calm on-chain identity.",
   "attributes": [
     {
       "trait_type": "Token ID",
@@ -16,7 +16,7 @@
     },
     {
       "trait_type": "Palette",
-      "value": "Static Blue"
+      "value": "Coral Flame"
     },
     {
       "trait_type": "Mood",
@@ -27,12 +27,12 @@
       "value": "Drifter"
     },
     {
-      "trait_type": "Visor",
-      "value": "Active"
+      "trait_type": "Screen",
+      "value": "#3061"
     },
     {
-      "trait_type": "Antenna",
-      "value": "Grounded"
+      "trait_type": "Signal Crest",
+      "value": "Steady"
     },
     {
       "trait_type": "Artifact",

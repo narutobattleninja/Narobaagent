@@ -1,10 +1,10 @@
 {
   "name": "Naroba Identity #6267",
-  "description": "A electric keeper from the Naroba archive, carrying a pocket horizon. Archive Lilac signal, pixel-native silhouette, precise details, and a calm on-chain identity. Mint stage: open. Price: 0.001 BNB.",
+  "description": "A electric keeper Naroba signal terminal with a luminous golden pixel-art laptop, carrying a pocket horizon. Emerald Signal gold, dark grid, radiant signal crystal, crisp details, and a calm on-chain identity. Mint stage: open. Price: 0.001 BNB.",
   "image": "ipfs://REPLACE_WITH_IMAGES_CID/6267.png",
   "external_url": "https://narobaagent.example/collection",
   "token_id": 6267,
-  "prompt": "A electric keeper from the Naroba archive, carrying a pocket horizon. Archive Lilac signal, pixel-native silhouette, precise details, and a calm on-chain identity.",
+  "prompt": "A electric keeper Naroba signal terminal with a luminous golden pixel-art laptop, carrying a pocket horizon. Emerald Signal gold, dark grid, radiant signal crystal, crisp details, and a calm on-chain identity.",
   "attributes": [
     {
       "trait_type": "Token ID",
@@ -16,7 +16,7 @@
     },
     {
       "trait_type": "Palette",
-      "value": "Archive Lilac"
+      "value": "Emerald Signal"
     },
     {
       "trait_type": "Mood",
@@ -27,12 +27,12 @@
       "value": "Keeper"
     },
     {
-      "trait_type": "Visor",
-      "value": "Open"
+      "trait_type": "Screen",
+      "value": "#6267"
     },
     {
-      "trait_type": "Antenna",
-      "value": "Grounded"
+      "trait_type": "Signal Crest",
+      "value": "Steady"
     },
     {
       "trait_type": "Artifact",

@@ -1,10 +1,10 @@
 {
   "name": "Naroba Identity #1694",
-  "description": "A patient listener from the Naroba archive, carrying a folded star map. Static Blue signal, pixel-native silhouette, precise details, and a calm on-chain identity. Mint stage: passage. Price: 0.000222 BNB.",
+  "description": "A patient listener Naroba signal terminal with a luminous golden pixel-art laptop, carrying a folded star map. Coral Flame gold, dark grid, radiant signal crystal, crisp details, and a calm on-chain identity. Mint stage: passage. Price: 0.000222 BNB.",
   "image": "ipfs://REPLACE_WITH_IMAGES_CID/1694.png",
   "external_url": "https://narobaagent.example/collection",
   "token_id": 1694,
-  "prompt": "A patient listener from the Naroba archive, carrying a folded star map. Static Blue signal, pixel-native silhouette, precise details, and a calm on-chain identity.",
+  "prompt": "A patient listener Naroba signal terminal with a luminous golden pixel-art laptop, carrying a folded star map. Coral Flame gold, dark grid, radiant signal crystal, crisp details, and a calm on-chain identity.",
   "attributes": [
     {
       "trait_type": "Token ID",
@@ -16,7 +16,7 @@
     },
     {
       "trait_type": "Palette",
-      "value": "Static Blue"
+      "value": "Coral Flame"
     },
     {
       "trait_type": "Mood",
@@ -27,12 +27,12 @@
       "value": "Listener"
     },
     {
-      "trait_type": "Visor",
-      "value": "Active"
+      "trait_type": "Screen",
+      "value": "#1694"
     },
     {
-      "trait_type": "Antenna",
-      "value": "Grounded"
+      "trait_type": "Signal Crest",
+      "value": "Steady"
     },
     {
       "trait_type": "Artifact",
