@@ -97,10 +97,10 @@ function getSavedAddress(network: NetworkKey) {
 }
 
 export default function Deploy() {
-  const [networkKey, setNetworkKey] = useState<NetworkKey>("bnb-testnet");
+  const [networkKey, setNetworkKey] = useState<NetworkKey>("bnb-mainnet");
   const [account, setAccount] = useState("");
   const [chainId, setChainId] = useState<number | null>(null);
-  const [address, setAddress] = useState(() => getSavedAddress("bnb-testnet"));
+  const [address, setAddress] = useState(() => getSavedAddress("bnb-mainnet"));
   const [baseURIInput, setBaseURIInput] = useState("");
   const [snapshot, setSnapshot] = useState<ContractSnapshot | null>(null);
   const [busy, setBusy] = useState<Action>(null);
@@ -369,7 +369,7 @@ export default function Deploy() {
                   <option value="bnb-testnet">{NETWORKS["bnb-testnet"].display}</option>
                   <option value="bnb-mainnet">{NETWORKS["bnb-mainnet"].display}</option>
                 </select>
-                <div className="deploy-network-note"><ShieldCheck size={16} /><span>Testnet is selected first for practice. Mainnet deployment uses real BNB for gas. Deploying does not charge the mint price or open mint.</span></div>
+                <div className="deploy-network-note"><ShieldCheck size={16} /><span>Mainnet is selected by default. Mainnet deployment uses real BNB for gas. Deploying does not charge the mint price or open mint.</span></div>
                 <button className="deploy-primary deploy-primary--wide" type="button" onClick={deployContract} disabled={!account || busy !== null}>
                   <FileCheck2 size={16} /> {busy === "deploy" ? "Deploying contract…" : `Deploy Naroba on ${networkKey === "bnb-mainnet" ? "Mainnet" : "Testnet"} — sign in wallet`}
                 </button>
