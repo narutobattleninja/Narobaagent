@@ -9,9 +9,9 @@
 ## Supply dan pricing — complete
 
 - [x] Tampilkan total supply 10.000 NFT, archive supply snapshot, sisa supply, dan progress koleksi.
-- [x] Terapkan tier harga otomatis: 1.000 mint pertama freemint.
-- [x] Terapkan harga 0.000222 BNB untuk mint ke-1.001 sampai ke-3.000.
-- [x] Terapkan paid mint 0.001 BNB untuk sisa supply sampai token ke-10.000.
+- [x] Terapkan free mint hanya untuk 1.000 token pertama (#0001–#1000).
+- [x] Terapkan harga 0.000222 BNB untuk 8.000 token berikutnya (#1001–#9000).
+- [x] Terapkan paid mint 0.001 BNB untuk 1.000 token terakhir (#9001–#10000).
 - [x] Tampilkan tier aktif dan harga aktif sebelum konfirmasi mint.
 
 ## Wallet prompt dan AI agent — complete

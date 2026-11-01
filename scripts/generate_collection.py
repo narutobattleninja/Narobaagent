@@ -42,7 +42,7 @@ def token_seed(token_id: int) -> int:
 def tier_for_token(token_id: int) -> tuple[str, str]:
     if token_id <= 1_000:
         return "freemint", "FREE"
-    if token_id <= 3_000:
+    if token_id <= 9_000:
         return "passage", "0.000222 BNB"
     return "open", "0.001 BNB"
 

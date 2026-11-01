@@ -4,7 +4,7 @@
 
 Naroba adalah landing page mint NFT satu halaman yang seluruh pengalaman utamanya berjalan di browser. React menangani state supply demo, pemilihan jalur wallet prompt atau AI agent, kalkulasi tier harga, validasi input, konfirmasi mint, dan gallery hasil mint. Karena alamat kontrak dan chain belum diberikan, aksi mint dibuat sebagai simulasi aman yang menunjukkan payload dan status; konfigurasi kontrak ditampilkan sebagai placeholder yang harus diganti sebelum transaksi on-chain diaktifkan.
 
-Supply memakai konstanta 10.000 token. Tier harga dipetakan deterministik: token 1–1.000 freemint, token 1.001–3.000 seharga 0.000222, dan token 3.001–10.000 seharga 0.001. Setiap hasil mint menyimpan tier, harga, nomor token, dan prompt sehingga dapat ditampilkan kembali di gallery.
+Supply memakai konstanta 10.000 token. Tier harga dipetakan deterministik: token 1–1.000 gratis, token 1.001–9.000 (8.000 token) seharga 0.000222 BNB, dan token 9.001–10.000 (1.000 token) seharga 0.001 BNB. Setiap hasil mint menyimpan tier, harga, nomor token, dan prompt sehingga dapat ditampilkan kembali di gallery.
 
 ## Struktur proyek
 

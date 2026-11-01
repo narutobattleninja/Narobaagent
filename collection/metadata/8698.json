@@ -1,6 +1,6 @@
 {
   "name": "Naroba Identity #8698",
-  "description": "A quiet keeper Naroba signal terminal with a luminous golden pixel-art laptop, carrying a folded star map. Arcane Violet gold, dark grid, radiant signal crystal, crisp details, and a calm on-chain identity. Mint stage: open. Price: 0.001 BNB.",
+  "description": "A quiet keeper Naroba signal terminal with a luminous golden pixel-art laptop, carrying a folded star map. Arcane Violet gold, dark grid, radiant signal crystal, crisp details, and a calm on-chain identity. Mint stage: passage. Price: 0.000222 BNB.",
   "image": "ipfs://REPLACE_WITH_IMAGES_CID/8698.png",
   "external_url": "https://narobaagent.example/collection",
   "token_id": 8698,
@@ -12,7 +12,7 @@
     },
     {
       "trait_type": "Stage",
-      "value": "Open"
+      "value": "Passage"
     },
     {
       "trait_type": "Palette",

@@ -1,6 +1,6 @@
 {
   "name": "Naroba Identity #7557",
-  "description": "A strange scout Naroba signal terminal with a luminous golden pixel-art laptop, carrying a packet of starlight. Neon Cyan gold, dark grid, radiant signal crystal, crisp details, and a calm on-chain identity. Mint stage: open. Price: 0.001 BNB.",
+  "description": "A strange scout Naroba signal terminal with a luminous golden pixel-art laptop, carrying a packet of starlight. Neon Cyan gold, dark grid, radiant signal crystal, crisp details, and a calm on-chain identity. Mint stage: passage. Price: 0.000222 BNB.",
   "image": "ipfs://REPLACE_WITH_IMAGES_CID/7557.png",
   "external_url": "https://narobaagent.example/collection",
   "token_id": 7557,
@@ -12,7 +12,7 @@
     },
     {
       "trait_type": "Stage",
-      "value": "Open"
+      "value": "Passage"
     },
     {
       "trait_type": "Palette",

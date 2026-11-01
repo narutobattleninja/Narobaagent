@@ -47,3 +47,11 @@ An IPFS CID cannot be created offline. The repository now contains the reproduci
 ## Artwork system
 
 The collection uses a luminous pixel-art laptop on a dark grid, with a signal crystal, ambient pixels, a terminal screen, and a detailed keyboard. Each token is assigned one of eight strongly differentiated color palettes (gold, violet, cyan, emerald, magenta, blue, coral, or silver); terminal bars and particles also vary deterministically. The screen prints that NFT's exact ID (for example, `#0001` or `#10000`) in pixel lettering. Art is drawn on a 64 × 64 canvas and enlarged to 256 × 256 with nearest-neighbour scaling. The `/nft` folder contains website previews for tokens 0001, 0638, 0771, and 2814. Regenerate artwork and metadata together using `python3 scripts/generate_collection.py --count 10000` before pinning a collection revision.
+
+## Mint phases
+
+- Tokens 1–1,000: free mint (1,000 total).
+- Tokens 1,001–9,000: paid mint at 0.000222 BNB (8,000 total).
+- Tokens 9,001–10,000: paid mint at 0.001 BNB (1,000 total).
+
+`collection/config.json`, the deterministic metadata generator, and the collection manifest use the same boundaries.

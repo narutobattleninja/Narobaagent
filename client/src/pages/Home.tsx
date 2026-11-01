@@ -45,27 +45,29 @@ type BeforeInstallPromptEvent = Event & {
 };
 
 const SUPPLY = 10_000;
+const FREE_MINT_END = 1_000;
+const PASSAGE_MINT_END = FREE_MINT_END + 8_000;
 const ARCHIVE_MINTED_START = 842;
 const CONTRACT_WALLET = "0xNAROBA_BNB_CONTRACT_CONFIGURE_ME";
 
 const tierForToken = (token: number) => {
-  if (token <= 1_000) {
+  if (token <= FREE_MINT_END) {
     return {
       id: "free" as const,
       label: "Freemint",
       price: "0",
       displayPrice: "FREE",
-      range: "001 — 1,000",
+      range: "0001 — 1,000",
       helper: "First signal, on us.",
     };
   }
-  if (token <= 3_000) {
+  if (token <= PASSAGE_MINT_END) {
     return {
       id: "passage" as const,
       label: "Passage",
       price: "0.000222",
       displayPrice: "0.000222",
-      range: "1,001 — 3,000",
+      range: "1,001 — 9,000",
       helper: "A small fee to cross the gate.",
     };
   }
@@ -74,7 +76,7 @@ const tierForToken = (token: number) => {
     label: "Open mint",
     price: "0.001",
     displayPrice: "0.001",
-    range: "3,001 — 10,000",
+    range: "9,001 — 10,000",
     helper: "The archive stays open.",
   };
 };
@@ -92,9 +94,9 @@ const seedPrompts = [
 ];
 
 const stageCards = [
-  { id: "free" as const, index: "01", label: "First signal", price: "FREE", range: "1,000 spots", note: "For the early explorers." },
-  { id: "passage" as const, index: "02", label: "The passage", price: "0.000222", range: "2,000 spots", note: "Sent to the contract wallet." },
-  { id: "open" as const, index: "03", label: "Open archive", price: "0.001", range: "7,000 spots", note: "Mint until the archive closes." },
+  { id: "free" as const, index: "01", label: "First signal", price: "FREE", range: "1,000 spots", note: "The first 1,000 tokens are free." },
+  { id: "passage" as const, index: "02", label: "The passage", price: "0.000222", range: "8,000 spots", note: "Paid mint · tokens #1001–#9000." },
+  { id: "open" as const, index: "03", label: "Open archive", price: "0.001", range: "1,000 spots", note: "Final paid tokens #9001–#10000." },
 ];
 
 function PixelMark({ compact = false }: { compact?: boolean }) {
@@ -341,7 +343,7 @@ export default function Home() {
             <p>Choose your entry point. The archive will use the next open spot and show the exact prompt before any mint action.</p>
             <div className="stage-list">
               {stageCards.map((stage) => (
-                <button className={`stage-card ${activeTier.id === stage.id ? "stage-card--active" : ""}`} type="button" key={stage.id} onClick={() => { setMinted(stage.id === "free" ? 842 : stage.id === "passage" ? 1_842 : 3_842); setStatusMessage(`Previewing the ${stage.label.toLowerCase()} tier.`); }}>
+                <button className={`stage-card ${activeTier.id === stage.id ? "stage-card--active" : ""}`} type="button" key={stage.id} onClick={() => { setMinted(stage.id === "free" ? 0 : stage.id === "passage" ? FREE_MINT_END : PASSAGE_MINT_END); setStatusMessage(`Previewing the ${stage.label.toLowerCase()} tier.`); }}>
                   <span className="stage-card__index">{stage.index}</span><span className="stage-card__main"><strong>{stage.label}</strong><small>{stage.range} · {stage.note}</small></span><span className={`stage-card__price stage-card__price--${stage.id}`}>{stage.price}</span><ChevronDown size={14} className="stage-card__chevron" />
                 </button>
               ))}

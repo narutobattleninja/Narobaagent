@@ -1,6 +1,6 @@
 {
   "name": "Naroba Identity #6158",
-  "description": "A observant drifter Naroba signal terminal with a luminous golden pixel-art laptop, carrying an amber key. Arcane Violet gold, dark grid, radiant signal crystal, crisp details, and a calm on-chain identity. Mint stage: open. Price: 0.001 BNB.",
+  "description": "A observant drifter Naroba signal terminal with a luminous golden pixel-art laptop, carrying an amber key. Arcane Violet gold, dark grid, radiant signal crystal, crisp details, and a calm on-chain identity. Mint stage: passage. Price: 0.000222 BNB.",
   "image": "ipfs://REPLACE_WITH_IMAGES_CID/6158.png",
   "external_url": "https://narobaagent.example/collection",
   "token_id": 6158,
@@ -12,7 +12,7 @@
     },
     {
       "trait_type": "Stage",
-      "value": "Open"
+      "value": "Passage"
     },
     {
       "trait_type": "Palette",

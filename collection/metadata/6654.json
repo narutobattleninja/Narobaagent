@@ -1,6 +1,6 @@
 {
   "name": "Naroba Identity #6654",
-  "description": "A observant courier Naroba signal terminal with a luminous golden pixel-art laptop, carrying a tiny beacon. Solar Gold gold, dark grid, radiant signal crystal, crisp details, and a calm on-chain identity. Mint stage: open. Price: 0.001 BNB.",
+  "description": "A observant courier Naroba signal terminal with a luminous golden pixel-art laptop, carrying a tiny beacon. Solar Gold gold, dark grid, radiant signal crystal, crisp details, and a calm on-chain identity. Mint stage: passage. Price: 0.000222 BNB.",
   "image": "ipfs://REPLACE_WITH_IMAGES_CID/6654.png",
   "external_url": "https://narobaagent.example/collection",
   "token_id": 6654,
@@ -12,7 +12,7 @@
     },
     {
       "trait_type": "Stage",
-      "value": "Open"
+      "value": "Passage"
     },
     {
       "trait_type": "Palette",

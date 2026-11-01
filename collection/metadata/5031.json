@@ -1,6 +1,6 @@
 {
   "name": "Naroba Identity #5031",
-  "description": "A quiet cartographer Naroba signal terminal with a luminous golden pixel-art laptop, carrying a pocket horizon. Emerald Signal gold, dark grid, radiant signal crystal, crisp details, and a calm on-chain identity. Mint stage: open. Price: 0.001 BNB.",
+  "description": "A quiet cartographer Naroba signal terminal with a luminous golden pixel-art laptop, carrying a pocket horizon. Emerald Signal gold, dark grid, radiant signal crystal, crisp details, and a calm on-chain identity. Mint stage: passage. Price: 0.000222 BNB.",
   "image": "ipfs://REPLACE_WITH_IMAGES_CID/5031.png",
   "external_url": "https://narobaagent.example/collection",
   "token_id": 5031,
@@ -12,7 +12,7 @@
     },
     {
       "trait_type": "Stage",
-      "value": "Open"
+      "value": "Passage"
     },
     {
       "trait_type": "Palette",
