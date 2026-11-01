@@ -271,7 +271,7 @@ export default function Home() {
       <div className="ambient ambient--two" />
       <header className="site-header">
         <a className="brand" href="#top" aria-label="Naroba home">
-          <PixelMark />
+          <img src="/nft/nrba-0001.png" alt="Naroba NFT identity #0001" style={{ width: "32px", height: "32px", objectFit: "cover", borderRadius: "8px", border: "1px solid #b9ff59" }} />
           <span className="brand__name">naroba</span>
           <span className="brand__slash">/</span>
           <span className="brand__descriptor">identity archive</span>
