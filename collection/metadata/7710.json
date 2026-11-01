@@ -1,8 +1,8 @@
 {
   "name": "Naroba Identity #7710",
   "description": "A electric listener Naroba signal terminal with a luminous golden pixel-art laptop, carrying an amber key. Coral Flame gold, dark grid, radiant signal crystal, crisp details, and a calm on-chain identity. Mint stage: passage. Price: 0.000222 BNB.",
-  "image": "ipfs://REPLACE_WITH_IMAGES_CID/7710.png",
-  "external_url": "https://narobaagent.example/collection",
+  "image": "https://naroba.info/collection/images/7710.png",
+  "external_url": "https://naroba.info/",
   "token_id": 7710,
   "prompt": "A electric listener Naroba signal terminal with a luminous golden pixel-art laptop, carrying an amber key. Coral Flame gold, dark grid, radiant signal crystal, crisp details, and a calm on-chain identity.",
   "attributes": [

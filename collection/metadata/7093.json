@@ -1,8 +1,8 @@
 {
   "name": "Naroba Identity #7093",
   "description": "A strange listener Naroba signal terminal with a luminous golden pixel-art laptop, carrying a folded star map. Emerald Signal gold, dark grid, radiant signal crystal, crisp details, and a calm on-chain identity. Mint stage: passage. Price: 0.000222 BNB.",
-  "image": "ipfs://REPLACE_WITH_IMAGES_CID/7093.png",
-  "external_url": "https://narobaagent.example/collection",
+  "image": "https://naroba.info/collection/images/7093.png",
+  "external_url": "https://naroba.info/",
   "token_id": 7093,
   "prompt": "A strange listener Naroba signal terminal with a luminous golden pixel-art laptop, carrying a folded star map. Emerald Signal gold, dark grid, radiant signal crystal, crisp details, and a calm on-chain identity.",
   "attributes": [

@@ -1,8 +1,8 @@
 {
   "name": "Naroba Identity #9677",
   "description": "A observant scout Naroba signal terminal with a luminous golden pixel-art laptop, carrying a pocket horizon. Electric Blue gold, dark grid, radiant signal crystal, crisp details, and a calm on-chain identity. Mint stage: open. Price: 0.001 BNB.",
-  "image": "ipfs://REPLACE_WITH_IMAGES_CID/9677.png",
-  "external_url": "https://narobaagent.example/collection",
+  "image": "https://naroba.info/collection/images/9677.png",
+  "external_url": "https://naroba.info/",
   "token_id": 9677,
   "prompt": "A observant scout Naroba signal terminal with a luminous golden pixel-art laptop, carrying a pocket horizon. Electric Blue gold, dark grid, radiant signal crystal, crisp details, and a calm on-chain identity.",
   "attributes": [

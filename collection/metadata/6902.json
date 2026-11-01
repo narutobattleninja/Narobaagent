@@ -1,8 +1,8 @@
 {
   "name": "Naroba Identity #6902",
   "description": "A patient cartographer Naroba signal terminal with a luminous golden pixel-art laptop, carrying a glass signal. Electric Blue gold, dark grid, radiant signal crystal, crisp details, and a calm on-chain identity. Mint stage: passage. Price: 0.000222 BNB.",
-  "image": "ipfs://REPLACE_WITH_IMAGES_CID/6902.png",
-  "external_url": "https://narobaagent.example/collection",
+  "image": "https://naroba.info/collection/images/6902.png",
+  "external_url": "https://naroba.info/",
   "token_id": 6902,
   "prompt": "A patient cartographer Naroba signal terminal with a luminous golden pixel-art laptop, carrying a glass signal. Electric Blue gold, dark grid, radiant signal crystal, crisp details, and a calm on-chain identity.",
   "attributes": [

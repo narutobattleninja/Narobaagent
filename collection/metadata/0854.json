@@ -1,8 +1,8 @@
 {
   "name": "Naroba Identity #0854",
   "description": "A restless scout Naroba signal terminal with a luminous golden pixel-art laptop, carrying an amber key. Coral Flame gold, dark grid, radiant signal crystal, crisp details, and a calm on-chain identity. Mint stage: freemint. Price: FREE.",
-  "image": "ipfs://REPLACE_WITH_IMAGES_CID/0854.png",
-  "external_url": "https://narobaagent.example/collection",
+  "image": "https://naroba.info/collection/images/0854.png",
+  "external_url": "https://naroba.info/",
   "token_id": 854,
   "prompt": "A restless scout Naroba signal terminal with a luminous golden pixel-art laptop, carrying an amber key. Coral Flame gold, dark grid, radiant signal crystal, crisp details, and a calm on-chain identity.",
   "attributes": [

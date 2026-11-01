@@ -1,8 +1,8 @@
 {
   "name": "Naroba Identity #7827",
   "description": "A strange courier Naroba signal terminal with a luminous golden pixel-art laptop, carrying a packet of starlight. Ice Silver gold, dark grid, radiant signal crystal, crisp details, and a calm on-chain identity. Mint stage: passage. Price: 0.000222 BNB.",
-  "image": "ipfs://REPLACE_WITH_IMAGES_CID/7827.png",
-  "external_url": "https://narobaagent.example/collection",
+  "image": "https://naroba.info/collection/images/7827.png",
+  "external_url": "https://naroba.info/",
   "token_id": 7827,
   "prompt": "A strange courier Naroba signal terminal with a luminous golden pixel-art laptop, carrying a packet of starlight. Ice Silver gold, dark grid, radiant signal crystal, crisp details, and a calm on-chain identity.",
   "attributes": [

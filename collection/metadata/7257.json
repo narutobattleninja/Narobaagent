@@ -1,8 +1,8 @@
 {
   "name": "Naroba Identity #7257",
   "description": "A quiet drifter Naroba signal terminal with a luminous golden pixel-art laptop, carrying a pocket horizon. Emerald Signal gold, dark grid, radiant signal crystal, crisp details, and a calm on-chain identity. Mint stage: passage. Price: 0.000222 BNB.",
-  "image": "ipfs://REPLACE_WITH_IMAGES_CID/7257.png",
-  "external_url": "https://narobaagent.example/collection",
+  "image": "https://naroba.info/collection/images/7257.png",
+  "external_url": "https://naroba.info/",
   "token_id": 7257,
   "prompt": "A quiet drifter Naroba signal terminal with a luminous golden pixel-art laptop, carrying a pocket horizon. Emerald Signal gold, dark grid, radiant signal crystal, crisp details, and a calm on-chain identity.",
   "attributes": [

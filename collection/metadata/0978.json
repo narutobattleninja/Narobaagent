@@ -1,8 +1,8 @@
 {
   "name": "Naroba Identity #0978",
   "description": "A restless drifter Naroba signal terminal with a luminous golden pixel-art laptop, carrying a folded star map. Ice Silver gold, dark grid, radiant signal crystal, crisp details, and a calm on-chain identity. Mint stage: freemint. Price: FREE.",
-  "image": "ipfs://REPLACE_WITH_IMAGES_CID/0978.png",
-  "external_url": "https://narobaagent.example/collection",
+  "image": "https://naroba.info/collection/images/0978.png",
+  "external_url": "https://naroba.info/",
   "token_id": 978,
   "prompt": "A restless drifter Naroba signal terminal with a luminous golden pixel-art laptop, carrying a folded star map. Ice Silver gold, dark grid, radiant signal crystal, crisp details, and a calm on-chain identity.",
   "attributes": [

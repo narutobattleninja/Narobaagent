@@ -1,8 +1,8 @@
 {
   "name": "Naroba Identity #7444",
   "description": "A strange cartographer Naroba signal terminal with a luminous golden pixel-art laptop, carrying an amber key. Hot Magenta gold, dark grid, radiant signal crystal, crisp details, and a calm on-chain identity. Mint stage: passage. Price: 0.000222 BNB.",
-  "image": "ipfs://REPLACE_WITH_IMAGES_CID/7444.png",
-  "external_url": "https://narobaagent.example/collection",
+  "image": "https://naroba.info/collection/images/7444.png",
+  "external_url": "https://naroba.info/",
   "token_id": 7444,
   "prompt": "A strange cartographer Naroba signal terminal with a luminous golden pixel-art laptop, carrying an amber key. Hot Magenta gold, dark grid, radiant signal crystal, crisp details, and a calm on-chain identity.",
   "attributes": [

@@ -1,8 +1,8 @@
 {
   "name": "Naroba Identity #9130",
   "description": "A quiet cartographer Naroba signal terminal with a luminous golden pixel-art laptop, carrying a glass signal. Electric Blue gold, dark grid, radiant signal crystal, crisp details, and a calm on-chain identity. Mint stage: open. Price: 0.001 BNB.",
-  "image": "ipfs://REPLACE_WITH_IMAGES_CID/9130.png",
-  "external_url": "https://narobaagent.example/collection",
+  "image": "https://naroba.info/collection/images/9130.png",
+  "external_url": "https://naroba.info/",
   "token_id": 9130,
   "prompt": "A quiet cartographer Naroba signal terminal with a luminous golden pixel-art laptop, carrying a glass signal. Electric Blue gold, dark grid, radiant signal crystal, crisp details, and a calm on-chain identity.",
   "attributes": [

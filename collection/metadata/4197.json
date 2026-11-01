@@ -1,8 +1,8 @@
 {
   "name": "Naroba Identity #4197",
   "description": "A quiet drifter Naroba signal terminal with a luminous golden pixel-art laptop, carrying an amber key. Neon Cyan gold, dark grid, radiant signal crystal, crisp details, and a calm on-chain identity. Mint stage: passage. Price: 0.000222 BNB.",
-  "image": "ipfs://REPLACE_WITH_IMAGES_CID/4197.png",
-  "external_url": "https://narobaagent.example/collection",
+  "image": "https://naroba.info/collection/images/4197.png",
+  "external_url": "https://naroba.info/",
   "token_id": 4197,
   "prompt": "A quiet drifter Naroba signal terminal with a luminous golden pixel-art laptop, carrying an amber key. Neon Cyan gold, dark grid, radiant signal crystal, crisp details, and a calm on-chain identity.",
   "attributes": [

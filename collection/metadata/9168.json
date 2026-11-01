@@ -1,8 +1,8 @@
 {
   "name": "Naroba Identity #9168",
   "description": "A restless keeper Naroba signal terminal with a luminous golden pixel-art laptop, carrying an amber key. Ice Silver gold, dark grid, radiant signal crystal, crisp details, and a calm on-chain identity. Mint stage: open. Price: 0.001 BNB.",
-  "image": "ipfs://REPLACE_WITH_IMAGES_CID/9168.png",
-  "external_url": "https://narobaagent.example/collection",
+  "image": "https://naroba.info/collection/images/9168.png",
+  "external_url": "https://naroba.info/",
   "token_id": 9168,
   "prompt": "A restless keeper Naroba signal terminal with a luminous golden pixel-art laptop, carrying an amber key. Ice Silver gold, dark grid, radiant signal crystal, crisp details, and a calm on-chain identity.",
   "attributes": [

@@ -1,8 +1,8 @@
 {
   "name": "Naroba Identity #0722",
   "description": "A electric keeper Naroba signal terminal with a luminous golden pixel-art laptop, carrying a tiny beacon. Electric Blue gold, dark grid, radiant signal crystal, crisp details, and a calm on-chain identity. Mint stage: freemint. Price: FREE.",
-  "image": "ipfs://REPLACE_WITH_IMAGES_CID/0722.png",
-  "external_url": "https://narobaagent.example/collection",
+  "image": "https://naroba.info/collection/images/0722.png",
+  "external_url": "https://naroba.info/",
   "token_id": 722,
   "prompt": "A electric keeper Naroba signal terminal with a luminous golden pixel-art laptop, carrying a tiny beacon. Electric Blue gold, dark grid, radiant signal crystal, crisp details, and a calm on-chain identity.",
   "attributes": [

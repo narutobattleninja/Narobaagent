@@ -1,8 +1,8 @@
 {
   "name": "Naroba Identity #8170",
   "description": "A restless courier Naroba signal terminal with a luminous golden pixel-art laptop, carrying an amber key. Ice Silver gold, dark grid, radiant signal crystal, crisp details, and a calm on-chain identity. Mint stage: passage. Price: 0.000222 BNB.",
-  "image": "ipfs://REPLACE_WITH_IMAGES_CID/8170.png",
-  "external_url": "https://narobaagent.example/collection",
+  "image": "https://naroba.info/collection/images/8170.png",
+  "external_url": "https://naroba.info/",
   "token_id": 8170,
   "prompt": "A restless courier Naroba signal terminal with a luminous golden pixel-art laptop, carrying an amber key. Ice Silver gold, dark grid, radiant signal crystal, crisp details, and a calm on-chain identity.",
   "attributes": [

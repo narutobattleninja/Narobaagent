@@ -1,8 +1,8 @@
 {
   "name": "Naroba Identity #9825",
   "description": "A restless drifter Naroba signal terminal with a luminous golden pixel-art laptop, carrying a pocket horizon. Ice Silver gold, dark grid, radiant signal crystal, crisp details, and a calm on-chain identity. Mint stage: open. Price: 0.001 BNB.",
-  "image": "ipfs://REPLACE_WITH_IMAGES_CID/9825.png",
-  "external_url": "https://narobaagent.example/collection",
+  "image": "https://naroba.info/collection/images/9825.png",
+  "external_url": "https://naroba.info/",
   "token_id": 9825,
   "prompt": "A restless drifter Naroba signal terminal with a luminous golden pixel-art laptop, carrying a pocket horizon. Ice Silver gold, dark grid, radiant signal crystal, crisp details, and a calm on-chain identity.",
   "attributes": [

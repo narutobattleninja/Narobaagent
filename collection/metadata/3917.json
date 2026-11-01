@@ -1,8 +1,8 @@
 {
   "name": "Naroba Identity #3917",
   "description": "A electric listener Naroba signal terminal with a luminous golden pixel-art laptop, carrying a folded star map. Arcane Violet gold, dark grid, radiant signal crystal, crisp details, and a calm on-chain identity. Mint stage: passage. Price: 0.000222 BNB.",
-  "image": "ipfs://REPLACE_WITH_IMAGES_CID/3917.png",
-  "external_url": "https://narobaagent.example/collection",
+  "image": "https://naroba.info/collection/images/3917.png",
+  "external_url": "https://naroba.info/",
   "token_id": 3917,
   "prompt": "A electric listener Naroba signal terminal with a luminous golden pixel-art laptop, carrying a folded star map. Arcane Violet gold, dark grid, radiant signal crystal, crisp details, and a calm on-chain identity.",
   "attributes": [

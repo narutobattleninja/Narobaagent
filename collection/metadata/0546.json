@@ -1,8 +1,8 @@
 {
   "name": "Naroba Identity #0546",
   "description": "A observant cartographer Naroba signal terminal with a luminous golden pixel-art laptop, carrying a glass signal. Electric Blue gold, dark grid, radiant signal crystal, crisp details, and a calm on-chain identity. Mint stage: freemint. Price: FREE.",
-  "image": "ipfs://REPLACE_WITH_IMAGES_CID/0546.png",
-  "external_url": "https://narobaagent.example/collection",
+  "image": "https://naroba.info/collection/images/0546.png",
+  "external_url": "https://naroba.info/",
   "token_id": 546,
   "prompt": "A observant cartographer Naroba signal terminal with a luminous golden pixel-art laptop, carrying a glass signal. Electric Blue gold, dark grid, radiant signal crystal, crisp details, and a calm on-chain identity.",
   "attributes": [

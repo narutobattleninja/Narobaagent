@@ -1,8 +1,8 @@
 {
   "name": "Naroba Identity #1616",
   "description": "A observant cartographer Naroba signal terminal with a luminous golden pixel-art laptop, carrying a glass signal. Emerald Signal gold, dark grid, radiant signal crystal, crisp details, and a calm on-chain identity. Mint stage: passage. Price: 0.000222 BNB.",
-  "image": "ipfs://REPLACE_WITH_IMAGES_CID/1616.png",
-  "external_url": "https://narobaagent.example/collection",
+  "image": "https://naroba.info/collection/images/1616.png",
+  "external_url": "https://naroba.info/",
   "token_id": 1616,
   "prompt": "A observant cartographer Naroba signal terminal with a luminous golden pixel-art laptop, carrying a glass signal. Emerald Signal gold, dark grid, radiant signal crystal, crisp details, and a calm on-chain identity.",
   "attributes": [

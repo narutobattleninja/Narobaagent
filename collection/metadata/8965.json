@@ -1,8 +1,8 @@
 {
   "name": "Naroba Identity #8965",
   "description": "A quiet cartographer Naroba signal terminal with a luminous golden pixel-art laptop, carrying an amber key. Arcane Violet gold, dark grid, radiant signal crystal, crisp details, and a calm on-chain identity. Mint stage: passage. Price: 0.000222 BNB.",
-  "image": "ipfs://REPLACE_WITH_IMAGES_CID/8965.png",
-  "external_url": "https://narobaagent.example/collection",
+  "image": "https://naroba.info/collection/images/8965.png",
+  "external_url": "https://naroba.info/",
   "token_id": 8965,
   "prompt": "A quiet cartographer Naroba signal terminal with a luminous golden pixel-art laptop, carrying an amber key. Arcane Violet gold, dark grid, radiant signal crystal, crisp details, and a calm on-chain identity.",
   "attributes": [

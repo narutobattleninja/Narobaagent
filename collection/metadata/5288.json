@@ -1,8 +1,8 @@
 {
   "name": "Naroba Identity #5288",
   "description": "A electric drifter Naroba signal terminal with a luminous golden pixel-art laptop, carrying a glass signal. Solar Gold gold, dark grid, radiant signal crystal, crisp details, and a calm on-chain identity. Mint stage: passage. Price: 0.000222 BNB.",
-  "image": "ipfs://REPLACE_WITH_IMAGES_CID/5288.png",
-  "external_url": "https://narobaagent.example/collection",
+  "image": "https://naroba.info/collection/images/5288.png",
+  "external_url": "https://naroba.info/",
   "token_id": 5288,
   "prompt": "A electric drifter Naroba signal terminal with a luminous golden pixel-art laptop, carrying a glass signal. Solar Gold gold, dark grid, radiant signal crystal, crisp details, and a calm on-chain identity.",
   "attributes": [

@@ -1,8 +1,8 @@
 {
   "name": "Naroba Identity #9517",
   "description": "A restless listener Naroba signal terminal with a luminous golden pixel-art laptop, carrying an amber key. Electric Blue gold, dark grid, radiant signal crystal, crisp details, and a calm on-chain identity. Mint stage: open. Price: 0.001 BNB.",
-  "image": "ipfs://REPLACE_WITH_IMAGES_CID/9517.png",
-  "external_url": "https://narobaagent.example/collection",
+  "image": "https://naroba.info/collection/images/9517.png",
+  "external_url": "https://naroba.info/",
   "token_id": 9517,
   "prompt": "A restless listener Naroba signal terminal with a luminous golden pixel-art laptop, carrying an amber key. Electric Blue gold, dark grid, radiant signal crystal, crisp details, and a calm on-chain identity.",
   "attributes": [

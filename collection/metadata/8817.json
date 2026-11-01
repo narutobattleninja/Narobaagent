@@ -1,8 +1,8 @@
 {
   "name": "Naroba Identity #8817",
   "description": "A patient scout Naroba signal terminal with a luminous golden pixel-art laptop, carrying a tiny beacon. Electric Blue gold, dark grid, radiant signal crystal, crisp details, and a calm on-chain identity. Mint stage: passage. Price: 0.000222 BNB.",
-  "image": "ipfs://REPLACE_WITH_IMAGES_CID/8817.png",
-  "external_url": "https://narobaagent.example/collection",
+  "image": "https://naroba.info/collection/images/8817.png",
+  "external_url": "https://naroba.info/",
   "token_id": 8817,
   "prompt": "A patient scout Naroba signal terminal with a luminous golden pixel-art laptop, carrying a tiny beacon. Electric Blue gold, dark grid, radiant signal crystal, crisp details, and a calm on-chain identity.",
   "attributes": [

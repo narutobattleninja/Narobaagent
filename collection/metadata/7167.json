@@ -1,8 +1,8 @@
 {
   "name": "Naroba Identity #7167",
   "description": "A quiet courier Naroba signal terminal with a luminous golden pixel-art laptop, carrying a packet of starlight. Hot Magenta gold, dark grid, radiant signal crystal, crisp details, and a calm on-chain identity. Mint stage: passage. Price: 0.000222 BNB.",
-  "image": "ipfs://REPLACE_WITH_IMAGES_CID/7167.png",
-  "external_url": "https://narobaagent.example/collection",
+  "image": "https://naroba.info/collection/images/7167.png",
+  "external_url": "https://naroba.info/",
   "token_id": 7167,
   "prompt": "A quiet courier Naroba signal terminal with a luminous golden pixel-art laptop, carrying a packet of starlight. Hot Magenta gold, dark grid, radiant signal crystal, crisp details, and a calm on-chain identity.",
   "attributes": [

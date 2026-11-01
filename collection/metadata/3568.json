@@ -1,8 +1,8 @@
 {
   "name": "Naroba Identity #3568",
   "description": "A observant courier Naroba signal terminal with a luminous golden pixel-art laptop, carrying an amber key. Solar Gold gold, dark grid, radiant signal crystal, crisp details, and a calm on-chain identity. Mint stage: passage. Price: 0.000222 BNB.",
-  "image": "ipfs://REPLACE_WITH_IMAGES_CID/3568.png",
-  "external_url": "https://narobaagent.example/collection",
+  "image": "https://naroba.info/collection/images/3568.png",
+  "external_url": "https://naroba.info/",
   "token_id": 3568,
   "prompt": "A observant courier Naroba signal terminal with a luminous golden pixel-art laptop, carrying an amber key. Solar Gold gold, dark grid, radiant signal crystal, crisp details, and a calm on-chain identity.",
   "attributes": [

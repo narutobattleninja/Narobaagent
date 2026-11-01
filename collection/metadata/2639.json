@@ -1,8 +1,8 @@
 {
   "name": "Naroba Identity #2639",
   "description": "A restless scout Naroba signal terminal with a luminous golden pixel-art laptop, carrying a pocket horizon. Coral Flame gold, dark grid, radiant signal crystal, crisp details, and a calm on-chain identity. Mint stage: passage. Price: 0.000222 BNB.",
-  "image": "ipfs://REPLACE_WITH_IMAGES_CID/2639.png",
-  "external_url": "https://narobaagent.example/collection",
+  "image": "https://naroba.info/collection/images/2639.png",
+  "external_url": "https://naroba.info/",
   "token_id": 2639,
   "prompt": "A restless scout Naroba signal terminal with a luminous golden pixel-art laptop, carrying a pocket horizon. Coral Flame gold, dark grid, radiant signal crystal, crisp details, and a calm on-chain identity.",
   "attributes": [

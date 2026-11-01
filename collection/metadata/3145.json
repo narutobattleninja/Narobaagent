@@ -1,8 +1,8 @@
 {
   "name": "Naroba Identity #3145",
   "description": "A restless courier Naroba signal terminal with a luminous golden pixel-art laptop, carrying a folded star map. Electric Blue gold, dark grid, radiant signal crystal, crisp details, and a calm on-chain identity. Mint stage: passage. Price: 0.000222 BNB.",
-  "image": "ipfs://REPLACE_WITH_IMAGES_CID/3145.png",
-  "external_url": "https://narobaagent.example/collection",
+  "image": "https://naroba.info/collection/images/3145.png",
+  "external_url": "https://naroba.info/",
   "token_id": 3145,
   "prompt": "A restless courier Naroba signal terminal with a luminous golden pixel-art laptop, carrying a folded star map. Electric Blue gold, dark grid, radiant signal crystal, crisp details, and a calm on-chain identity.",
   "attributes": [

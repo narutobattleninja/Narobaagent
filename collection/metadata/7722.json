@@ -1,8 +1,8 @@
 {
   "name": "Naroba Identity #7722",
   "description": "A restless keeper Naroba signal terminal with a luminous golden pixel-art laptop, carrying a folded star map. Coral Flame gold, dark grid, radiant signal crystal, crisp details, and a calm on-chain identity. Mint stage: passage. Price: 0.000222 BNB.",
-  "image": "ipfs://REPLACE_WITH_IMAGES_CID/7722.png",
-  "external_url": "https://narobaagent.example/collection",
+  "image": "https://naroba.info/collection/images/7722.png",
+  "external_url": "https://naroba.info/",
   "token_id": 7722,
   "prompt": "A restless keeper Naroba signal terminal with a luminous golden pixel-art laptop, carrying a folded star map. Coral Flame gold, dark grid, radiant signal crystal, crisp details, and a calm on-chain identity.",
   "attributes": [

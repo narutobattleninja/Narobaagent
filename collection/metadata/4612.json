@@ -1,8 +1,8 @@
 {
   "name": "Naroba Identity #4612",
   "description": "A quiet listener Naroba signal terminal with a luminous golden pixel-art laptop, carrying a glass signal. Solar Gold gold, dark grid, radiant signal crystal, crisp details, and a calm on-chain identity. Mint stage: passage. Price: 0.000222 BNB.",
-  "image": "ipfs://REPLACE_WITH_IMAGES_CID/4612.png",
-  "external_url": "https://narobaagent.example/collection",
+  "image": "https://naroba.info/collection/images/4612.png",
+  "external_url": "https://naroba.info/",
   "token_id": 4612,
   "prompt": "A quiet listener Naroba signal terminal with a luminous golden pixel-art laptop, carrying a glass signal. Solar Gold gold, dark grid, radiant signal crystal, crisp details, and a calm on-chain identity.",
   "attributes": [

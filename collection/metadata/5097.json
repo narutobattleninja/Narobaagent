@@ -1,8 +1,8 @@
 {
   "name": "Naroba Identity #5097",
   "description": "A strange keeper Naroba signal terminal with a luminous golden pixel-art laptop, carrying a packet of starlight. Hot Magenta gold, dark grid, radiant signal crystal, crisp details, and a calm on-chain identity. Mint stage: passage. Price: 0.000222 BNB.",
-  "image": "ipfs://REPLACE_WITH_IMAGES_CID/5097.png",
-  "external_url": "https://narobaagent.example/collection",
+  "image": "https://naroba.info/collection/images/5097.png",
+  "external_url": "https://naroba.info/",
   "token_id": 5097,
   "prompt": "A strange keeper Naroba signal terminal with a luminous golden pixel-art laptop, carrying a packet of starlight. Hot Magenta gold, dark grid, radiant signal crystal, crisp details, and a calm on-chain identity.",
   "attributes": [

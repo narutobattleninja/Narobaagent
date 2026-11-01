@@ -1,8 +1,8 @@
 {
   "name": "Naroba Identity #0504",
   "description": "A observant scout Naroba signal terminal with a luminous golden pixel-art laptop, carrying a packet of starlight. Coral Flame gold, dark grid, radiant signal crystal, crisp details, and a calm on-chain identity. Mint stage: freemint. Price: FREE.",
-  "image": "ipfs://REPLACE_WITH_IMAGES_CID/0504.png",
-  "external_url": "https://narobaagent.example/collection",
+  "image": "https://naroba.info/collection/images/0504.png",
+  "external_url": "https://naroba.info/",
   "token_id": 504,
   "prompt": "A observant scout Naroba signal terminal with a luminous golden pixel-art laptop, carrying a packet of starlight. Coral Flame gold, dark grid, radiant signal crystal, crisp details, and a calm on-chain identity.",
   "attributes": [

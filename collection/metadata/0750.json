@@ -1,8 +1,8 @@
 {
   "name": "Naroba Identity #0750",
   "description": "A strange drifter Naroba signal terminal with a luminous golden pixel-art laptop, carrying a packet of starlight. Hot Magenta gold, dark grid, radiant signal crystal, crisp details, and a calm on-chain identity. Mint stage: freemint. Price: FREE.",
-  "image": "ipfs://REPLACE_WITH_IMAGES_CID/0750.png",
-  "external_url": "https://narobaagent.example/collection",
+  "image": "https://naroba.info/collection/images/0750.png",
+  "external_url": "https://naroba.info/",
   "token_id": 750,
   "prompt": "A strange drifter Naroba signal terminal with a luminous golden pixel-art laptop, carrying a packet of starlight. Hot Magenta gold, dark grid, radiant signal crystal, crisp details, and a calm on-chain identity.",
   "attributes": [
