@@ -252,8 +252,9 @@ export default function Home() {
   const [account, setAccount] = useState("");
   const [chainMinted, setChainMinted] = useState<number | null>(null);
   const [mintEnabled, setMintEnabled] = useState<boolean | null>(null);
-  const [status, setStatus] = useState<"ready" | "reviewing" | "minted" | "error">("ready");
+  const [status, setStatus] = useState<"ready" | "reviewing" | "awaiting_wallet" | "confirming" | "minted" | "error">("ready");
   const [statusMessage, setStatusMessage] = useState("Loading live mint status…");
+  const [transactionHash, setTransactionHash] = useState("");
   const [filter, setFilter] = useState<GalleryFilter>("all");
   const [mobileNav, setMobileNav] = useState(false);
   const [gallery, setGallery] = useState<MintRecord[]>([]);
@@ -355,7 +356,9 @@ export default function Home() {
       setStatusMessage("No wallet found. Open this page in your wallet's dApp browser.");
       return;
     }
+    let submittedTxHash = "";
     try {
+      setTransactionHash("");
       setStatus("reviewing");
       setStatusMessage("Checking BNB Chain, mint status, current price, and gas estimate...");
       const chainId = await wallet.request({ method: "eth_chainId" });
@@ -389,13 +392,16 @@ export default function Home() {
       const estimateHex = (await wallet.request({ method: "eth_estimateGas", params: [tx] })) as string;
       const estimatedGas = BigInt(estimateHex);
       const gasLimit = (estimatedGas * 120n + 99n) / 100n;
-      setStatusMessage(`Token #${String(tokenId).padStart(4, "0")} · ${tier.displayPrice === "FREE" ? "FREE" : `${tier.displayPrice} BNB`} · estimated gas ${estimatedGas.toLocaleString()}. Review these details in your wallet.`);
-      const txHash = (await wallet.request({
+      setStatus("awaiting_wallet");
+      setStatusMessage(`Token #${String(tokenId).padStart(4, "0")} · ${tier.displayPrice === "FREE" ? "FREE" : `${tier.displayPrice} BNB`} · estimated gas ${estimatedGas.toLocaleString()}. Wallet request pending: review it there; if you already approved it, wait for confirmation. Do not tap mint again.`);
+      submittedTxHash = (await wallet.request({
         method: "eth_sendTransaction",
         params: [{ ...tx, gas: `0x${gasLimit.toString(16)}` }],
       })) as string;
-      setStatusMessage("Transaction sent · waiting for confirmation...");
-      const receipt = await waitForReceipt(txHash);
+      setTransactionHash(submittedTxHash);
+      setStatus("confirming");
+      setStatusMessage("Transaction submitted · waiting for BNB Chain confirmation...");
+      const receipt = await waitForReceipt(submittedTxHash);
       if (receipt.status !== "0x1") {
         setStatus("error");
         setStatusMessage("Transaction failed on-chain. Check the hash on BscScan.");
@@ -412,7 +418,7 @@ export default function Home() {
       setMintEnabled(fresh.mintEnabled);
       if (!transferLog?.topics?.[3]) {
         setStatus("minted");
-        setStatusMessage(`Transaction confirmed, but the token ID could not be read from its receipt. Check transaction ${txHash} on BscScan.`);
+        setStatusMessage(`Transaction confirmed, but the token ID could not be read from its receipt. Check transaction ${submittedTxHash} on BscScan.`);
         return;
       }
       const mintedTokenId = Number(BigInt(transferLog.topics[3]));
@@ -427,9 +433,14 @@ export default function Home() {
       };
       setGallery((items) => [record, ...items]);
       setStatus("minted");
-      setStatusMessage(`Token #${String(mintedTokenId).padStart(4, "0")} minted to your wallet. Transaction: ${txHash}`);
+      setStatusMessage(`Token #${String(mintedTokenId).padStart(4, "0")} minted to your wallet.`);
     } catch (error) {
       setStatus("error");
+      if (submittedTxHash) {
+        setTransactionHash(submittedTxHash);
+        setStatusMessage("A transaction was submitted but its final status could not be read. Check BscScan before trying again.");
+        return;
+      }
       const message = error instanceof Error ? error.message : "Mint could not be completed.";
       setStatusMessage(message.includes("rejected") || message.includes("denied")
         ? "Mint was cancelled in your wallet. No transaction was sent."
@@ -439,6 +450,7 @@ export default function Home() {
 
   const resetSession = () => {
     setGallery([]);
+    setTransactionHash("");
     setStatus("ready");
     setStatusMessage("Session gallery cleared.");
   };
@@ -537,7 +549,7 @@ export default function Home() {
             </div>
             <div className="price-review"><div><span className="meta-label">Current phase</span><strong>{displayTier.label} <span>/ {displayTier.range}</span></strong></div><div className="price-review__amount"><span className="meta-label">Mint cost</span><strong className={displayTier.id === "free" ? "is-free" : ""}>{displayTier.displayPrice}{displayTier.id !== "free" && <small> BNB</small>}</strong></div></div>
             <div className="mint-gas-note">Gas paid by you · estimated before wallet confirmation</div>
-            <div className="console-action"><button className="mint-button" type="button" onClick={connected ? mintNow : connectWalletPrompt} disabled={status === "reviewing"}><span>{status === "reviewing" ? "Checking mint…" : connected ? status === "minted" ? "Mint next identity" : `Mint #${String(displayToken).padStart(4, "0")}` : "Connect wallet to mint"}</span><ArrowUpRight size={17} /></button><div className={`mint-status mint-status--${status}`}><span className="mint-status__icon">{status === "minted" ? <Check size={12} /> : status === "error" ? <X size={12} /> : <Radio size={12} />}</span>{statusMessage}</div></div>
+            <div className="console-action"><button className="mint-button" type="button" onClick={connected ? mintNow : connectWalletPrompt} disabled={status === "reviewing" || status === "awaiting_wallet" || status === "confirming" || mintEnabled === false || chainMinted === SUPPLY || (status === "error" && Boolean(transactionHash))}><span>{status === "reviewing" ? "Checking mint…" : status === "awaiting_wallet" ? "Wallet request pending…" : status === "confirming" ? "Confirming on-chain…" : mintEnabled === false ? "Mint not open" : chainMinted === SUPPLY ? "Sold out" : status === "error" && transactionHash ? "Check transaction before retry" : connected ? status === "minted" ? "Mint next identity" : `Mint #${String(displayToken).padStart(4, "0")}` : "Connect wallet to mint"}</span><ArrowUpRight size={17} /></button><div className={`mint-status mint-status--${status}`} aria-live="polite"><span className="mint-status__icon">{status === "minted" ? <Check size={12} /> : status === "error" ? <X size={12} /> : <Radio size={12} />}</span>{statusMessage}{transactionHash && <> <a href={`https://bscscan.com/tx/${transactionHash}`} target="_blank" rel="noreferrer">View transaction</a></>}</div></div>
             <div className="contract-note"><Code2 size={14} /><span>BNB contract <strong>live on BNB Mainnet</strong>. <a href="https://bscscan.com/address/0x8cc34AaD007bF677FfED5E64e4a05c327609625d" target="_blank" rel="noreferrer">View on BscScan</a></span><CopyButton value={CONTRACT_ADDRESS} label="Copy contract address" /></div>
           </div>
         </section>
