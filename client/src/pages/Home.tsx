@@ -91,7 +91,8 @@ export default function Home() {
       const state = await readChainState(); setChainMinted(state.totalMinted); setMintEnabled(state.mintEnabled);
       if (!state.mintEnabled) throw new Error("Mint belum dibuka oleh owner.");
       const token = state.totalMinted + 1; if (token > SUPPLY) throw new Error("Koleksi sudah habis.");
-      const value = token <= 1000 ? "0x0" : token <= 9000 ? "0xc9f2c0000000" : "0x38d7ea4c68000";
+      // Exact wei values required by the contract: 0, 0.000222, or 0.001 BNB.
+      const value = token <= 1000 ? "0x0" : token <= 9000 ? "0xc9e86723e000" : "0x38d7ea4c68000";
       setStatus(`Menunggu konfirmasi wallet untuk Naroba #${String(token).padStart(4, "0")}...`);
       const hash = await window.ethereum.request({ method: "eth_sendTransaction", params: [{ from: account, to: CONTRACT_ADDRESS, value, data: MINT_CALLDATA }] }) as string;
       setStatus(`Mint terkirim · ${hash.slice(0, 10)}...`);
@@ -122,7 +123,7 @@ export default function Home() {
       </main>
 
       <aside className="social-right"><div className="social-search"><Search size={18} /><input placeholder="Cari di Naroba" /></div><section className="trend-box"><h2>Yang sedang terjadi</h2><Trend label="Naroba Dream Agents" count="3.333 posting" /><Trend label="#Naroba" count="1.205 posting" /><Trend label="BNB Chain" count="982 posting" /><Trend label="Digital Identity" count="689 posting" /><a href="#top" className="show-more">Tampilkan lebih banyak</a></section><section className="trend-box follow-box"><h2>Siapa yang harus diikuti</h2><Follow image="/nft/nrba-0009.png" name="Naroba Studio" handle="@naroba_info" /><Follow image="/nft/nrba-0010.png" name="BNB Chain" handle="@BNBCHAIN" /><a href="#top" className="show-more">Tampilkan lebih banyak</a></section><footer className="social-footer">Ketentuan Layanan · Privasi · Kebijakan · © 2026 Naroba</footer></aside>
-      <div className="mint-dock"><span className="mint-dock-status"><Zap size={15} /> {status}</span><span className="mint-dock-token">Next #{String(nextToken).padStart(4, "0")}</span><button onClick={mint} disabled={mintEnabled === false}>{connected ? "Mint NFT" : "Hubungkan Wallet"}</button></div>
+      <div className="mint-dock"><span className="mint-dock-status"><Zap size={15} /> {status}</span><span className="mint-dock-token">Next #{String(nextToken).padStart(4, "0")}</span><button onClick={mint}>{connected ? "Mint NFT" : "Hubungkan Wallet"}</button></div>
     </div>
   );
 }
