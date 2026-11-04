@@ -116,3 +116,14 @@ button { border: 0; }
 .install-stack { display: flex; justify-content: center; align-items: center; min-height: 210px; }.install-stack img { width: 94px; height: 94px; padding: 8px; object-fit: contain; image-rendering: pixelated; background: var(--panel); border: 1px solid var(--line); box-shadow: 0 12px 25px rgba(0,0,0,.25); }.install-stack img + img { margin-left: -19px; transform: translateY(25px) rotate(6deg); }.install-stack img:first-child { transform: rotate(-6deg); }
 @media (max-width: 1000px) { .install-section { grid-template-columns: minmax(210px, .8fr) 1.2fr; }.install-stack { grid-column: 1 / -1; justify-content: flex-start; min-height: auto; } }
 @media (max-width: 720px) { .hero-nft-image { width: 57%; }.install-section { display: flex; flex-direction: column; align-items: stretch; gap: 35px; padding-top: 70px; padding-bottom: 78px; }.install-art { min-height: 300px; }.install-copy h2 { font-size: 51px; }.install-stack { justify-content: center; }.install-stack img { width: 82px; height: 82px; }.identity-card__nft { width: 142px; height: 142px; } }
+
+/* MintBox: compact, informational phases with one clear primary action. */
+.stage-card { grid-template-columns: 28px 1fr auto; cursor: default; }
+.stage-card:hover { transform: none; border-color: var(--line); }
+.mint-console .console-body { min-height: 0; padding-top: 28px; padding-bottom: 24px; }
+.mint-one-liner { max-width: 420px; margin: 0; color: var(--ink-soft); font-size: 13px; line-height: 1.6; }
+.mint-gas-note { padding: 11px 30px; color: var(--ink-faint); border-bottom: 1px solid var(--line); font-family: 'IBM Plex Mono', monospace; font-size: 9px; }
+@media (max-width: 720px) {
+  .stage-card { grid-template-columns: 25px 1fr auto; }
+  .mint-gas-note { padding-right: 18px; padding-left: 18px; }
+}

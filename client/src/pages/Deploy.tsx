@@ -430,9 +430,9 @@ export default function Deploy() {
                 <li>Pin the finalized image and metadata folders to IPFS.</li>
                 <li>Set the metadata Base URI to the metadata CID.</li>
                 <li>Check the owner, URI, and supply on the selected chain.</li>
-                <li>Open mint only when the public mint page is connected.</li>
+                <li>Verify the public mint page targets this exact contract and chain before opening mint.</li>
               </ol>
-              <p><strong>Important:</strong> the current Naroba home-page mint panel is still a local preview, not a live contract mint UI. Opening this contract does not connect the home page automatically. Keep mint closed until that binding is added.</p>
+              <p><strong>Important:</strong> the home page currently targets a fixed BNB Mainnet contract address. Deploying another contract here does not update that address automatically. Verify the address and network before opening mint; custom prompts are not written into NFT metadata.</p>
               <a href="https://github.com/narutobattleninja/Narobaagent#nft-assets-and-metadata" target="_blank" rel="noreferrer">Read IPFS pinning steps <ArrowUpRight size={13} /></a>
             </section>
           </aside>
